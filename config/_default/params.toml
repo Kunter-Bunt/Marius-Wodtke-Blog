@@ -4,17 +4,18 @@ mainSections = ["post"]
 rssFullContent = true
 
 [footer]
-since = 2020
-customText = ""
+since = 2023
+customText = "This site is owned by Marius Wodtke, Marktgasse 21-23/27, 1090 Wien, Austria. All rights reserved."
 
 [dateFormat]
 published = "Jan 02, 2006"
 lastUpdated = "Jan 02, 2006 15:04 MST"
 
-[opengraph.twitter]
-site = ""
-card = "summary_large_image"
-
 [sidebar]
-emoji = "🍥"
-subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+emoji = ""
+subtitle = "Hi, I'm Marius, Consultant for Dynamics 365 at Avanade. I specialize in Integrating Dynamics with other systems."
+
+[sidebar.avatar]
+enabled = true
+local = true
+src = "images/MariusWodtke.png"

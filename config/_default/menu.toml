@@ -1,15 +1,15 @@
 [[social]]
 identifier = "github"
 name = "GitHub"
-url = "https://github.com/CaiJimmy/hugo-theme-stack"
+url = "https://github.com/Kunter-Bunt/"
 
 [social.params]
 icon = "brand-github"
 
 [[social]]
-identifier = "twitter"
-name = "Twitter"
-url = "https://twitter.com"
+identifier = "linkedin"
+name = "Linked In"
+url = "https://www.linkedin.com/in/marius-wodtke/"
 
 [social.params]
-icon = "brand-twitter"
+icon = "brand-linkedin"
