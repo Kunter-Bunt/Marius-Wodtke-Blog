@@ -36,3 +36,6 @@ As mentioned before we cannot store the actual step (sdkmessageprocessingstep) i
 
 # Next steps
 Now that we know roughly how it works, how do we put this into practice. This is exactly the topic of [the next post](), where we will use this to register a "naming plugin" to any entity.
+
+# Links
+Also check out [this Wiki article](https://github.com/Kunter-Bunt/D365LivePluginRegistration/wiki/Mapping-with-Plugin-Registration-Tool) detailing how the entity maps to the plugin registration tool.
