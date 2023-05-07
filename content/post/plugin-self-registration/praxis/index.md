@@ -1,5 +1,5 @@
 ---
-title: "Plugin Self Registration: Putting it into practice"
+title: "Plugin Self Registration 3: Putting it into practice"
 date: 2023-04-30
 draft: false
 ---

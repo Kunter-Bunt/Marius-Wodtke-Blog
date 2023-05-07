@@ -1,5 +1,5 @@
 ---
-title: "Plugin Self Registration: The Managed Solution"
+title: "Plugin Self Registration 2: The Managed Solution"
 date: 2023-04-24
 draft: false
 ---

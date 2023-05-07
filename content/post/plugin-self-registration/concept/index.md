@@ -1,5 +1,5 @@
 ---
-title: "Plugin Self Registration: The Concept"
+title: "Plugin Self Registration 1: The Concept"
 date: 2023-04-19
 draft: false
 ---
