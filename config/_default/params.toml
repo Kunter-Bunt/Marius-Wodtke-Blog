@@ -19,3 +19,24 @@ subtitle = "Hi, I'm Marius, Consultant for Dynamics 365 CE at Avanade. I special
 enabled = true
 local = true
 src = "images/MariusWodtke.png"
+
+[colorScheme]
+default = "dark"
+
+[comments]
+enabled = true
+provider = "giscus"
+
+[comments.giscus]
+repo = "Kunter-Bunt/Marius-Wodtke-Blog"
+repoID = "R_kgDOJXM_jA"
+category = "Announcements"
+categoryID = "DIC_kwDOJXM_jM4CWemG"
+mapping = "title"
+strict = "0"
+lightTheme = "0"
+darkTheme = "1"
+reactionsEnabled = "1" 
+emitMetadata = "0"
+inputPosition = "top"
+lang = "en"
