@@ -14,7 +14,7 @@ menu:
     main: 
         weight: 4
         params:
-            icon: rss
+            icon: link
 
 comments: false
 ---
