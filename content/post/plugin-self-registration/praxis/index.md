@@ -69,3 +69,6 @@ So with the design of the configuration entity we made sure that we know the tar
 Whats left to do now? Of course to implement all those cool ideas for generic logic that came to your mind while reading through the series! There will be one more post out soon elaborating more on the topic of strategies in self registration and how you can get around it sometimes.
 Needless to say: While the [D365NameCombiner](https://github.com/Kunter-Bunt/D365NameCombiner/) served as an example for your own self registration ideas here it is of course a working solution with actual use! Check out its Wiki for more samples.
 The next and [last post]((/post/plugin-self-registration/outlook)) of this series we will take a look at when to use this - and when not.
+
+# Special Thanks
+To [Lukas Leitzinger](https://www.linkedin.com/in/lukas-leitzinger-6b5654160/) for contributing to this repository with ideas and code!

@@ -39,3 +39,6 @@ Now that we know roughly how it works, how do we put this into practice. This is
 
 # Links
 Also check out [this Wiki article](https://github.com/Kunter-Bunt/D365LivePluginRegistration/wiki/Mapping-with-Plugin-Registration-Tool) detailing how the entity maps to the plugin registration tool.
+
+# Special Thanks
+To [Lukas Leitzinger](https://www.linkedin.com/in/lukas-leitzinger-6b5654160/) for contributing to this repository with ideas and code!
