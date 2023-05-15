@@ -1,5 +1,5 @@
 ---
-title: "eForms with C#: Introduction"
+title: "eForms with C# 1: Introduction"
 date: 2023-05-13
 draft: false
 ---
@@ -36,3 +36,7 @@ The [Publication API](https://enotices2.preview.ted.europa.eu/esenders/swagger-u
 
 # Summary
 So this article was an introduction. It detailed that using C# for eForms should be concious decision, provided links to the documentation and a short overview for the associated APIs. Last we generated an API key for the preview environment of eForms and used it to explore the APIs. In the next post we will take a deeper dive into the actual programming, generating an XML for a notice. 
+
+
+# Special Thanks
+To [Şevket Çokay](https://www.linkedin.com/in/sevketcokay/) and [Florian Unterberger](https://www.linkedin.com/in/florian-unterberger-3bab39106/) for supporting me with subject matter expertise and contacts in implementing eForms integration!
