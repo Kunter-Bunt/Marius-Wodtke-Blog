@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://www.marius-wodtke.de/'
 languageCode = 'en-us'
 title = 'Marius Wodtke'
 theme = 'hugo-theme-stack'
