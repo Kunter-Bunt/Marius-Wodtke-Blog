@@ -1,7 +1,7 @@
 ---
 title: "My first shot at Plugin Packages (Dependent Assembly Plugins)"
 date: 2023-06-10
-draft: true
+draft: false
 ---
 
 I recently noticed for a project that needs certificate authentication that _Microsoft.IdentityModel.Clients.ActiveDirectory_ is deprecated.
