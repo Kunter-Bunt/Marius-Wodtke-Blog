@@ -1,7 +1,7 @@
 ---
 title: "My first shot at External Tables with SQL"
-date: 2023-06-12
-draft: true
+date: 2023-06-17
+draft: false
 ---
 
 So this week I've looked into the "[Virtual Entities](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-virtual-entities?view=op-9-1)", or as they are now called "External Tables" again. The problem the first time around was that it worked with the OData connector if you did absolutely everything right, but any minor mistake in configuring the attributes was immediately breaking the whole interface and debug information was not present. And in mistake I mean something like the server defines a string attribute and you create that as an optional string field in Dynamics; it needs to be required because it is not nullable...
