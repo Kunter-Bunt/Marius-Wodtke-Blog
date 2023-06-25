@@ -54,11 +54,11 @@ This can be done with the Powershell command `Grant-PnPAzureADAppSitePermission`
 But since we are using Powershell here anyway, lets do the whole thing with Powershell.
 1. Install the module: `Install-Module -Name PnP.PowerShell -SkipPublisherCheck -Scope CurrentUser` (-SkipPublisherCheck is technically not needed but helps with unattended scripts since you dont need to confirm the download.)
 2. Connect to your Sharepoint Site, $sharepointUrl stores the full url here, e.g. ht<span>tps://crm123456.sharepoint.com/sites/Contoso: `Connect-PnPOnline -Url "$sharepointUrl" -Interactive`
-3. Next we are going to create the AppRegistration. $tenant holds the domain of the tenant, so here crm123456.onmicrosoft.com and $app is the name of the app, so we can use something like DataverseCE-SharepointIntegration-dev again: `$reg = Register-PnPAzureADApp -ApplicationName "$app" -Tenant "$tenant" -Store CurrentUser -SharePointApplicationPermissions "Sites.Selected" -Interactive`
+3. Next we are going to create the AppRegistration. $tenantDomain holds the domain name of the tenant, in this case crm123456.onmicrosoft.com and $appName is the name of the app, so we can use something like DataverseCE-SharepointIntegration-dev again: `$appRegistration = Register-PnPAzureADApp -ApplicationName "$appName" -Tenant "$tenantDomain" -Store CurrentUser -SharePointApplicationPermissions "Sites.Selected" -Interactive`
 Please note that this action also creates the Certificate. Both the PFX and CER are dropped to the folder where you execute the command. It also uploads the CER to the AppRegistration and sets the Permission - _Sites.Selected_. So a lot of the steps we executed by hand earlier, making the Powershell command far less error prone.
 You might want to upload the PFX to a KeyVault anyways to store it safely.
-4. For `Grant-PnPAzureADAppSitePermission` we need the ClientId, we will save it from the returned information of `Register-PnPAzureADApp`: `$clientId = $reg."AzureAppId/ClientId";`
-5. Next we will grant Read/Write permissions to our AppRegistration:`$permission = Grant-PnPAzureADAppSitePermission -Permissions "Write" -Site $sp -AppId $clientId -DisplayName $app`
+4. For `Grant-PnPAzureADAppSitePermission` we need the ClientId, we will save it from the returned information of `Register-PnPAzureADApp`: `$clientId = $appRegistration."AzureAppId/ClientId";`
+5. Next we will grant Read/Write permissions to our AppRegistration:`$permission = Grant-PnPAzureADAppSitePermission -Permissions "Write" -Site $sharepointUrl -AppId $clientId -DisplayName $appName`
 6. As needed: We actually saved the Id of the Permission to be able to manipulate it, there are 4 levels of permission, _Read_, _Write_, _Manage_ and _FullControl_ but the later two you cannot use with the `Grant-PnPAzureADAppSitePermission`, you will have to use this command: `Set-PnPAzureADAppSitePermission -Permissions "FullControl" -PermissionId $permission.Id `
 As said this is optional because you might simply be fine with _Read_ or _Write_.
 
@@ -70,17 +70,17 @@ Here is the consolidated full script:
 
 ```
 $sp = Read-Host -Prompt "Enter the Url of the Sharepoint Site you want to use the principle with, e.g. https://crm123456.sharepoint.com/sites/Contoso"
-$app = Read-Host -Prompt "Enter the Display Name of the Application in AAD, e.g. DataverseCE-SharepointIntegration-dev"
-$tenant = Read-Host -Prompt "Enter the AAD Tenants Primary Domain, e.g. crm123456.onmicrosoft.com"
+$appName = Read-Host -Prompt "Enter the Display Name of the Application in AAD, e.g. DataverseCE-SharepointIntegration-dev"
+$tenantDomain = Read-Host -Prompt "Enter the AAD Tenants Primary Domain, e.g. crm123456.onmicrosoft.com"
 
 Install-Module -Name PnP.PowerShell -SkipPublisherCheck -Scope CurrentUser
 
-Connect-PnPOnline -Url "$sp" -Interactive
+Connect-PnPOnline -Url "$sharepointUrl" -Interactive
 
-$reg = Register-PnPAzureADApp -ApplicationName "$app" -Tenant "$tenant" -Store CurrentUser -SharePointApplicationPermissions "Sites.Selected" -Interactive
-$clientId = $reg."AzureAppId/ClientId";
+$appRegistration = Register-PnPAzureADApp -ApplicationName "$appName" -Tenant "$tenantDomain" -Store CurrentUser -SharePointApplicationPermissions "Sites.Selected" -Interactive
+$clientId = $appRegistration."AzureAppId/ClientId";
 
-$permission = Grant-PnPAzureADAppSitePermission -Permissions "Write" -Site $sp -AppId $clientId -DisplayName $app
+$permission = Grant-PnPAzureADAppSitePermission -Permissions "Write" -Site $sharepointUrl -AppId $clientId -DisplayName $appName
 Set-PnPAzureADAppSitePermission -Permissions "FullControl" -PermissionId $permission.Id 
 ```
 
@@ -88,3 +88,10 @@ Set-PnPAzureADAppSitePermission -Permissions "FullControl" -PermissionId $permis
 So while creating the Sharepoint AppRegistration via the Portal is a good exercise for understanding how the components work together, doing it with the Powershell is a lot more fit for purpose. It reduces human error, is able to grant more granular permissions and once the script is set up, its much faster. Therefore I will always lean towards the 10 lines of code to create a service user for Sharepoint.
 
 In the next post, we will actually use the service user to interact with our site. 
+
+# Links
+https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread
+
+https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets
+
+http://johnliu.net/blog/2019/2/flowninja-hack-78-modifying-modified-by-and-modified-time-with-microsoft-flow 
