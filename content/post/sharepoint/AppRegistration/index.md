@@ -17,6 +17,7 @@ First we need a KeyVault, maybe you do already have one, otherwise search for _K
 ![The name of a Key Vault has to be globally unique.](CreateKeyVault.png)
 
 Next head to the Certificates section on the left menu and Create a Certificate. But even though I am the owner of the subscription I cannot access the KeyVault:
+
 ![First you will need to authorize yourself, but after that you can generate a new Certificate.](GenerateCertificate.png)
 
 But as I am the owner of the KeyVault Azure Resource I can simply add myself appropriate permissions. Under _Access Control (IAM)_, select _Add role assignment_. For my purposes I chose the _Key Vault Administrator_ role (although _Key Vault Certificates Officer_ would have been sufficient for today) and my own account of course.
