@@ -4,6 +4,9 @@ toggleMenu:
 darkMode:
     other: Dark Mode
 
+giscusToggle:
+    other: Use giscus (US Server!)
+
 list:
     page:
         one: "{{ .Count }} page"
@@ -70,4 +73,4 @@ footer:
         other: Built with {{ .Generator }}
 
     designedBy:
-        other: Theme {{ .Theme }} designed by {{ .DesignedBy }}
+        other: Theme {{ .Theme }} designed by {{ .DesignedBy }} modified by {{ .ModifiedBy }} for GDPR conformity
