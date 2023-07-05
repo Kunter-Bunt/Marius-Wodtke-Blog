@@ -1,5 +1,5 @@
 ---
-title: "Sharepoint Integration 2: Setup"
+title: "Sharepoint Integration (Standard) 1: Setup"
 date: 2023-07-01
 draft: false
 ---
@@ -65,3 +65,5 @@ Setting up the standard Sharepoint Integration for Dynamics CE is pretty straigh
 First we created a site on Sharepoint. Then we enabled the server-based integration from Dynamics to Sharepoint. After this we can connect the site to Dynamics, in this step we will also enable entities and optionally define a hierarchy. After that the integration is ready for the users, they can upload, preview or download documents, organize in subfolders and some more things. 
 
 In my experience this works very well for most of the direct user interaction scenarios, so your users are hopefully already quite happy with these features, giving them quick access to documents through their Dynamics interface, all well organized within the records created by them.
+
+Check out [the next post](/post/sharepoint/standard/functionality) for a deeper dive into the OOTB functionality of this integration.

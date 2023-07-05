@@ -1,5 +1,5 @@
 ---
-title: "Sharepoint Integration 1: AppRegistration"
+title: "Sharepoint Integration (Extended) 1: AppRegistration"
 date: 2023-06-25
 draft: false
 ---
