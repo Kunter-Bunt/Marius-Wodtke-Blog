@@ -2,3 +2,8 @@
 resources/_gen/*
 content/post/eForms-csharp/introduction/Notes.txt
 .vscode/settings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/Marius-Wodtke-Blog/FileContentIndex/*.vsidx
+.vs/Marius-Wodtke-Blog/FileContentIndex/read.lock
+.vs/Marius-Wodtke-Blog/v17/.wsuo
