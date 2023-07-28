@@ -1,7 +1,7 @@
 ---
-title: "Sharepoint Integration (Extended) 1: Using PnP.Core"
-date: 2023-07-28
-draft: true
+title: "Sharepoint Integration (Extended) 2: Using PnP.Core"
+date: 2023-07-30
+draft: false
 ---
 
 So now that we have a login from [the last post](/post/sharepoint/custom/appregistration), lets use it! In this post we will use PnP.Core to help us interact with Sharepoint. Afterall I am a CRM Developer and not a Sharepoint specialist, so a library to help my tasks is most welcome.
