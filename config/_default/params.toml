@@ -40,3 +40,15 @@ reactionsEnabled = "1"
 emitMetadata = "0"
 inputPosition = "top"
 lang = "en"
+
+[[widgets.homepage]]
+type = "search"
+
+[[widgets.homepage]]
+type = "archives"
+
+[widgets.homepage.params]
+limit = 5
+
+[[widgets.page]]
+type = "toc"
