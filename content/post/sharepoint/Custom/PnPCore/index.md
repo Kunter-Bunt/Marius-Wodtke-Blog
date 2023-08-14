@@ -6,7 +6,7 @@ draft: false
 
 So now that we have a login from [the last post](/post/sharepoint/custom/appregistration), lets use it! In this post we will use PnP.Core to help us interact with Sharepoint. Afterall I am a CRM Developer and not a Sharepoint specialist, so a library to help my tasks is most welcome.
 
-# Prerequisites
+## Prerequisites
 So I do assume you have the service principle set up. If not its time to head back [here](/post/sharepoint/custom/appregistration).
 The next rather important consideration is PnP.Core as a library itself. It has a lot of dependencies, usually thats not a problem, but this means we wont be able to upload it to dynamics, no ILMerge or [Plugin Packages](/post/my-first-shot/plugin-packages) will help here due to unmanaged code in some dependencies. This means that this method is not for plugins, but for standalone tools, APIs etc. 
 
@@ -20,7 +20,7 @@ Next, I will be using .Net Core in this tutorial. This is technically not requir
 
 And one last thing: I do somehow assume you do know how to use the Dataverse Service Client or the classic CrmServiceClient (IOrganizationService), so the code shown will completely ignore the CRM bits and instead will mock corresponding queries as simple variables to keep the focus on what we are trying to achieve: Integrating Sharepoint.
 
-# Authenticating
+## Authenticating
 Before we can manipulate the Sharepoint we need to log in. 
 
 I've started with a Console App (.Net 6.0) and installed 2 NuGet packages _PnP.Core_ and _PnP.Core.Auth_. 
@@ -95,7 +95,7 @@ X509Certificate2 GetCertificate(string certThumbprint)
 
 Since this method uses the `StoreLocation.LocalMachine` it is important that you select "Local Machine" when installing the certificate. If you didn't do so don't worry, you can install the .pfx again; or change the StoreLocation! The reason for me to use LocalMachine here is that it makes the deployment to servers easier where the programm might not be executed by the same account deploying the server, hence the CurrentUser installation yields problems in this scenario.
 
-# Creating a file
+## Creating a file
 Now lets actually do something! I will upload a file from my computer to Sharepoint. I know you are bursting of exitement for this amazing task, but doing this ensures that the login works and we have the correct permissions and then you can hop on doing other things and if you get weird errors you at least know its your code being broken and not the service principle or something like that.
 
 To have a file to upload I added a file _Test.txt_ to the project, wrote "Hello World!" inside and set _Copy to Output Directory_ to "Copy always". Next comes the following code:
@@ -135,7 +135,7 @@ Instead you should create a _documentlocation_ to connect them immediately. That
 
 regardingobjectid and relativeurl should be no problem, this is the account and the foldername. In simple scenarios parentsiteorlocation is simple as well, query for the documentlocation with relativeurl "account", so the logicalname of the entity. This stops being so easy when you have two sites with a Library "Account" since suddenly you have 2 documentlocations with the relativeurl "account" but different parent sites. Also if you want to connect to a location in the hierarchical setup, this gets trickier as well, but in this case you will already have to deal with that once you are creating the folder, because it then is no longer under the root folder but 2 folders deeper.
 
-# Summary
+## Summary
 But after retesting and writing this article, I really have to say PnP.Core makes it easy to dip your toes into "Sharepoint Development". Well we are not developing here, we are manipulating the content of the Sharepoint with programs. 
 The setup is easy and the code you need to write to do basic manipulations is quite short. For more advanced manipulations that are not as intuitive as `Files.Add`, check out their great documentation with samples and tutorals here: https://pnp.github.io/pnpcore/index.html
 The only downside to this SDK are its dependencies, making it unsuitable for Dynamics Plugins. This is why we will explore using the Sharepoint REST API in future posts as well. A little heads up: This is of course more cumbersome, so I do use PnP.Core whenever the requirements allow it.

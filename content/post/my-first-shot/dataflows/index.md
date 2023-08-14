@@ -6,12 +6,12 @@ draft: false
 
 This time I will do my first experiments with Dataflows. Spoiler alert: There are quite some options left that would need a separate article, so at first glance this seems to be a powerful feature.
 
-# Prerequisites 
+## Prerequisites 
 As data source the same Azure SQL Database will be used that we already used for [the External Table post](/post/my-first-shot/externaltable). If you do not have a table ready, that post describes how it was set up in Azure with minimal cost. For reference, this is what the tables structure looks like:
 
 ![](SQLTable.png)
 
-# Creating the Dataflow
+## Creating the Dataflow
 On make.powerapps.com, ensuring you are on the correct environement, selct Dataflows from the left menu. For me it was hidden in the _More_ flyout. If you cant find it there either, try _Discover all_ as this menu shows all Power Platform components. Still not finding it? Check that your environment has a database, this is required as a Dataflow will persist records to a dataverse table.
 
 ![To create a new Dataflow, select New Dataflow and give it a name.](New.png)
@@ -42,7 +42,7 @@ The last dialog is about when the import will happen, on demand or scheduled. Th
 
 ![](Schedule.png)
 
-# The Result
+## The Result
 That will be a quick section: No problem here! At the end of the wizard, select publish, it will take a few minutes. Then open the Advanced Find, look for the entity you mapped or created and the data should be there. 
 
 ![](AdvancedFind.png)
@@ -51,7 +51,7 @@ Everything looks fine here, all the data, including our custom "Year" column was
 
 Since the entity being filled with data here is a regular entity, you can integrate it to Model Driven Apps, create forms and so on. You could even add new records or edit existing ones. Although keep in mind that the changed data will be overwritten with the next execution of the dataflow. But adding additional fields that are not mapped from source would stay intact and also new records (unless you selected the option to delete records not present in source).
 
-# Summary
+## Summary
 Dataflows import data to regular Dataverse tables. They achieve this with definitions that are much like PowerBI, giving us many online resources on how to transform data before loading it to Dataverse. In contrast to External Tables, Dataflows create an editable copy of the data. This also means that the data is not real time and is only as fresh as the last refresh.
 
 There is much to still explore here: Different column types like Choice and Currency. Relationships within the source or to Dataverse. Deployment topics like Dataflows vs Dataflow Templates. But for todays experiment this is enough. Keep your eyes peeled for more Dataflow content!

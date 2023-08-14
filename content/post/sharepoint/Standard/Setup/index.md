@@ -8,7 +8,7 @@ Well, ordering is broken now, but as I wanted to write more about Sharepoint int
 
 After all, Microsoft evidently thinks its sufficient for most customers so why shouldn't you get happy with it. Also I am always relying on the standard experience for the frontend when automations are required. 
 
-# Setting up a Sharepoint site
+## Setting up a Sharepoint site
 This is pretty straight forward, I only want to share two considerations here. First, use one site per environment, sharing the site between multiple environments just leads to confusion, compromises the separation in security and after all, Sharepoint is billed by capacity and not per site. Second, there can be only one "Default Site". Thats the site where Dynamics will auto create folders when a user visits the _Documents_ Tab of a record, so you should consider which site shall be your default site when you are planning with multiple sites to be integrated.
 
 So first head to https://{tenant-domain}-admin.sharepoint.com/ where you replace {tenant-domain} with the domain of your Azure Active Directory tenant. 
@@ -25,7 +25,7 @@ Then give the site a name that shows its purpose well, maybe reference it being 
 
 On the last screen you can also already add members to the site, they will be added to a Office 365 group that was created alongside the site.
 
-# Authorizing Dynamics
+## Authorizing Dynamics
 In the _Advanced Settings_ (accessed from the cog symbol on the top right) choose _Document Management_ and _Enable Server-Based SharePoint Integration_.
 
 > **_NOTE:_** This menu point vanishes after being performed.
@@ -34,7 +34,7 @@ Step through the wizard, if you are on an online Sharepoint site like described 
 
 ![](WizardServer.png)![](Valid.png)
 
-# Connecting Dynamics
+## Connecting Dynamics
 Next we need _Document Management Settings_.
 
 ![](DocSettings.png)
@@ -50,7 +50,7 @@ And then the wizard will create document libraries in Sharepoint for each entity
 
 ![](Hierarchy.png)![](Final.png)
 
-# Testing it
+## Testing it
 We are ready to go! Select an account in Dynamics, under _Related_, select _Documents_.
 
 ![](Documents.png) ![](DocumentsTab.png) 
@@ -59,7 +59,7 @@ I've used the _Upload_ button here already and for the next step, use _Open Loca
 
 ![](Folder.png) 
 
-# Summary
+## Summary
 Setting up the standard Sharepoint Integration for Dynamics CE is pretty straight forward and can be done in less than 30 minutes if you have enough priviledges to execute the wizards on Sharepoint and Dynamics side.
 
 First we created a site on Sharepoint. Then we enabled the server-based integration from Dynamics to Sharepoint. After this we can connect the site to Dynamics, in this step we will also enable entities and optionally define a hierarchy. After that the integration is ready for the users, they can upload, preview or download documents, organize in subfolders and some more things. 

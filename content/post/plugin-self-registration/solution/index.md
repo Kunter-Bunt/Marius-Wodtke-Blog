@@ -8,10 +8,10 @@ In [the last post](/post/plugin-self-registration/concept) we've dived into the 
 
 My proposed solution to ease the process of self registration is to introduce an abstraction layer in form another entity. As this will be a regular custom entity, we can relate to it as much as we like. 
 
-# The Repository
+## The Repository
 [Here](https://github.com/Kunter-Bunt/D365LivePluginRegistration) you will find the public repository of this solution. If you want to use it, simple [download](https://github.com/Kunter-Bunt/D365LivePluginRegistration/raw/master/LivePluginRegistration_3_0_0_1_managed.zip) and install the managed solution to your instance.
 
-# The Mapping
+## The Mapping
 If you're familiar with registering Plugins in Dynamics 365 using the traditional Plugin Registration Tool (PRT), understanding the mapping to the new _Plugin Step Registration_ (mwo_pluginstepregistration) entity can be helpful. In this section, we will explore how the Plugin Step Registration entity maps to the entities in the PRT, and how you can leverage it for registering steps.
 
 ![The event handler here specifies what plugin to execute.](general.png)
@@ -28,17 +28,17 @@ Image configuration tab allows you to configure an Image (sdkmessageprocessingst
 
 The Step is now managed by the Plugin Step Registration record. This means that if you update the record, the Step will be updated as well. Similarly, if you deactivate the record, the Step will be deactivated, and if you delete the record, the Step will be deleted too. However, you can untie this one-way connection between the record and the actual Step by setting the field _Managed_ to "No". This allows you to delete the record while leaving the Step untouched. If you're not sure which record manages which Step, you can check the Plugin Step Id against the Id of the Step in the PRT.
 
-# Service Endpoints
+## Service Endpoints
 Additionally, it's also possible to have Service Endpoints as Event Handlers (formerly known as Plugin Type Name). You can reference them by name in the Plugin Event Handler entity and then select them in the Event Handler Lookup on the Plugin Step Registration. However, it's important to note that by their nature, Service Endpoints can only handle asynchronous steps, and attempting to register a synchronous step will result in failure.
 
-# The physical relation
+## The physical relation
 As mentioned before we cannot store the actual step (sdkmessageprocessingstep) in a relationship like a lookup. Therefore the Plugin Step Registration saves the guid of the step to a string field and parses it back from there. This is of course rather unelegant, but this is why we will use this abstraction for our regular code, we will never need to worry about this again and can simply relate to the Plugin Step Registration.
 
-# Next steps
+## Next steps
 Now that we know roughly how it works, how do we put this into practice. This is exactly the topic of [the next post](/post/plugin-self-registration/praxis), where we will use this to register a "naming plugin" to any entity.
 
-# Links
+## Links
 Also check out [this Wiki article](https://github.com/Kunter-Bunt/D365LivePluginRegistration/wiki/Mapping-with-Plugin-Registration-Tool) detailing how the entity maps to the plugin registration tool.
 
-# Special Thanks
+## Special Thanks
 To [Lukas Leitzinger](https://www.linkedin.com/in/lukas-leitzinger-6b5654160/) for contributing to this repository with ideas and code!

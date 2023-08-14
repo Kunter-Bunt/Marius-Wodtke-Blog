@@ -10,7 +10,7 @@ Dynamics CE has a Sharepoint integration, but it lacks. It works well with every
 
 In this post we will create an AppRegistration that will resemble a service user for talking to Sharepoint. This is done for integrating with Sharepoint via backend code like C#. You can also do this integration with Power Automate, but having done this for a customer much preferring Power Automate my humble opinion is: Its not worth it. Determining the folder position alone is too complex and by the amount of actions executed, the Flows actually become quite slow. 
 
-# The Portal Way
+## The Portal Way
 So if you like to point an click, we can set up a service user via the Azure Portal. All you need is an active Subscription, the cost will be minimal.
 First we need a KeyVault, maybe you do already have one, otherwise search for _Key Vault_ in the search box at the top, select the KeyVault and _+ Create_ to start the creation process. Standard SKU is absolutely enough and for the name you need to be globally unique. For my name thats quite easy, I've added a -dev here just in case I will use the KeyVault for anything else in the future, in this case it is important to create separate KeyVaults for different stages and topics because once you give some application access to the contents it has access to all the secrets of this KeyVault. The other settings can stay as default for this tutorial, you can skip the other tabs and directly create the KeyVault.
 
@@ -48,7 +48,7 @@ Last thing now: Grant admin consent. As shown below this is a button that just n
 
 And thats it, the App Registration is now granted permissions and we can use it as an identity to integrate with Sharepoint!
 
-# The Powershell Way
+## The Powershell Way
 But especially in the aforementioned corporate environment the _Sites.ReadWrite.All_ Permission is far to powerfull. What you want here is the _Sites.Selected_ and then enable the App for individual sites.
 This can be done with the Powershell command `Grant-PnPAzureADAppSitePermission` from the `PnP.PowerShell` module. 
 
@@ -85,12 +85,12 @@ $permission = Grant-PnPAzureADAppSitePermission -Permissions "Write" -Site $shar
 Set-PnPAzureADAppSitePermission -Permissions "FullControl" -PermissionId $permission.Id 
 ```
 
-# Summary
+## Summary
 So while creating the Sharepoint AppRegistration via the Portal is a good exercise for understanding how the components work together, doing it with the Powershell is a lot more fit for purpose. It reduces human error, is able to grant more granular permissions and once the script is set up, its much faster. Therefore I will always lean towards the 10 lines of code to create a service user for Sharepoint.
 
 In the next post, we will actually use the service user to interact with our site. 
 
-# Links
+## Links
 https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread
 
 https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets

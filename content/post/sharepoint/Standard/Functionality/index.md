@@ -6,13 +6,13 @@ draft: false
 
 In [the previous post](/post/sharepoint/standard/setup) we set up the Sharepoint integration for our instance, what can we do now?
 
-# The Documents Tab
+## The Documents Tab
 On the entities where you enabled the Integration in the wizard you should be able to access the _Documents_ Tab. This is the main hub for interacting with Sharepoint.
 I will be working with the Account for this post as I enabled this entity when setting up the integration.
 
 ![](DocumentsTab.png)
 
-# New/Upload/Preview/Download
+## New/Upload/Preview/Download
 With the _+ New_ button you can create new documents, but only subfolders and some of the most common Office formats. For everything else you would use the _Upload_ button which displays a dialog to select a file from your computer. 
 
 ![](New.png)
@@ -23,7 +23,7 @@ If you double click a folder you will navigate the grid inside the folder and th
 
 ![](Subfolders.png)
 
-# Check In/Out/Edit/Delete
+## Check In/Out/Edit/Delete
 When you single click a file (or mark the checkbox on the left) the ribbon changes. It now shows buttons for _Check in_/_Check out_, a feature to lock files for editing. In my experience this is not used that much anymore since the office documents do support multiple users editing at the same time but maybe you will find this helpful when working with formats that do not support collaboration.
 
 The _Edit_ button is something you wont need, its the same as double click! _Delete_ should explain itself. A little bit more interesting is _Edit Properties_ as the name suggests that it allows editing the metadata columns. However only filename and title are available in the dialog, making it kind of a "Rename" button. 
@@ -32,7 +32,7 @@ The _Edit_ button is something you wont need, its the same as double click! _Del
 
 Another potentially interesting button is the _Flow_ button which usually lets you execute a Flow on the selected record, allowing admins to define Flows like "Send file for approval". However in my demo environment creating a Flow from here does not work! If you made it work somehow, let me know, I will happily update the article.
 
-# Location Actions
+## Location Actions
 There are several buttons for the "location", this means the folder that is connected to Dynamics. Lets first talk about _Add Location_. While Dynamics created a folder for you when you entered the _Documents_ Tab this does not mean it needs to be the only folder! With add location you can add a second location (and more) and they do not necessarily need to be on the same site!
 
 ![](Locations.png)
@@ -49,7 +49,7 @@ And finally: _Open Location_. This is the single most used button by me. I opens
 
 ![Open Location takes you directly to the sharepoint folder](SharepointView.png)
 
-# Summary
+## Summary
 The OOTB functionality of the Sharepoint integration is great for the average users interactions: Upload, Edit, Download documents. Organize in folders and find files in the overview via _All Locations_. And whenever the views in Dynamics are not sufficient, you can always head over to the sharepoint with just 2 clicks. 
 
 And everything is nicely connected to the structured data in Dynamics record with the possibility to create more private secondary locations etc. So all in all in my humble opinion the OOTB view already provides a great experience working with documents. It might lack automation options and interaction with metadata, but we will discuss these topics in future articles in this series!
