@@ -10,6 +10,7 @@ import { getColor } from 'ts/color';
 import menu from 'ts/menu';
 import createElement from 'ts/createElement';
 import StackColorScheme from 'ts/colorScheme';
+import EnableGiscus from "./enableGiscus";
 import { setupScrollspy } from 'ts/scrollspy';
 import { setupSmoothAnchors } from "ts/smoothAnchors";
 
@@ -92,6 +93,7 @@ let Stack = {
         });
 
         new StackColorScheme(document.getElementById('dark-mode-toggle'));
+        new EnableGiscus(document.getElementById('giscus-toggle'));
     }
 }
 

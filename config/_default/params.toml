@@ -25,7 +25,7 @@ default = "dark"
 
 [comments]
 enabled = true
-provider_disabled = "giscus"
+provider = "giscus"
 
 [comments.giscus]
 repo = "Kunter-Bunt/Marius-Wodtke-Blog"

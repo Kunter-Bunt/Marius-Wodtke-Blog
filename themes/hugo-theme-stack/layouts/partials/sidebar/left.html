@@ -95,13 +95,22 @@
                     <span>{{ T "darkMode" }}</span>
                 </li>
             {{ end }}
-            <!--
+
+            <li id="emptySpacer">
+                <span></span>
+            </li>
+            <li id="cookieMessage">
+                <a href="/page/cookies">
+                    {{ partial "helper/icon" "ftcookie" }}
+                    <span>Cookie stuff (<u>learn more</u>)</span>
+                </a>
+            </li>
             <li id="giscus-toggle">
                 {{ partial "helper/icon" "toggle-left" }}
                 {{ partial "helper/icon" "toggle-right" }}
                 <span>{{ T "giscusToggle" }}</span>
             </li>
-            -->
+            
         </div>
     </ol>
 </aside>

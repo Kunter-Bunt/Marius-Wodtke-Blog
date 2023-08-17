@@ -5,7 +5,7 @@ darkMode:
     other: Dark Mode
 
 giscusToggle:
-    other: Use giscus (US Server!)
+    other: Enable comments
 
 list:
     page:
