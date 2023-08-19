@@ -2,7 +2,7 @@
 title: "PowerBI: Publishing a first Dashboard to Dynamics"
 date: 2023-08-13
 draft: false
-toc: true
+image: cover.png
 ---
 
 Did you know PowerBI Dashboards can be published to Dynamics? Its a great feature! Not only has PowerBI many options for displaying data that the regular Dynamics Dashboards lack, but it also as more options in styling. Not to speak of the possibility to integrate data from non Dataverse sources. 
