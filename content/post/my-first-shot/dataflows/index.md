@@ -2,6 +2,9 @@
 title: "My first shot at Dataflows with SQL"
 date: 2023-08-06
 draft: false
+tags: 
+    - Dataflows
+    - Azure SQL
 ---
 
 This time I will do my first experiments with Dataflows. Spoiler alert: There are quite some options left that would need a separate article, so at first glance this seems to be a powerful feature.

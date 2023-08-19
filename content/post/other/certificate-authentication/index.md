@@ -3,6 +3,9 @@ title: "Without a NuGet: Certificate Authentication with AAD and C#"
 date: 2023-08-20
 draft: false
 image: cover.png
+tags:
+    - Sharepoint
+    - Azure Active Directory
 ---
 
 Now this is something different and very specific. So I am writing this series on [Sharepoint](/post/sharepoint) and how to [integrate it from the Dynamics Backend](/post/sharepoint/custom). And Sharepoint Online has a strange restriction for the current state of the art [Azure AD App-Only](https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread) authentication. It only works if you use a certificate and not with a secret. 

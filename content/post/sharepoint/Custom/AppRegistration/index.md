@@ -2,6 +2,8 @@
 title: "Sharepoint Integration (Extended) 1: AppRegistration"
 date: 2023-06-25
 draft: false
+tags: 
+    - Sharepoint
 ---
 
 As this blog focuses on everything around Dataverse and how to integrate it, its now time to talk about Sharepoint. 

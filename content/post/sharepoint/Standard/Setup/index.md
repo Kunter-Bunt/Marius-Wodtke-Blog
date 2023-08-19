@@ -2,6 +2,8 @@
 title: "Sharepoint Integration (Standard) 1: Setup"
 date: 2023-07-01
 draft: false
+tags: 
+    - Sharepoint
 ---
 
 Well, ordering is broken now, but as I wanted to write more about Sharepoint integration with Dynamics CE I asked myself "shouldn't we talk about the standard integration first?"

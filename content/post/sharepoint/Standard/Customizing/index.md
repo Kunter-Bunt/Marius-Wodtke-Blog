@@ -2,6 +2,8 @@
 title: "Sharepoint Integration (Standard) 3: Customizing"
 date: 2023-07-16
 draft: false
+tags: 
+    - Sharepoint
 ---
 
 If you are not entirely happy with the default functionality shown in [the previous post](/post/sharepoint/standard/functionality), there are some options to tailor it. This article will discuss some customization options available to people and projects not willing to build extensive PCF controls or something similar.

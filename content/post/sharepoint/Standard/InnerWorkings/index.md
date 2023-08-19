@@ -2,6 +2,8 @@
 title: "Sharepoint Integration (Standard) 4: The Inner Workings"
 date: 2023-07-23
 draft: false
+tags: 
+    - Sharepoint
 ---
 
 Having some knowledge about the inner workings of this integration is often beneficial. It helps you track bugs and understand what can work and what can not.

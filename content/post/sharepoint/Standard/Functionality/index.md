@@ -2,6 +2,8 @@
 title: "Sharepoint Integration (Standard) 2: OOTB Functionality"
 date: 2023-07-09
 draft: false
+tags: 
+    - Sharepoint
 ---
 
 In [the previous post](/post/sharepoint/standard/setup) we set up the Sharepoint integration for our instance, what can we do now?
