@@ -70,6 +70,9 @@ In the wizard we select our Dashboard from step 5 and then it is done!
 
 ![](DynDashboardFiltered.png) 
 
+> **_NOTE:_** Missing the "PowerBI Dashboard" Option? Make sure the PowerBI Embedding Feature is enabled on your environment under Settings -> Features -> Embedded Content.
+![](FeatureSwitch.png) 
+
 ## Step 7: Sharing
 Now of course not every user should go through these steps just because this is a personal Dashboard! Lets share it. I've again marked the share button in the screenshot above. But that's not enough! The users can then select the dashboard, but they wont be able to see its contents since they dont have access to the PowerBI Service Components we created.
 
