@@ -3,6 +3,8 @@ title: "PowerBI: Embedding a Report to a form"
 date: 2023-08-27
 draft: false
 image: cover.png
+tags: 
+    - PowerBI
 ---
 
 In [the last post](/powerbi/first-dashboard) of the PowerBI Series we added a Dashboard to Dynamics. I recently came across a shortcoming of this approach. It lack the context menus. So for example the _Export data_ button is missing. Also you will have to provide the filters within the visuals. So for example via the cross filtering feature of PowerBI we were able to filter by country by clicking on it in the pie chart, but for example by city would have not been possible!
