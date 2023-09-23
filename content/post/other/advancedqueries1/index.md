@@ -7,7 +7,7 @@ image: cover.png
 
 When it comes to performance optimization I have a single advice to you: Reduce the amount of queries, period. Forget about parallelizing, List vs. Array, a StringBuilder or loop unrolling, if you have a loop with a Retrieve inside, its almost always magnitutes more efficient to look at queries than anything else. Just because of the latency. If you have a loop of 10.000 items with a retrieve inside which takes 50ms, thats 500 seconds. There are of course other methods to discuss like ExecuteMultiple and BypassCustomPluginExecution, but queries is the easiest and very efficient optimization to try. 
 
-# Select Many Relationships
+## Select Many Relationships
 Using the Navigation Properties of Earlybounds you can load a related entity. The following query starts at the account and loads all related contacts.
 ```
 var contacts = ctx.AccountSet
@@ -25,7 +25,7 @@ var contacts2 = ctx.ContactSet
     .ToList();
 ```
 
-# Select Relationship
+## Select Relationship
 ```
 var contact = ctx.AccountSet
     .Where(_ => _.Id == accountId)
@@ -56,7 +56,7 @@ var contacts = ctx.ContactSet
     .ToList();
 ```
 
-# Joining 
+## Joining 
 If we need both entities, we will have to switch to query syntax. I like to use the method syntax a lot because in my opinion its quite readable for simple queries, but fo these larger ones, arguably, query syntax is the better choice.
 ```
 var model = (from contact in ctx.ContactSet
@@ -79,7 +79,7 @@ var cont = (from contact in ctx.ContactSet
                 ).FirstOrDefault();
 ```
 
-# Filtering on related
+## Filtering on related
 Another cool feature here is the ability to filter on the related entity. So in the sample below we are only caring about the Contact, but we dont have the Id of the Account yet. Simple query could mean that we first get the Account with that exact Name and then query by ParentCustomerId, but with a join we can filter directly by `account.Name`.
 ```
 var cont = (from contact in ctx.ContactSet
@@ -89,7 +89,7 @@ var cont = (from contact in ctx.ContactSet
                 ).ToList();
 ```
 
-# Putting it all together
+## Putting it all together
 Last query is everything in one: We will do two joins by also looking at the PrimaryContactId of the Account. We will also query by a field on the account and we will return all 3 records, the contact, its account and the primary contact of the account.
 ```
 var model = (from contact in ctx.ContactSet
@@ -106,5 +106,5 @@ var model = (from contact in ctx.ContactSet
 
 Now it gets a little special: Lets assume we have 2 contacts that have that account as ParentCustomer. That means that the query will return 2 results. And that also means 2 Contacts, 2 Accounts and 2 PrimaryContacts. So you might need to post process that result before handing it back to a logic, e.g. by grouping by Account.Id. Or the logic simply does not care, need a sample? A tool exporting a .csv file with a row for each contact with some values from Account and PrimaryContact simply would iterate through the results and write down the values.
 
-# Summary
+## Summary
 Relationships and Joining are a great way to reduce queries and thus latency. Before thinking about any other optimization for slow Tools, APIs or Plugins, check your queries first and think about their dynamics. If query1 returns 100k results and foreach result another query2 has to be fired that is a BIG deal. We will soon look into optimizations for writing data to Dataverse as well to optimize you further!
