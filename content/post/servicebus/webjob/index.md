@@ -18,7 +18,7 @@ Something else often forgotten in this kind of articles is the description of th
 - `Microsoft.Azure.WebJobs.Core` => General Webjobs stuff in Program.cs
 - `Microsoft.Azure.WebJobs.Extensions.ServiceBus` => Bindings to Service Bus
 - `Microsoft.Extensions.Logging.Console` => Using the Console as a Logging Output, may not be required if you use a different logging mechanism
-- `Microsoft.PowerPlatform.Dataverse.Client` => RemoteExecutionContext class for Deserialization. And 
+- `Microsoft.PowerPlatform.Dataverse.Client` => RemoteExecutionContext class for Deserialization
 
 And of course check out [the first post](/post/servicebus/exporting-events) of this series where we set up the service bus and our possibility to send events to this service bus. So by now everytime you create an account, a message should pop up in your subscription.
 
@@ -77,7 +77,7 @@ So the parameter refers to this setting. The setting can directly contain a conn
 
 Back to the Functions.cs code, the `ServiceBusTriggerAttribute` decorates the real parameter of the function `RemoteExecutionContext message`. `RemoteExecutionContext` is part of the `Microsoft.Xrm.Sdk` namespace and is the object we passed to the Service Bus, the WebJobs SDK will automatically deserialize it.
 
-> **_IMPORTANT:_** **If you followed the first post exactly, you will receive an error here**. This is because Newtonsoft.JSON refuses to deserialize `RemoteExecutionContext`. There is a simple solution to this: Change the _Message Format_ to ".NETBinary", this format will be deserialized. If it needs to be JSON for some reason you can skip the automatic deserialization by specifying message as string (`string message`) and then deserializing yourself. The JavaScriptSerializer does work, but is exclusive to .NET Framework.
+> **_IMPORTANT:_** **If you followed the first post exactly, you will receive an error here**. This is because Newtonsoft.JSON refuses to deserialize `RemoteExecutionContext`. There is a simple solution to this: Change the _Message Format_ to ".NETBinary", this format will be deserialized. If it needs to be JSON for some reason you can skip the automatic deserialization by specifying message as string (`string message`) and then deserializing yourself. The JavaScriptSerializer does work, but is exclusive to .NET Framework. (Check [the post about plain console processing](/post/servicebus/exporting-events) for a working JSON solution)
 
 ## Setting up the App Service
 I will do this via the Azure Portal, after all if you do something in Azure the first time around, its the easiest way to achieve a result quickly.
