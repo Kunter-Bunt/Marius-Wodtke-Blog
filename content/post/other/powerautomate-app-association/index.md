@@ -28,6 +28,11 @@ But lets do this, select a Flow, navigate to the _Details_ and you will find the
 
 And thats it! Now repeat this for all Flows and think about what apps they relate to. If you cant pin a certain app, that might be the red flag that you are currently multiplexing and the users "using" the Flow might need a license.
 
+## When does it need to be done?
+Microsoft announced notifications going out on October 15th and the enforcement (the flow being turned off) will happen after 90 days. So this means you have until after Christmas before this needs to be completed. This should be a sufficient time frame to perform the association, but still needs to be planned because it will be forgotten otherwise. The official documentation is [found here](https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs#what-are-the-different-enforcements), check it for updates regarding the timeline.
+
+![](Timeline.png)
+
 ## Summary
 This was something completely different for me, I hope you did not get bored with all that legal talk. While we talk about that: Be aware that nothing here is legal advice and the licensing guides do change regularly which may render the statements made here useless. 
 For the actual matter: The change here is not to big and it should be possible to find a few hours to complete the app association within 90 days. Yet you should be aware and to be honest I think the idea of this move is for you to reevaluate if you are multiplexing and should buy additional licenses.
