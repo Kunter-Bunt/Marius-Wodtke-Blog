@@ -119,9 +119,9 @@ This token is issued by me for me and is signed by myself. When it is sent to AA
 
 To generate this token I went hunting in Microsofts NuGet. Luckily they do publish it opensource, therefore I was just able to grab relevant parts from there. I don't want to make a super long exhibit here, so I will provide you with links to all relevant files in their repository instead and only print my own part to the article:
 
-- JWT Models: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/bfe765c6fe5da6f73aabfb3b7fe865ab83bf79dd/src/client/Microsoft.Identity.Client/public/JsonWebToken.cs
-- Signing a JWT Token: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/bfe765c6fe5da6f73aabfb3b7fe865ab83bf79dd/src/client/Microsoft.Identity.Client/PlatformsCommon/Shared/CommonCryptographyManager.cs 
-- Base64Conversions: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/bfe765c6fe5da6f73aabfb3b7fe865ab83bf79dd/src/client/Microsoft.Identity.Client/Utils/Base64UrlHelpers.cs
+- JWT Models: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/src/client/Microsoft.Identity.Client/Internal/JsonWebToken.cs
+- Signing a JWT Token: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/src/client/Microsoft.Identity.Client/PlatformsCommon/Shared/CommonCryptographyManager.cs
+- Base64Conversions: https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/main/src/client/Microsoft.Identity.Client/Utils/Base64UrlHelpers.cs
 
 > **_NOTE:_** I modified and stripped the classes to then not need other things like System.Text.Json and for example the Base64UrlHelper we only need Encode.
 
