@@ -1,6 +1,6 @@
 ---
 title: "Sharepoint Integration (Extended) 3: Using the REST Endpoint"
-date: 2023-10-22
+date: 2023-10-29
 draft: false
 tags:
     - Sharepoint
