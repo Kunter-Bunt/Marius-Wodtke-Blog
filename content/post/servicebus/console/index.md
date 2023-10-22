@@ -1,6 +1,6 @@
 ---
 title: "Service Bus 3: Processing Events with a plain Console App"
-date: 2023-10-15
+date: 2023-10-22
 draft: false
 image: cover.png
 tags:

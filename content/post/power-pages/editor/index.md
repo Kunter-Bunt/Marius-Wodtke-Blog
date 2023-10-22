@@ -1,6 +1,6 @@
 ---
 title: "[VIDEO] First steps in the Power Pages Maker"
-date: 2023-10-12
+date: 2023-10-15
 draft: false
 image: cover.png
 tags:
