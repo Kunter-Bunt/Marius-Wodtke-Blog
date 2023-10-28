@@ -1,6 +1,6 @@
 ---
 title: "Dynamics CE Business Rules: Manipulating Status (Reasons)"
-date: 2023-11-05
+date: 2023-11-12
 draft: false
 image: cover.png
 tags: 
