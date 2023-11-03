@@ -10,7 +10,7 @@
     
     <section class="powerby">
         {{ with .Site.Params.footer.customText }}
-            {{ . | safeHTML }} <br/>
+            {{ . | safeHTML }} <a href="/page/legal"><u>Legal notice.</u></a><br/>
         {{ end }}
 
         {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
@@ -18,7 +18,7 @@
         {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
         {{- $ModifiedBy := `<a href="https://www.marius-wodtke.de" target="_blank" rel="noopener">Marius</a>` -}}
 
-        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
+        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }}
         {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy "ModifiedBy" $ModifiedBy) | safeHTML }}
     </section>
 </footer>

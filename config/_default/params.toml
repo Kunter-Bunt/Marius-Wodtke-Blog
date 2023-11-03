@@ -5,7 +5,7 @@ rssFullContent = true
 
 [footer]
 since = 2023
-customText = "This site is owned by Marius Wodtke, Marktgasse 21-23/27, 1090 Wien, Austria. All rights reserved."
+customText = "This site is owned by Marius Wodtke. All rights reserved."
 
 [dateFormat]
 published = "Jan 02, 2006"
