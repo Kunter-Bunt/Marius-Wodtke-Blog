@@ -13,7 +13,7 @@ Technically you know everything you need to from the [first 3 articles](/post/se
 This can be mitigated by using Infrastructure as Code (IaC). This ensures that when the feature is completed and the code for the listener is checked in, the infrastructure for it is checked in alongside, preferably in the same Pull Request. 
 
 ## Bicep
-The tool we will be using for this today is Bicep. It was developed by Microsoft for deploying Azure Resources. I won't go to much into the very basics of this tool, if you are stuck with my explanations, MS Learn has a [full learning path](https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/) providing much more help.
+The tool we will be using for this today is Bicep. It was developed by Microsoft for deploying Azure Resources. I won't go too much into the very basics of this tool, if you are stuck with my explanations, MS Learn has a [full learning path](https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/) providing much more help.
 
 But that much information we need: To deploy (execute, interpret, whatever) the contents of a .bicep file, we will need [the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli) installed. I also recommend installing the Bicep Extension if you are using VS Code, as this will grant you autocomplete features as well as linting, always welcome features if not having a firm grasp on a new language. 
 
