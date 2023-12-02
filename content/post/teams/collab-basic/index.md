@@ -1,5 +1,5 @@
 ---
-title: "Teams Integration: Collaboration Basic Experience"
+title: "Teams Integration: Basic Collaboration Experience"
 date: 2023-12-03
 draft: false
 image: cover.png
