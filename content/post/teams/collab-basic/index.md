@@ -92,4 +92,6 @@ Back when we added our record to a team, it got connected to Dynamics. When we s
 ![](ExistingCollaborate.png)
 
 # Outlook
-That was quite a heap of useful features with this integration. But did you notice how everything starts at Teams? The only direct action from Dynamics you can take is to add/edit files once the Teams connection is established. And that will change when we enable the _Enhanced Experience_ which we will explore in the [next post]().
+That was quite a heap of useful features with this integration. But did you notice how everything starts at Teams? The only direct action from Dynamics you can take is to add/edit files once the Teams connection is established. And that will change when we enable the _Enhanced Experience_ which we will explore in the [next post](/post/teams/collab-enhanced).
+
+Details may always change. Stay up to date with [the official documentation](https://learn.microsoft.com/en-us/dynamics365/sales/teams-integration/teams-collaboration) as well!
