@@ -7,3 +7,4 @@ content/post/eForms-csharp/introduction/Notes.txt
 .vs/Marius-Wodtke-Blog/FileContentIndex/*.vsidx
 .vs/Marius-Wodtke-Blog/FileContentIndex/read.lock
 .vs/Marius-Wodtke-Blog/v17/.wsuo
+public/**
