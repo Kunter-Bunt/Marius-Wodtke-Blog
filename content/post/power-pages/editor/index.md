@@ -2,7 +2,7 @@
 title: "[VIDEO] First steps in the Power Pages Maker"
 date: 2023-10-15
 draft: false
-image: cover.png
+image: cover.jpg
 tags:
     - Power Pages
     - Portals
@@ -12,4 +12,4 @@ After we [created a Power Page](/post/power-pages/setup) to serve external users
 
 Check it out [here](https://youtu.be/EiF0P7DpSmc).
 
-[![](video.png)](https://youtu.be/EiF0P7DpSmc)
+[![](video.jpg)](https://youtu.be/EiF0P7DpSmc)

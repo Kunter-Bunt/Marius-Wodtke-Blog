@@ -2,7 +2,7 @@
 title: "[VIDEO] Adding a Form to Power Pages"
 date: 2023-11-26
 draft: false
-image: cover.png
+image: cover.jpg
 tags:
     - Power Pages
     - Portals
@@ -12,4 +12,4 @@ This time we will add a form to our Power Page. This will allow users of the Web
 
 Check it out [here](https://youtu.be/IwQ0szTYAb0).
 
-[![](video.png)](https://youtu.be/IwQ0szTYAb0)
+[![](video.jpg)](https://youtu.be/IwQ0szTYAb0)

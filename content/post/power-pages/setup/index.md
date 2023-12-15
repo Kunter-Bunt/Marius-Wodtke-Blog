@@ -2,7 +2,7 @@
 title: "[VIDEO] Setting up your first Power Page"
 date: 2023-09-24
 draft: false
-image: cover.png
+image: cover.jpg
 tags:
     - Power Pages
     - Portals
@@ -11,4 +11,4 @@ Do you want to provide external users with a website fed with data from Datavers
 
 Check it out [here](https://youtu.be/kz3HtxDJIdA).
 
-[![](video.png)](https://youtu.be/kz3HtxDJIdA)
+[![](video.jpg)](https://youtu.be/kz3HtxDJIdA)
