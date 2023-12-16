@@ -2,7 +2,7 @@
 title: "Service Bus 5: Deploying Service Endpoints"
 date: 2023-12-24
 draft: false
-image: cover.png
+image: cover.jpg
 tags: 
     - Azure Service Bus
     - Service Endpoints
