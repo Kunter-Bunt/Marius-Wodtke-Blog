@@ -16,7 +16,7 @@
     },
     "host": {
       "cors": {
-        "origins": ["http://localhost:4280", "https://www.marius-wodtke.de"],
+        "origins": ["http://localhost:1313", "http://localhost:4280", "https://www.marius-wodtke.de"],
         "allow-credentials": false
       },
       "authentication": {
@@ -30,7 +30,16 @@
       "source": "pageViews",
       "permissions": [
         {
-          "actions": ["create"],
+          "actions": [
+            {
+              "action": "read",
+              "fields": {
+                "include": ["id, page"],
+                "exclude": ["date"]
+              }
+            }, 
+            "create"
+          ],
           "role": "anonymous"
         }
       ]

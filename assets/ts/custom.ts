@@ -1,26 +1,16 @@
 class MwoTrack {
     public static TrackAnonymous() {
-        const page = window.location.pathname;
-        fetch("/api/anonymouspageview",
-            {
-                method: "POST",
-                body: JSON.stringify({page: page})
-            });
-    }
-
-    public static TrackAnonymous2() {
         const data = {
             id: this.uuidv4(),
             page: window.location.pathname,
-            date: new Date().toISOString()
+            date: new Date().toISOString().split('T')[0]
           };
         
           const gql = `
-            mutation create($item: CreatePageView!) {
+            mutation create($item: CreatePageViewInput!) {
               createPageView(item: $item) {
                 id
                 page
-                date
               }
             }`;
           
@@ -48,6 +38,6 @@ class MwoTrack {
 
 window.addEventListener('load', () => {
     setTimeout(function () {
-        MwoTrack.TrackAnonymous2();
+        MwoTrack.TrackAnonymous();
     }, 0);
 })
