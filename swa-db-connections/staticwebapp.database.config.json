@@ -5,7 +5,6 @@
     "connection-string": "@env('DATABASE_CONNECTION_STRING')",
     "options": {
       "database": "blog",
-      "container": "pageViews",
       "schema": "staticwebapp.database.schema.gql"
     }
   },
@@ -17,7 +16,7 @@
     },
     "host": {
       "cors": {
-        "origins": ["http://localhost:4280", "https://www.marius-wodtke.de/"],
+        "origins": ["http://localhost:4280", "https://www.marius-wodtke.de"],
         "allow-credentials": false
       },
       "authentication": {
