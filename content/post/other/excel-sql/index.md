@@ -19,7 +19,7 @@ And since we can't define the view, we can also not export it to Excel.
 > **_NOTE:_** You can define such a view with the _FetchXml Builder_ in the _XrmToolbox_, but it will not behave correct. E.g. it wont display a name for the "illegal" column and in my testing the view also broke the Excel features.
 
 ## A solution
-We can overcome both problems with the PowerQuery feature of Excel. PowerQuery is the language that powers PowerBI ([read more here](/powerbi/)) and does not use FetchXML to get data. Instead, it uses the read-only SQL Endpoint and that means it does not share many of the limitations of FetchXML based integrations.
+We can overcome both problems with the PowerQuery feature of Excel. PowerQuery is the language that powers PowerBI ([read more here](/post/powerbi/)) and does not use FetchXML to get data. Instead, it uses the read-only SQL Endpoint and that means it does not share many of the limitations of FetchXML based integrations.
 
 So I wrote the query in SQL, entered it in the _Get Data_ dialog, authenticated to Dynamics and then loaded the data. See below, pictures tell more than a thousand words here.
 

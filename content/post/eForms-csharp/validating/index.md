@@ -4,7 +4,7 @@ date: 2023-05-28
 draft: false
 ---
 
-In [the last post](/post/eForms-scharp/generating), we've generated and serialized a notice. In [the introduction](/post/eForms-scharp/introduction), we've also already discussed that there is an [API for formally validating notices](https://cvs.preview.ted.europa.eu/swagger-ui/index.html). So let's see what our mapping is missing!
+In [the last post](/post/eforms-csharp/generating), we've generated and serialized a notice. In [the introduction](/post/eforms-csharp/introduction), we've also already discussed that there is an [API for formally validating notices](https://cvs.preview.ted.europa.eu/swagger-ui/index.html). So let's see what our mapping is missing!
 
 ## Generating a client
 For interacting with an API that already has an open API definition (here provided by Swagger) I like to use [NSwag Studio](https://github.com/RicoSuter/NSwag) to generate a client. In the studio, you enter the URL of the definition and then set the checkbox for _CSharp Client_ and then click _Generate Outputs_ to see the resulting Client class. From here the output usually needs some tuning. In the pictures below you can see what settings I have changed personally to fix the namespace, switch the serializer, combining all operations into one client and so on. When the output holds to the eyes I like to save the [.nswag](https://github.com/Kunter-Bunt/eForms-CSharp-Sample/blob/main/eForms-CSharp-Sample-App/clients/ValidationApi.nswag) to the folder where I'd like to have the .cs in the end. This makes it easy to reload the file and tweak settings or simply reproduce the output for a newer version of the API. Finally, specify the file name as a relative path and finally, click _Generate Outputs_ to generate the output as .cs.
