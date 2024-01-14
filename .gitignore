@@ -1,6 +1,6 @@
 *.presso
 resources/_gen/*
-content/post/eForms-csharp/introduction/Notes.txt
+**/notes.txt
 .vscode/settings.json
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
