@@ -137,6 +137,8 @@ protected override void ExecuteDataversePlugin(ILocalPluginContext localPluginCo
 ## Next steps
 The decision now was, is this an improvement for the existing control or should it be a fork? This is because the Custom API ties this down to Model Driven Apps which might not be wanted. But I'm in contact with Allan and it seems the Control was always aimed at Model Driven Apps anyway so the changes will be merged. Until the changes are available in [the official control](https://pcf.gallery/vat-number-validator/), you can download the control or take a look at the source code in [my fork](https://github.com/Kunter-Bunt/VATNumberValidator).
 
+> **Update:** The Fork was merged to [the official control](https://pcf.gallery/vat-number-validator/) and is available for download.
+
 ## Demo time!
 ![](Demo.gif)
 
