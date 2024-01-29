@@ -41,7 +41,7 @@ We are greeted with a Dashboard, but that demands to configure it in the setting
 
 ![](App.png)
 
-# Connect to a Team
+## Connect to a Team
 In a Teams channel, you have the + symbol at the top to add tabs, the Dynamics app will be displayed here.
 First, we will add a record to the channel. You can search for a record, but chances are that the record you want to connect is already listed in _Recents_ because you recently edited it. And then it shows in this tab as if you had it open in the real app. But this time without the navigation.
 
@@ -63,7 +63,7 @@ We can also add a view, even to the same channel. This can even work with person
 ![](Fix.png)
 ![](Fix2.png)
 
-# Documents
+## Documents
 Did you see that "_This record is successfully connected to Dynamics 365_" with the record we added to the channel? This action was not only manipulating Teams but also Dynamics where a _Microsoft Teams Collaboration Entity_ is created, linking to the channel. This allows you to visit the _Documents_ Tab in the Opportunity and see the documents belonging to the Sharepoint Site connected to the Teams channel. For the demo, I created a file in the _Files_ Tab of the channel and I can see it in Dynamics as well.
 
 ![](Documents.png)
@@ -72,13 +72,13 @@ Also, if you connected a ["regular" Sharepoint location](/post/sharepoint/standa
 
 ![](Sharepoint.png)
 
-# Connect to a chat
+## Connect to a chat
 In my chat with Alan Steiner, I added the record as well. This at first looked very similar to adding a record to a team, but at second glance there are some differences. You don't have the option to link a view and also the connected record does not show the "_This record is successfully connected to Dynamics 365_" message, meaning that the files from this chat are not connected to Dynamics. Still useful when collaborating without a full team!
 ![](AddToChat1.png)
 ![](AddToChat2.png)
 ![](AddToChat3.png)
 
-# Connect to a meeting
+## Connect to a meeting
 In a meeting, you can also connect to a record. Similar to the chat, no views and no "full connection". Also as a side pane, this looks different and not as powerful as the full forms. But it allows you to create tasks and notes for the Opportunity without leaving the context of the Meeting and should someone need the full form everyone now has the "pop-out" button at the top right as well. A link in the chat would also do, but certainly, it is more professional if you prepare this ahead of time in the meeting options.
 ![](AddToMeeting1.png)
 
@@ -86,12 +86,12 @@ In a meeting, you can also connect to a record. Similar to the chat, no views an
 
 ![When opening a meeting from the calendar, you can add the Dynamics app.](AddToMeeting3.png)
 
-# Using Collaborate again
+## Using Collaborate again
 Back when we added our record to a team, it got connected to Dynamics. When we select the _Collaborate_ button again, the team will be shown. We still can not do much from Dynamics apart from jumping to the correct team. _+ Create a new connection_ works just like the _Get Started_ in the beginning and takes us to Teams.
 
 ![](ExistingCollaborate.png)
 
-# Outlook
+## Outlook
 That was quite a heap of useful features with this integration. But did you notice how everything starts at Teams? The only direct action from Dynamics you can take is to add/edit files once the Teams connection is established. And that will change when we enable the _Enhanced Experience_ which we will explore in the [next post](/post/teams/collab-enhanced).
 
 Details may always change. Stay up to date with [the official documentation](https://learn.microsoft.com/en-us/dynamics365/sales/teams-integration/teams-collaboration) as well!
