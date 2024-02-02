@@ -4,7 +4,8 @@ date: 2024-01-29
 draft: false
 image: cover.jpg
 tags: 
-    - PowerPages
+    - Power Pages
+    - Portals
 ---
 
 The Power Platform Learners channel is not dead after the  Power  Platform Advent Calendar! Together with Ambesh Singh, we will talk more about Power Pages, THE tool for your customers and partners to effectively interact with your company through Dataverse.
