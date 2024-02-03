@@ -6,6 +6,7 @@ image: cover.jpg
 tags:
     - Power Pages
     - Portals
+    - Video
 ---
 
 We already took a look at [displaying a list to the user](/post/power-pages/list). This used the products of Dataverse which allowed the Dataverse Users to control what visitors will see on the Power Page. 

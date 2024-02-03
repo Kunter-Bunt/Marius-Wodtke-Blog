@@ -6,6 +6,7 @@ image: cover.jpg
 tags:
     - Power Pages
     - Portals
+    - Video
 ---
 
 Not only can we let users enter Data into Power Pages, but we can also show them the data we administer in Power Pages. So in this video, we will publish our product table to the users to browse our catalog.
