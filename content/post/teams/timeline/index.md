@@ -9,7 +9,7 @@ tags:
 
 We've already [talked about chat](/post/teams/chat) as the lighter integration of Teams. And there is a preview to make it even better: [Timeline Integration](https://learn.microsoft.com/en-us/dynamics365/release-plan/2023wave1/service/dynamics365-customer-service/view-teams-chat-connected-records-timeline). Even though this is marked as a customer service feature, it will still work nicely in the sales app context I've set in this series.
 
-## Enabling Timeline Integration
+## How to enable Timeline Integration?
 Luckily, the Teams Integration settings are a one-stop job. So we are again at _Sales Hub_ -> _App Settings_ -> _Chat and Collaborate_. Here it's the _Show Teams chats on the connected record's timeline (Preview)_ Flag we are looking for. Also note the fact, that this needs a Global Administrator to enable it because changes in Teams will be captured by an Application and synched back to Dynamics.
 
 ![](Enable.jpg)
