@@ -37,7 +37,7 @@ After the dialog completes, we are redirected to Teams (in a new Tab), directly 
 
 ![](Result2.png)
 
-# New Team and Channel
+## New Team and Channel
 In the previous section, we selected existing Teams and Channels. But in both steps, we had the option to create something new as well. Creating a new Team already comes with a General channel, but we also have the option to create new channels, even private ones. No other options are presented (*aside from the Sensitivity Label in the next section), so any special channel options you will have to set in Teams after being redirected.
 
 ![](NewTeam.png)

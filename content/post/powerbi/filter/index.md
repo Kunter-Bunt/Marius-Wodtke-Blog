@@ -9,7 +9,7 @@ tags:
 
 In [this post](/post/powerbi/embedded-report) of the PowerBI series, we embedded a report in a Dynamics form. But I think you also noticed that this was somewhat pointless because the report showed the same data on every record, it lacked context. This time we are going to fix this with a filter!
 
-# Simple filter
+## Simple filter
 To set a filter first, we need to find out the table and column name of the target column in the PowerBI report. You can find these in the _Table View_ when opening the report in the Desktop App.
 
 ![](Fields.jpg)
