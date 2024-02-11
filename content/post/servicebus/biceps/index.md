@@ -6,6 +6,7 @@ image: cover.png
 tags: 
     - Azure Service Bus
     - Service Endpoints
+    - Azure
 ---
 
 Technically you know everything you need to from the [first 3 articles](/post/servicebus) of this series. But as you develop more and more functionality and the amount of subscriptions or topics grows, there will be configuration errors happening. The most typical thing: Someone configures a new subscription for dev and test, finishes their feature and then forgets about it. Some time later the listener gets released to production and won't start due to the missing subscription.

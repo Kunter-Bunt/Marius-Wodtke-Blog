@@ -6,6 +6,7 @@ image: cover.png
 tags:
     - Azure Service Bus
     - Service Endpoints
+    - Azure
 ---
 
 Are you aware of the Service Endpoints of Dataverse? These are integration options to process Dataverse events like Create and Update outside of Dataverse/PowerPlatform. This "Outside of Dataverse" can be things like an API hosted anywhere, but it can also be an _Azure Service Bus_ and that is what I want to discuss here.

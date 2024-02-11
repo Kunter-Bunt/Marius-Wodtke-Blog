@@ -4,6 +4,7 @@ date: 2023-06-25
 draft: false
 tags: 
     - Sharepoint
+    - Azure
 ---
 
 As this blog focuses on everything around Dataverse and how to integrate it, it's now time to talk about Sharepoint. 

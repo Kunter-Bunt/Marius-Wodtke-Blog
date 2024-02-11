@@ -6,6 +6,7 @@ image: cover.png
 tags:
     - Azure Service Bus
     - Service Endpoints
+    - Azure
 ---
 
 In [the last post](/post/servicebus/webjob), we already set up a working processor for Dataverse events. But what if AppServices and WebJobs are not preferred or are simply not possible for you? An example would be because you are on OnPremise infrastructure or Azure VMs or the Azure Kubernetes Services are used. There has to be an option to create a processor without such helper technologies, right? Yes, of course there is and here we are going to explore how.

@@ -6,6 +6,7 @@ image: cover.png
 tags:
     - Azure Service Bus
     - Service Endpoints
+    - Azure
 ---
 
 In [the first post](/post/servicebus/exporting-events) of this series, we started with sending Dataverse Events to a Service Bus. Of course that in itself does not have any value, we need to do something with these Events!

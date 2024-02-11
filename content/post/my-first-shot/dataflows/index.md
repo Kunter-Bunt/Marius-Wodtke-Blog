@@ -5,6 +5,7 @@ draft: false
 tags: 
     - Dataflows
     - Azure SQL
+    - Azure
 ---
 
 This time I will do my first experiments with Dataflows. Spoiler alert: There are quite some options left that would need a separate article, so at first glance, this seems to be a powerful feature.

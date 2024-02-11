@@ -6,6 +6,7 @@ image: cover.jpg
 tags: 
     - Azure Service Bus
     - Service Endpoints
+    - Azure
 ---
 
 After finishing a development it's time to deploy it. In [the last post](/post/servicebus/biceps) of [this series](/post/servicebus), we covered how to deploy the Azure Service Bus. But the Service Endpoint in Dynamics linking it needs to be deployed as well!
