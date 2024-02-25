@@ -1,6 +1,6 @@
 ---
 title: "[VIDEO] Power Platform Learners: PAC support for Power Pages"
-date: 2024-02-28
+date: 2024-03-28
 draft: false
 image: cover.jpg
 tags: 
