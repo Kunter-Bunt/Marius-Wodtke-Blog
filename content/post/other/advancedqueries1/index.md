@@ -3,6 +3,8 @@ title: "Advanced LINQ Queries for Dataverse (1)"
 date: 2023-09-10
 draft: false
 image: cover.png
+tags: 
+    - Performance Optimization
 ---
 
 When it comes to performance optimization I have a single piece of advice for you: Reduce the amount of queries, period. Forget about parallelizing, List vs. Array, a StringBuilder or loop unrolling, if you have a loop with a Retrieve inside, it's almost always magnitudes more efficient to look at queries than anything else. Just because of the latency. If you have a loop of 10.000 items with a retrieve inside which takes 50ms, that's 500 seconds. There are of course other methods to discuss like ExecuteMultiple and BypassCustomPluginExecution, but queries are the easiest and most efficient optimization to try. 

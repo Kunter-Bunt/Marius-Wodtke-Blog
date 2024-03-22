@@ -7,6 +7,7 @@ tags:
     - Dataflows
     - Azure SQL
     - Azure
+    - Data Integration
 ---
 
 In the [first shot of Dataflows](/post/my-first-shot/dataflows), we've explored the feature and imported products from an Azure SQL database. But a feature without deployment is merely a PoC. 

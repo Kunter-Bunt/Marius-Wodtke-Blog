@@ -5,6 +5,7 @@ draft: false
 image: cover.png
 tags: 
     - Excel
+    - Data Integration
 ---
 
 Hopefully, this article just comes out as a "short tip" regarding Excel and Dynamics. I do assume you know the standard tools, you can select the _Export to Excel_ option on a grid to open the records in Excel. There are multiple options with _dynamic_ and _static_ worksheets as well as an online option. The other thing is the _Excel Templates_, they can predefine some evaluations and visualizations of the data. 
