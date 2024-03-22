@@ -1,5 +1,5 @@
 ---
-title: "My first shot: PCF with React"
+title: "My First Shot at PCFs with React"
 date: 2024-03-31
 draft: false
 image: cover.jpg
