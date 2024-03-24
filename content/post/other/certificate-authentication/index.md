@@ -14,7 +14,7 @@ Now this is something different and very specific. So I am writing this series o
 Let's first start with this rather easy method. There are lots of resources on the internet covering this, but it's still important to cover it as a base because a lot of concepts will be similar. Of course, we will be doing it without a NuGet.
 
 Essentially we just need to send a POST request to ht<span>tps://login.microsoftonline.com/{yourtenantid}/oauth2/v2.0/token with a form content. The form content has the following 4 parameters:  
-```
+``` c#
 "grant_type": "client_credentials"  
 "client_id": {yourappid}  
 "client_secret": {yourappsecret}  
@@ -29,7 +29,7 @@ The scope might be a little more difficult. Usually, it's the URL of the app you
 What you will get back is a JSON object that contains a property "access_token" that you will pass onto the real application in the header "Authorization" and the format "Bearer {access_token}". 
 
 Now as C#:
-```
+``` c#
 public string PerformSPRequest(string tenantId, string resource, string clientId, string secret, string site) {
     string token;
     var form = new Dictionary<string, string>
@@ -77,7 +77,7 @@ Also, check the claims tab, this will explain to you how Sharepoint knows this i
 ## Generating a certificate token with a NuGet
 There are multiple that can do it, but the NuGet `Microsoft.Identity.Client` is the current official one by Microsoft.
 
-```
+``` c#
 using Microsoft.Identity.Client;
 using System.Security.Cryptography.X509Certificates;
 
@@ -126,7 +126,7 @@ To generate this token I went hunting in Microsoft's NuGet. Luckily they do publ
 > **_NOTE:_** I modified and stripped the classes to then not need other things like System.Text.Json and for example the Base64UrlHelper we only need Encode.
 
 With these Classes in place, the code from above looks like this:
-```
+``` c#
 using System.Security.Cryptography.X509Certificates;
 
 public string PerformSPRequest(string tenantId, string resource, string clientId, string secret, string site) {

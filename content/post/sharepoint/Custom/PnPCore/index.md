@@ -27,7 +27,7 @@ Before we can manipulate Sharepoint we need to log in.
 
 I've started with a Console App (.Net 6.0) and installed 2 NuGet packages _PnP.Core_ and _PnP.Core.Auth_. 
 Then, with the new top-level statements feature I can code directly into the Program.cs file:
-```
+``` c#
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PnP.Core.Auth.Services.Builder.Configuration;
@@ -81,7 +81,7 @@ This is very similar to the sample found in the [getting started guide](https://
 
 The retrieval of that secret is done by the `GetCertificate` method mentioned in the code above. It takes the Thumbprint of the certificate, which I always find in the AppRegistrations _Certificates & Secrets_ section, but there are probably other ways as well. The code of this method looks like this:
 
-```
+``` c#
 X509Certificate2 GetCertificate(string certThumbprint)
 {
     X509Store store = new X509Store(StoreLocation.LocalMachine);
@@ -102,7 +102,7 @@ Now let's do something! I will upload a file from my computer to Sharepoint. I k
 
 To have a file to upload I added a file _Test.txt_ to the project, wrote "Hello World!" inside and set _Copy to Output Directory_ to "Copy always". Next comes the following code:
 
-```
+``` c#
 await host.StartAsync();
 
 using (var scope = host.Services.CreateScope())

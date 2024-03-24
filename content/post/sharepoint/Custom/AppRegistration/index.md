@@ -72,7 +72,7 @@ If you need to enable the app for a second Sharepoint later, you can look up the
 
 Here is the consolidated full script:
 
-```
+``` ps1
 $sp = Read-Host -Prompt "Enter the Url of the Sharepoint Site you want to use the principle with, e.g. https://crm123456.sharepoint.com/sites/Contoso"
 $appName = Read-Host -Prompt "Enter the Display Name of the Application in AAD, e.g. DataverseCE-SharepointIntegration-dev"
 $tenantDomain = Read-Host -Prompt "Enter the AAD Tenants Primary Domain, e.g. crm123456.onmicrosoft.com"

@@ -21,7 +21,7 @@ But that much information we need: To deploy (execute, interpret, whatever) the 
 ## servicebus.bicep
 In a bicep file, you define resources that receive parameters and when executed, the resource will be turned into a real thing in Azure. We can also define modules that group such resources, but let's worry about that later, just be aware, that we are about to define a module in the servicebus.bicep file.
 
-```
+``` js
 param serviceBusName string
 param location string = resourceGroup().location
 
@@ -43,7 +43,7 @@ The service bus has an `existing` before its definition. That means we don't wan
 The topic parameter is an object, so you need to pass something more complex. This of course is a parameter you don't want to specify in the CLI, but later we will define a main.bicep where we can code some complex objects.
 Lastly, this module calls another module, called subscription.bicep. And it does so with a loop `[for subscription in topic.subscriptions: ...]`. The `dependsOn` also specifies that this deployment cannot start before the topic is created. 
 
-```
+``` js
 param serviceBusName string
 param topic object
 
@@ -76,7 +76,7 @@ module subscriptionModule 'subscription.bicep' = [for subscription in topic.subs
 ## subscription.bicep
 Of course, this file also needs to be present. And its probably the most important for this article as the subscriptions and rules are the thing that connects this article to the Dynamics Service Endpoint specifics.
 
-```
+``` js
 param serviceBusName string
 param topicName string
 param subscription object
@@ -130,7 +130,7 @@ As you can see, I've hardcoded most of the settings for the Subscription here. T
 ## main.bicep
 The last file for today: main.bicep. This puts it all together, provides some parameters and is the one we are going to deploy.
 
-```
+``` js
 param serviceBusName string
 param location string = resourceGroup().location
 

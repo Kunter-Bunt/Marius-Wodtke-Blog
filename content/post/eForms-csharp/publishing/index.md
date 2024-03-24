@@ -20,7 +20,7 @@ So then there is also a difference to the Validation API in that the API Key is 
 ## Calling the API
 Now let's take our notice XML and publish the notice. You probably want to double-check your url to contain a _.preview._ now to not accidentally publish something to the real platform.
 
-```
+``` c#
 var publicationClient = factory.GetPublicationClient();
 var metadata = new Metadata
 {

@@ -46,7 +46,7 @@ Just to have a sample: In a project, we did not stick to a single topic and intr
 The Subscription is named "account-export" here, mimicking an integration. Since we will be pushing more events in the future, this subscription needs a filter as well. Since they will not show well, the properties to filter on are "http://schemas.microsoft.com/xrm/2011/Claims/EntityLogicalName" and "http://schemas.microsoft.com/xrm/2011/Claims/RequestName". And maybe if you are not using separate Bus/Topic as suggested: "http://schemas.microsoft.com/xrm/2011/Claims/Organization".
 
 For simple scenarios, you can just filter on a single entity like "account". For this just set a correlation filter like in the screenshot. Sometimes you will also want to filter on the Message "Create" or "Update" if there is maybe also a Delete event being pushed to the Bus! This can be handled with the SQL filters:
-```
+``` sql
 "http://schemas.microsoft.com/xrm/2011/Claims/EntityLogicalName" = 'account' AND
 (
 	"http://schemas.microsoft.com/xrm/2011/Claims/RequestName"='Create' OR

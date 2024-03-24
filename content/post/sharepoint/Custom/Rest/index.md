@@ -47,7 +47,7 @@ But getting a token with a certificate was not an easy task without the help of 
 ## Using Microsoft.IdentityModel.Clients.ActiveDirectory
 This NuGet is nice because it does need to be ILMerged or similar since it's loaded to the Dynamics Sandboxes. But it's also deprecated! That means it will probably stop working as soon as the Dynamics SDK is loaded to the sandboxes no longer rely on this NuGet. So probably not the best option, but certainly the easiest for a quick PoC.
 
-```
+``` c#
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 var cert = new X509Certificate2(certBytes); // certBytes is the content of the .pfx certificate file
@@ -61,7 +61,7 @@ var authorizationHeaderContent = $"Bearer {authenticationResult.AccessToken}";
 ## Using Microsoft.Identity.Client
 This is the NuGet that you should use instead of `Microsoft.IdentityModel.Clients.ActiveDirectory`. The problem here is the usual NuGet problem: You can only upload one assembly. The options are the unsupported ILMerge or the plugin packages which are in preview at the time of writing. I've tried this exact NuGet in a [dedicated article to plugin packages](/post/my-first-shot/plugin-packages), so it will work, but as said, it's in preview.
 
-```
+``` c#
 using Microsoft.Identity.Client;
 
 var cert = new X509Certificate2(certBytes); // certBytes is the content of the .pfx certificate file
@@ -84,7 +84,7 @@ Since my last article, the classes moved! If the links are dead again, try to se
 
 > **_NOTE:_** I modified and stripped the classes to then not need other things like System.Text.Json and for example the Base64UrlHelper we only need Encode.
 
-```
+``` c#
 var cert = new X509Certificate2(certBytes); // certBytes is the content of the .pfx certificate file
 
 var jwt = new JsonWebToken(new CommonCryptographyManager(), clientId, $"https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token");
@@ -105,7 +105,7 @@ var authorizationHeaderContent = $"Bearer {token}";
 
 ## Summary
 No matter what method for gaining an access token you chose, now you will have a JWT. With that let's look at one last request, and now one that is working:
-```
+``` 
 POST https://{site_url}/_api/web/folders
 
 Content-Type: "application/json;odata=verbose"

@@ -8,7 +8,7 @@ In [the first post](/post/eforms-csharp/introduction) of this series, we already
 
 ## Classes from schema
 But [eForms SDK](https://github.com/OP-TED/eForms-SDK) to the rescue: It contains the folder _schemas_ which, as the name suggests, contains the schema in the form of xsd files. For generating C# classes there is the xsd.exe which was installed for you with Visual Studio. First, copy the schemas into your project, then right-click the folder and select _Open in Terminal_ and then we can use something like `xsd /c xyz.xsd` to generate the classes for this schema. If you now try this with a file of the schemas you will quickly notice that this does not work because the .xsd of eForms (/maindoc) reference xsds of UBL in the /common folder and xsd.exe cant resolve this. You can however pass multiple files to xsd.exe so we could simply pass all the .xsd in the schema subfolders, that gives us a rather long statement in the console which is hard to repeat should the schema change in the future. But luckily you can also define a parameters file that holds the options for us so we can simply execute `xsd /c /p:parameters.xml` to generate the classes for a dozen xsds. The _parameters.xml_ looks something like this:
-```
+``` xml
 <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
 	<generateClasses language='CS' namespace='myNameSpace.Schemas'>
 		<schema>.\maindoc\UBL-ContractNotice-2.3.xsd</schema>
@@ -27,7 +27,7 @@ Of course, this series of articles comes with [a repository](https://github.com/
 ## Building a model
 When you want to publish a notice there are three root types that we want to instantiate: `ContractNoticeType` for announcing tenders, `ContractAwardNoticeType` for announcing the winner and maybe `PriorInformationNoticeType` for pre-announcing a tender. We can simply write `new ContractNoticeType()` now and then start to fill in the data from what the user entered into our actual app. For the sample repository, this will be static data from a `NoticeModel`. One advice here: Due to the XML structure with UBL, the mapping will be quite verbose. Therefore do not start to map like this:
 
-```
+``` c#
 var notice = new ContractNoticeType 
 { 
     UBLExtensions = new UBLExtensionType[]
@@ -59,7 +59,7 @@ Aside from that, we will at least need `UBLVersionID = new UBLVersionIDType { Va
 
 ## Serializing
 So now that we have a draft of what we think is a notice but we cannot pass our model to eForms directly. Instead, we need to pass it as serialized XML. For that C# offers the `XmlSerializer` class. There is just one trick I want to show you here: By default, the element will contain the namespace of the element but we can make these namespaces known globally like this.
-```
+``` c#
 var ns = new XmlSerializerNamespaces();
 ns.Add("cbc", "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2");
 ...

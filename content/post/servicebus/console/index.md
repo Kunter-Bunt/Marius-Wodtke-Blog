@@ -32,7 +32,7 @@ Next, we install the NuGets to make sure the code will compile, here's the list 
 
 And next is code. We only need two classes, program.cs and functions.cs. I chose the same split here as the WebJobs, technically of course this can all be written into the program.cs.
 
-```
+``` c#
 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 var sbNamespace = config.GetSection("AzureServiceBus")["fullyQualifiedNamespace"];
 
@@ -40,7 +40,7 @@ var client = new ServiceBusClient(sbNamespace,new DefaultAzureCredential(), new 
 ```
 
 So just like with the WebJob I created a file called appsettings.json, marked it for CopyToOutputDirectory and its content looks like this:
-```
+``` json
 {
   "AzureServiceBus": {
     "fullyQualifiedNamespace": "mariuswodtke-dev.servicebus.windows.net"
@@ -50,13 +50,13 @@ So just like with the WebJob I created a file called appsettings.json, marked it
 This "fullyQualifiedNamespace" is passed to the `ServiceBusClient` alongside the `DefaultAzureCredential` for logging in with the managed identity and `ServiceBusClientOptions` which you might want to customize depending on your open ports as these do change whether you use TCP or WebSockets here.
 
 As promised in the preparations, you don't need to use a managed identity, if you use regular SAS keys like we did with Dataverse it will look like this.
-```
+``` c#
 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 var sbConnectionString = config.GetSection("AzureServiceBus")["connectionString"];
 
 var client = new ServiceBusClient(sbConnectionString);
 ```
-```
+``` json
 {
   "AzureServiceBus": {
     "connectionString": "Endpoint=sb://mariuswodtke-dev.servicebus.windows.net/;SharedAccessKeyName=Processor;SharedAccessKey=REDACTED;EntityPath=dataverse"
@@ -69,7 +69,7 @@ To gain such a connection string, you can copy the approach from the policy of [
 
 ![](Policy.png)
 
-```
+``` c#
 var functions = new Functions();
 
 var processor = client.CreateProcessor("dataverse", "account-export", new ServiceBusProcessorOptions());
@@ -83,7 +83,7 @@ Console.ReadKey();
 Next, we are creating a processor on the subscription. Here the `ServiceBusProcessorOptions` might be interesting if you want to limit concurrent processing to 1 (MaxConcurrentCalls) like I suggested last time. Then we add the functions that will be the processors for the message and potential errors and finally call `StartProcessingAsync` to start processing. Because this method returns as soon as processing has started, I need to block the program from exiting afterward.
 
 And finally, we need to take a look at the Functions class:
-```
+``` c#
 public class Functions
 {
     private ILogger log;

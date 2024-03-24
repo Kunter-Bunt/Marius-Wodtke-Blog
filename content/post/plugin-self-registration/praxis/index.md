@@ -44,7 +44,7 @@ And for that, we won't need a whole lot of code, creation and update of the mwo_
 Why is it so short? We simply create or update another entity if our configuration entity is created or updated. By the way: The triggers on mwo_namecombination of course use SPKL for registering the plugin because we absolutely know which entity and fields we want to trigger for.
 
 But back to the registration, when you create a similar mechanism the heart of the registration will be a mapping to the registration, so let's add a (shortened) extract of this code:
-```
+``` c#
 var step = new mwo_PluginStepRegistration
 {
     mwo_EventHandler = typeof(NameCombiner).FullName,

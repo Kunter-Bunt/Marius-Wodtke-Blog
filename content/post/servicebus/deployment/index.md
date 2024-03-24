@@ -39,7 +39,7 @@ For this, we will use the help of the [Power DevOps Tools](https://marketplace.v
 And the question of course is: What is the content of svcBus.json?
 You can find the [class definition here](https://github.com/WaelHamze/xrm-ci-framework/blob/master/MSDYNV9/Xrm.Framework.CI/Xrm.Framework.CI.Common/PluginRegistration/ServiceEndpt.cs), but I will provide you with a sample as well.
 
-```
+``` json
 [
   {
     "Id": "7756786a-229c-ee11-be37-000d3a207f96",
@@ -69,7 +69,7 @@ Putting the secret directly into the file is another security concern, so I've a
 I'd still suggest putting the steps to a regular solution, there is no problem in deploying them regularly. You just have to make sure the Guid of the Service Endpoint is the same as on the Development Environment, but since that was in the exported customizations earlier, it should be no problem to configure properly.
 
 A quick note on YAML Pipelines: Variables can also be defined here with a dot, so it would look like
-```
+``` yaml
 variables:
 - name: 0.Name
   value: 'mariuswodtke-dev' 
@@ -80,7 +80,7 @@ or you use a variable group to have the traditional mode of entry which is proba
 What if you can't use the _Power DevOps Tools_? E.g. because you are not using Azure DevOps or you are not allowed to install the Tasks. Well, we can still code this! After all, Service Endpoint is a table and we can update a record there, especially since we can assume that the Guid is constant.
 
 So with C#, this can look like this:
-```
+``` c#
 var namespace = "sb://mariuswodtke-dev.servicebus.windows.net/";
 var secret = "secret";
 var svcenpt = new Entity("serviceendpoint", new Guid("7756786a-229c-ee11-be37-000d3a207f96"));
@@ -90,7 +90,7 @@ OrgService.Update(svcenpt);
 ```
 
 Or with Powershell:
-```
+``` ps1
 Set-PSRepository PSGallery -InstallationPolicy Trusted
 Install-Module Microsoft.Xrm.Data.Powershell -Confirm:$false
 

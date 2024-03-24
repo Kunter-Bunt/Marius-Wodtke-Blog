@@ -31,7 +31,7 @@ I had to implement the VAT Number Validator twice in my life already, once as a 
 Our solution there was to use the existing Azure API Management (APIM) as a proxy. You define an API on the WSDL of the European VAT Service (VIES) and add an _inbound policy_ to allow CORS from your Dynamics Environment URLs (XXX.crmY.dynamics.com). Additionally, when defining the API you can tell the APIM to perform a SOAP/REST conversion, allowing you to pass a JSON body as input which is much easier to define in JavaScript. 
 
 SOAP body:
-```
+``` js
 var soadpRequest = "<?xml version='1.0' encoding='UTF-8'?>" +
     "<SOAP-ENV:Envelope xmlns:ns0='urn:ec.europa.eu:taxud:vies:services:checkVat:types'" +
     " xmlns:ns1='http://schemas.xmlsoap.org/soap/envelope/'" +
@@ -44,7 +44,7 @@ var soadpRequest = "<?xml version='1.0' encoding='UTF-8'?>" +
 ```
 
 REST body:
-```
+``` js
 var soadpRequest = {
     countryCode: this._vatNumberElement.value.slice(0, 2).toUpperCase()
     vatNumber: this._vatNumberElement.value.slice(2)
@@ -64,7 +64,7 @@ Here is a quick rundown of how this looks.
 
 First, you need to tell the PCF Framework that you need the webAPI in the ControlManifest.Input.xml. This by the way limits the PCF to Model Driven Apps because Portals and Canvas Apps don't have that API available in the same way. 
 
-```
+``` xml
 <feature-usage>
     <uses-feature name="WebAPI" required="true" />
 </feature-usage>
@@ -72,7 +72,7 @@ First, you need to tell the PCF Framework that you need the webAPI in the Contro
 
 Then you define a request class matching the inputs of your Custom API. This is very easy here, there is just one string input "VAT".
 
-```
+``` js
 class ValidateVATRequest {
     private readonly VAT: string;
 
@@ -99,7 +99,7 @@ class ValidateVATRequest {
 
 Then we can instantiate that class and call the webAPIs `execute` method to invoke the API. After converting the response body to JSON we can use all outputs. I've used the original outputs of the VIES service, so we have `Valid`, `Name` and `Address` available.
 
-```
+``` js
 var request = new ValidateVATRequest(this._vatNumberElement.value);
 var response = await (this._context.webAPI as any).execute(request);
 var result = await response.json();
@@ -110,7 +110,7 @@ if (result.Valid == true) {
 
 And finally of course we need the Custom API. Apart from the records in CRM, this is a plugin class that extracts the VAT from the inputs, feeds it to the connected SOAP Service and extracts the response properties back to the output. 
 
-```
+``` c#
 protected override void ExecuteDataversePlugin(ILocalPluginContext localPluginContext)
 {
     var context = localPluginContext.PluginExecutionContext;

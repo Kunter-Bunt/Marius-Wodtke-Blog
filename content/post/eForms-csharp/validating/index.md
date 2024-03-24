@@ -17,7 +17,7 @@ So then I like to also build a small factory around it. That lets me manipulate 
 
 ## Calling the CVS
 Next up: Calling the Validation API - or Central Validation Service (CVS). 
-```
+``` c#
 var factory = new ClientFactory(config, apiKey);
 var client = factory.GetValidationClient();
 
@@ -37,11 +37,11 @@ With a pre-generated client, this is quite straightforward to make the API call.
 > **_NOTE:_**  Depending on how much you have mapped at this stage you might get 400 responses from the service which will pop up as ApiExceptions. It is important to note that the definition of the API states that this is caused by the parameters like Language and Version, which is also printed to the Exception Message. But make sure to check the Result as well, here the real response from the service is noted, in the picture below you can see that the actual error is regarding the XML itsel! It is missing required properties. ![The actual response from the service is in the Result, not the Message](400Error.png)
 
 Sadly there is another problem: The definition of the API which returns an application/xml content is not interpreted by NSwag as an XML File being returned because there is no schema given for this. I had to edit the return value [here](https://github.com/Kunter-Bunt/eForms-CSharp-Sample/blob/main/eForms-CSharp-Sample-App/clients/ValidationClient.cs#LL193C34-L193C34):
-```
+``` c#
 return new FileResponse(status_, headers_, new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(await response_.Content.ReadAsStringAsync())), client_, response_);
 ```
 Now we can read the response and with a simple XML deserialization against our _Paste XML As Classes_ class we can also check the result for validation errors (schematronoutputFailedassert) and output those in a structured way. The sample app uses extension methods here to provide a small footprint in the main logic.
-```
+``` c#
 var schematronoutput = response.DeserializeAsShematron();
 
 if (schematronoutput.HasErrors())

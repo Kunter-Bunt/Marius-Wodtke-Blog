@@ -11,7 +11,7 @@ When it comes to performance optimization I have a single piece of advice for yo
 
 ## Select Many Relationships
 Using the Navigation Properties of Earlybounds you can load a related entity. The following query starts at the account and loads all related contacts.
-```
+``` c#
 var contacts = ctx.AccountSet
     .Where(_ => _.Id == accountId)
     .SelectMany(_ => _.contact_customer_accounts)
@@ -20,7 +20,7 @@ var contacts = ctx.AccountSet
 ```
 
 That alone does not yield an immediate optimization, because I could have expressed that as well with a "simple" query.
-```
+``` c#
 var contacts2 = ctx.ContactSet
     .Where(_ => _.ParentCustomerId.Id == accountId)
     .Select(_ => new Contact { FirstName = _.FirstName, LastName = _.LastName })
@@ -28,7 +28,7 @@ var contacts2 = ctx.ContactSet
 ```
 
 ## Select Relationship
-```
+``` c#
 var contact = ctx.AccountSet
     .Where(_ => _.Id == accountId)
     .Select(_ => _.account_primary_contact)
@@ -38,7 +38,7 @@ var contact = ctx.AccountSet
 
 This sample is a little different and this time it's an actual saving. We are selecting a single value relationship here, the primary contact of an account. If we do the same with simple queries, we will need two queries. Doing it with a single query saves the latency once, but will put a little more load on the database to perform the join, which is usually far less than a latency.
 
-```
+``` c#
 var account = ctx.AccountSet
     .Where(_ => _.Id == accountId)
     .Select(_ => new Account { PrimaryContactId = _.PrimaryContactId })
@@ -51,7 +51,7 @@ var contact2 = ctx.ContactSet
 ```
 
 Sadly this method still has some shortcomings, what if I want both values from the contact and account? The following code DOES NOT WORK, it will only fill the FirstName property.
-```
+``` c#
 var contacts = ctx.ContactSet
     .Where(_ => _.Id == contactId)
     .Select(_ => new Contact { FirstName = _.FirstName, contact_customer_accounts = _.contact_customer_accounts })
@@ -60,7 +60,7 @@ var contacts = ctx.ContactSet
 
 ## Joining 
 If we need both entities, we will have to switch to query syntax. I like to use the method syntax a lot because in my opinion, it's quite readable for simple queries, but for these larger ones, arguably, query syntax is the better choice.
-```
+``` c#
 var model = (from contact in ctx.ContactSet
             join account in ctx.AccountSet on contact.ParentCustomerId.Id equals account.AccountId
             where contact.ContactId == contactId
@@ -74,7 +74,7 @@ That sample outputs both the Account and Contact here. There are some things to 
 
 Also, notice how I've used `contact.ContactId` in the where clause and `account.AccountId` in the join. Using `contact.Id` is legal in the simple query below, but if you are working with a Join, you will have to use the long id names instead.
 
-```
+``` c#
 var cont = (from contact in ctx.ContactSet
                 where contact.Id == contactId
                 select new Contact { FirstName = contact.FirstName }
@@ -83,7 +83,7 @@ var cont = (from contact in ctx.ContactSet
 
 ## Filtering on related
 Another cool feature here is the ability to filter on the related entity. So in the sample below, we are only caring about the Contact, but we don't have the ID of the Account yet. A simple query could mean that we first get the Account with that exact Name and then query by ParentCustomerId, but with a join, we can filter directly by `account.Name`.
-```
+``` c#
 var cont = (from contact in ctx.ContactSet
                 join account in ctx.AccountSet on contact.ParentCustomerId.Id equals account.AccountId
                 where account.Name == "Alpine Ski House (sample)"
@@ -93,7 +93,7 @@ var cont = (from contact in ctx.ContactSet
 
 ## Putting it all together
 The last query is everything in one: We will do two joins by also looking at the PrimaryContactId of the Account. We will also query by a field on the account and we will return all 3 records, the contact, its account and the primary contact of the account.
-```
+``` c#
 var model = (from contact in ctx.ContactSet
                 join account in ctx.AccountSet on contact.ParentCustomerId.Id equals account.AccountId
                 join primaryContact in ctx.ContactSet on account.PrimaryContactId.Id equals primaryContact.ContactId

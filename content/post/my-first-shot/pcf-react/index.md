@@ -35,7 +35,7 @@ Other commands you might need are `npm run refreshTypes` after you changed the _
 
 ## The component
 A lot of the magic of the _VAT Number Validator_ happened in index.ts, this will be much different even in the easiest React controls because you want to work in .tsx files instead. I named my entry-point _Control(.tsx)_ in correlation to the convention for _App(.tsx)_ as the entry-point for native apps. The index.ts will call this entry-point and pass along some needed objects, like the input parameters and a function that will ultimately call `notifyOutputChanged` to persist the calculated results to the actual form field. In contrast to classic PCFs this happens in the `updateView` method which looks like this in my case:
-```
+``` js
 public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
     const props: IControlProps = {
         context: context,
@@ -61,7 +61,7 @@ So, updateView creates the root React element and passes the context with the in
 
 Now I can use my _Control.tsx_ to define the elements that are rendered inside. I want to mention the concept of `useState`: It returns a getter and a setter. And when a component uses the getter it will be rerendered every time the setter is called. So in the following sample, when vatStates.img is set asynchronously after the correct image is determined and loaded, the img element will be refreshed automatically.
 
-```
+``` react
 <img 
     src={vatStates.img} 
     className='pcfvatimage'
@@ -72,7 +72,7 @@ The variable vatStates is already a complex object here, as I prefer to extract 
 
 This preview also includes Fluent UI and using it should give you a look that is consistent with the Microsoft designs. You can [find the component here](https://developer.microsoft.com/en-us/fluentui#/controls/web), I've used a TextField as input.
 
-```
+``` react
 <TextField 
     className='pcfvatinput' 
     value={vatStates.input} 
@@ -89,7 +89,7 @@ There is not much to elaborate on this component, you can work here as explained
 I did not want to inline styling and wanted to work with a .css module, however I couldn't make the sandbox pick it up and instead used a regular .css. A .css just has to be referenced in the _ControlManifest.Input.xml_ and then you can use the defined classes in your components.
 
 As already mentioned, the sandbox does not work correctly with `getResource`, it loads the resource when observing the network, but passes undefined to the callback. For debugging purposes, I solved this with a ternary, rendering a fixed image in the sandbox so that styling can be checked.
-```
+``` js
 context.resources.getResource(
     "img/at.png",
     data => data

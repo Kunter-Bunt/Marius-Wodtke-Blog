@@ -32,7 +32,7 @@ Next, we install the NuGets to make sure the code will compile, here's the list 
 
 And next is code. We only need two classes, program.cs and functions.cs, I'll start with program.cs
 
-```
+``` c#
 var hostBuilder = new HostBuilder();
 hostBuilder.ConfigureWebJobs((context, builder) => {
     builder.AddServiceBus(options => options.MaxConcurrentCalls = 1);
@@ -41,7 +41,7 @@ hostBuilder.ConfigureWebJobs((context, builder) => {
 These first lines contain an important concept used in WebJobs: The HostBuilder. It configures the WebJob before it is run, this allows the WebJobs to be "triggered" and not just be a continuously running application. Well actually they are of course but things like waiting for a new message are not an explicit code operation but a definition within the Functions.
 We are adding a Service Bus here, we will discuss later how the WebJob knows which Service Bus we want to connect to. The option for MaxConcurrentCalls = 1 makes the job process one message after another. This is great for debugging and usually makes sure the receiving database does not get overwhelmed. But it can also lead to a bottleneck within your processor. An idea for this I have seen in projects is to make this a variable in the appsettings that is set to 1. The value is then either scaled in deployment or directly in the running AppService on Azure by an Administrator. If you connect to Dataverse make sure to not use a value bigger than 10 because a) it won't scale well and b) you might get issues with the ServiceClient since you cannot open to many connections to Dataverse.
 
-```
+``` c#
 hostBuilder.ConfigureLogging((context, b) =>
 {
     b.AddConsole();
@@ -50,7 +50,7 @@ hostBuilder.ConfigureLogging((context, b) =>
 Next is logging, I'm just using the Console here, but I still wanted to include this to the post, to make you aware that there are more options here, like Application Insights if you want to stay within Azure.
 Once everything is configured we build and run the HostBuilder. This `RunAsync()` will block the console indefinitely and usually it throws here if you misconfigured something.
 
-```
+``` c#
 var host = hostBuilder.Build();
 using (host)
 {
@@ -59,7 +59,7 @@ using (host)
 ```
 
 Ok, over to the Functions.cs. As the name suggests, this is the entry point for our functionality. 
-```
+``` c#
 public static void ProcessQueueMessage([ServiceBusTrigger("dataverse", "account-export", Connection = "AzureServiceBus")] RemoteExecutionContext message, ILogger log)
 {
     log.LogInformation(message.MessageName);
@@ -67,7 +67,7 @@ public static void ProcessQueueMessage([ServiceBusTrigger("dataverse", "account-
 
 ```
 Technically, these are only 2 lines of code, but a lot is going on. I'll start with the `ServiceBusTriggerAttribute`, the first parameter ("dataverse") here is the topic and the second one ("account-export") is the subscription. The Connection parameter ("AzureServiceBus") is just a reference to the settings, so a quick dive into the appsettings.json file.
-```
+``` json
 {
   "AzureServiceBus": {
     "fullyQualifiedNamespace": "mariuswodtke-dev.servicebus.windows.net"
