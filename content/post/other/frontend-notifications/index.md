@@ -34,9 +34,9 @@ function ClearFormNotification(formContext) {
 
 ![A form notification with level INFO is gray.](FormInfo.gif)
 
-![A form notification with level INFO is yellow.](FormWarning.gif)
+![A form notification with level WARNING is yellow.](FormWarning.gif)
 
-![A form notification with level INFO is red.](FormError.gif)
+![A form notification with level ERROR is red.](FormError.gif)
 
 Be careful, if you are planning multiple notifications on the same form, as soon as you have two, they will be folded. And while the top level keeps the color of the highest level, the unfolded notifications are gray and the level is only shown in the icon, making it harder to differentiate them. 
 
@@ -88,9 +88,9 @@ Also, no formContext is needed, making this suitable for views and "global" scri
 
 ![A global notification with level INFO is gray.](GlobalInfo.gif)
 
-![A global notification with level INFO is yellow.](GlobalWarning.gif)
+![A global notification with level WARNING is yellow.](GlobalWarning.gif)
 
-![A global notification with level INFO is red.](GlobalError.gif)
+![A global notification with level ERROR is red.](GlobalError.gif)
 
 ![A global notification persists through navigation and may have an action.](GlobalSwitch.gif)
 
