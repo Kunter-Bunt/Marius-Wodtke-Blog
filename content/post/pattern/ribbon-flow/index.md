@@ -87,7 +87,7 @@ We can also update the field through the OData Web API. This does not require th
 ``` JS
 function TriggerFlow(entityName, entityId, fieldLogicalName, messageForUser, displayDuration) {
     var updateEntity = {};
-    updateEntity[fieldLogicalName] = Date.now();
+    updateEntity[fieldLogicalName] = new Date();
     
     if (!messageForUser)
         messageForUser = "Operation successfully started!"
