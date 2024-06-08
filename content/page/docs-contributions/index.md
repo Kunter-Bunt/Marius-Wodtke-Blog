@@ -5,6 +5,7 @@ date: 2023-03-24
 
 Self-awareness page for collecting my requests/suggestions for the docs.
 
+- 2024-06-08 - [Add limition for dataflows with administration mode](https://github.com/MicrosoftDocs/powerquery-docs/pull/547) 
 - 2024-03-04 - [Enable enhanced experience for email attachments - Configuration wording](https://github.com/MicrosoftDocs/dynamics-365-customer-engagement/pull/3244) 
 - 2024-03-04 - [File Behavior in new designer](https://github.com/MicrosoftDocs/power-automate-docs/issues/1388)
 - 2024-01-17 - [Add Refresh step to Post configuration for custom entity](https://github.com/MicrosoftDocs/dynamics-365-customer-engagement/pull/3218)
