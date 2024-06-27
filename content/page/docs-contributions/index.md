@@ -5,6 +5,7 @@ date: 2023-03-24
 
 Self-awareness page for collecting my requests/suggestions for the docs.
 
+- 2025-06-25 - [Custom Connector for Timeline documentation - Icon numbers](https://github.com/microsoft/PowerApps-Samples/issues/550)
 - 2024-06-08 - [Add limitation for dataflows with administration mode](https://github.com/MicrosoftDocs/powerquery-docs/pull/547) 
 - 2024-03-04 - [Enable enhanced experience for email attachments - Configuration wording](https://github.com/MicrosoftDocs/dynamics-365-customer-engagement/pull/3244) 
 - 2024-03-04 - [File Behavior in new designer](https://github.com/MicrosoftDocs/power-automate-docs/issues/1388)
