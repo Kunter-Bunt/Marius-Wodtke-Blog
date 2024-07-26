@@ -4,6 +4,8 @@ date: 2023-03-24
 ---
 
 Self-awareness page for collecting my requests/suggestions for the docs.
+- 2025-07-26 - [4 Fixes on Calling Cloud Flows from Power Pages](https://github.com/MicrosoftDocs/power-pages-docs/pull/146)
+Self-awareness page for collecting my requests/suggestions for the docs.
 - 2025-06-29 - [Microsoft Authentication Provider - Client Secret correction](https://github.com/MicrosoftDocs/power-pages-docs/pull/144)
 - 2025-06-25 - [Custom Connector for Timeline documentation - Icon numbers](https://github.com/microsoft/PowerApps-Samples/issues/550)
 - 2024-06-08 - [Add limitation for dataflows with administration mode](https://github.com/MicrosoftDocs/powerquery-docs/pull/547) 
