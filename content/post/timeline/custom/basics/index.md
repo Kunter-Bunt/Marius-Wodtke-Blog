@@ -21,7 +21,7 @@ This class you are specifying needs to implement a certain interface called `IRe
 ## init
 This is the first bummer. The sample (at the time of writing) does not include a definition for the given context since the referenced `mscrm.d.ts` is missing. We will try to fix that later, but you could type it into `any` here and just save it to a class property/field.
 
-```
+``` TS 
 async init(context: any, config?: JSON | undefined): Promise<void> {
     this.context = context;
     this.config = config;
@@ -34,7 +34,8 @@ Apart from that you have static namespaces like Xrm.WebApi or Xrm.Utility availa
 
 ## getRecordSourceInfo
 This is a very simple function, it just returns an object with a name property, done. No special requirements for the name, but it should correspond to the module aka the connector you are implementing. I've used the class name as the default.
-```
+
+``` TS 
 getRecordSourceInfo(): IRecordSourceInfo {
     return {
         name: MyRecordSource.name
@@ -44,7 +45,8 @@ getRecordSourceInfo(): IRecordSourceInfo {
 
 ## getRecordsData
 This function is called onLoad, on refresh and whenever the filters or search is used. It shall return the data based on the filters (if present). Here is the absolute minimal extract.
-```
+
+``` TS 
 async getRecordsData(request: IRecordsDataRequest, filter?: IFilterRequest | undefined): Promise<IRecordsDataResponse> {
     this.records = this.records ?? [{
         id: "1",
