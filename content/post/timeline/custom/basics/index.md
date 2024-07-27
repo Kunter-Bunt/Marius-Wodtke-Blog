@@ -16,6 +16,8 @@ But sometimes this is not feasible, e.g. due to the security setup with activiti
 ## The Feature
 But getting there will be quite a journey. First of all, I'm talking about a feature Microsoft calls [_Custom Connectors with the timeline control_](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/custom-connectors-timeline-control). This is a high-code extension that you will find in the _Advanced_ section of the Timeline control settings. You enter the unique name of a webresource and the name of the primary class.
 
+![The section for custom connectors is found in _Advanced_](register1.jpg) ![The unique name of the webresource and the (full) name of the entrypoint is needed](register2.jpg)
+
 This class you are specifying needs to implement a certain interface called `IRecordSource` which is found in [Interfaces.d.ts](https://github.com/microsoft/PowerApps-Samples/blob/master/model-driven-apps/custom-connectors/SecondaryRecordSource/solution/Interfaces.d.ts) in the sample linked at the bottom of the article. This requires you to implement 4 (+ 2 optional) methods.
 
 ## init
