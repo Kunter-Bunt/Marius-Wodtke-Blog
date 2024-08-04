@@ -1,6 +1,6 @@
 ---
 title: "Timeline Custom Connectors 2: Retrieving Data"
-date: 2024-08-03
+date: 2024-08-04
 draft: false
 image: cover.jpg
 tags: 
