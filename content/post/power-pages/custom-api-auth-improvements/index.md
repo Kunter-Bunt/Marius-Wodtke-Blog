@@ -1,5 +1,5 @@
 ---
-title: "[VIDEO] Power Pages Actions - Authorization Configuration Improvments"
+title: "[VIDEO] Power Pages Actions - Authorization Configuration Improvements"
 date: 2024-09-01
 draft: false
 image: cover.jpg
