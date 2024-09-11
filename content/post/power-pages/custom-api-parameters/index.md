@@ -78,13 +78,13 @@ var outputs = {
 ### Float
 ``` JS
 var inputs = {
-   Integer: 5.5
+   Float: 5.5
 }
 ```
 
 ``` JS
 var outputs = {
-    Integer: 5.5
+    Float: 5.5
 }
 ```
 
