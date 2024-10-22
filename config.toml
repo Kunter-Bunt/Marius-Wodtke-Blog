@@ -1,5 +1,4 @@
 baseURL = 'https://www.marius-wodtke.de/'
-languageCode = 'en-us'
 title = 'Marius Wodtke'
 theme = 'hugo-theme-stack'
 favicon = 'favicon.ico'
