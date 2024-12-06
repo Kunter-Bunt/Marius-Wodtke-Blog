@@ -1,6 +1,6 @@
 ---
 title: "Timeline: Are auto-posts annoying you?"
-date: 2024-12-29
+date: 2025-01-05
 draft: false
 image: cover.jpg
 tags: 
