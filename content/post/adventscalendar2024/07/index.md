@@ -1,7 +1,7 @@
 ---
-title: "Power Platform Advent Calendar: 01.12.2024 Kick-Off"
+title: "Power Platform Advent Calendar: How to integrate translation by using AI - Options for the dictionary?"
 date: 2024-12-07
-draft: true
+draft: false
 image: /post/adventscalendar2024/cover.jpg
 tags:
     - Video

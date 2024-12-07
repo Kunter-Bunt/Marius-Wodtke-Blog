@@ -1,7 +1,7 @@
 ---
-title: "Power Platform Advent Calendar: 01.12.2024 Kick-Off"
+title: "Power Platform Advent Calendar: 2024 Kick-Off"
 date: 2024-12-01
-draft: true
+draft: false
 image: /post/adventscalendar2024/cover.jpg
 tags:
     - Video
