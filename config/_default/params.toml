@@ -18,7 +18,7 @@ subtitle = "Hi, I'm Marius, Consultant for Dynamics 365 CE at Avanade. I special
 [sidebar.avatar]
 enabled = true
 local = true
-src = "images/MariusWodtke.png"
+src = "images/MariusWodtke.jpg"
 
 [colorScheme]
 default = "dark"
