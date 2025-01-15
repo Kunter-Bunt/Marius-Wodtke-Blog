@@ -4,10 +4,10 @@ date: 2023-06-03
 draft: false
 ---
 
-Oh, you're back! So this means you've progressed with the validation from [the last article](/post/eForms-scharp/validating) so much, that you are ready to publish a first notice. Well, at least to the preview environment.
+Oh, you're back! So this means you've progressed with the validation from [the last article](/post/eForms-cscharp/validating) so much, that you are ready to publish a first notice. Well, at least to the preview environment.
 
 ## Generating a client
-So again, new API, same game, let's use [NSwag Studio](https://github.com/RicoSuter/NSwag) to generate a client. I do assume you have read [the last article](/post/eForms-scharp/validating), so you are already familiar with the options of NSwag. The settings are quite similar here, so you can start with a copy of your old config and just change the _Specification Url_, _Namespace_, _Class Name_ and _Output file path_. To recall, the swagger is found [here](https://enotices2.preview.ted.europa.eu/esenders/swagger-ui/) and the specification URL is https://enotices2.preview.ted.europa.eu/esenders/api/v2/notice/v3/api-docs/public.
+So again, new API, same game, let's use [NSwag Studio](https://github.com/RicoSuter/NSwag) to generate a client. I do assume you have read [the last article](/post/eForms-cscharp/validating), so you are already familiar with the options of NSwag. The settings are quite similar here, so you can start with a copy of your old config and just change the _Specification Url_, _Namespace_, _Class Name_ and _Output file path_. To recall, the swagger is found [here](https://enotices2.preview.ted.europa.eu/esenders/swagger-ui/) and the specification URL is https://enotices2.preview.ted.europa.eu/esenders/api/v2/notice/v3/api-docs/public.
 
 You can also work off the configuration of the sample app, of course, it is found [here](https://github.com/Kunter-Bunt/eForms-CSharp-Sample/blob/main/eForms-CSharp-Sample-App/clients/PublicationApi.nswag).
 
@@ -36,10 +36,10 @@ What you get back is a success indicator and a URL with the validation result. S
 
 ![The resulting output of the sample app for a successful publish](SuccessfulPublish.png)
 
-> **_NOTE:_** For my testing I have created an account with the EU in the [introduction article](/post/eForms-scharp/introduction). This one does receive 403 errors when trying to publish a notice. Even on the preview instance! For publishing notices you need to pass an authorization process with the EU first, so for the screenshot I had to resort to an API Key from the project.
+> **_NOTE:_** For my testing I have created an account with the EU in the [introduction article](/post/eForms-cscharp/introduction). This one does receive 403 errors when trying to publish a notice. Even on the preview instance! For publishing notices you need to pass an authorization process with the EU first, so for the screenshot I had to resort to an API Key from the project.
 
 ## Summary
-It's done! A notice published and may it be only to the preview environment! So let's recap, in [the beginning](/post/eForms-scharp/introduction), we started by finding the API specifications and created an account with the EU. Then, with the help of [the eForms SDK](https://github.com/OP-TED/eForms-SDK), we [created our first notice XMLs](/post/eForms-scharp/generating). After that, we [refined our output](/post/eForms-scharp/validating) with the Validation API. Finally, in this article, we generated a client for the Publication API, fixed the errors from the auto-generation and uploaded our validated notice to the service. 
+It's done! A notice published and may it be only to the preview environment! So let's recap, in [the beginning](/post/eForms-cscharp/introduction), we started by finding the API specifications and created an account with the EU. Then, with the help of [the eForms SDK](https://github.com/OP-TED/eForms-SDK), we [created our first notice XMLs](/post/eForms-cscharp/generating). After that, we [refined our output](/post/eForms-cscharp/validating) with the Validation API. Finally, in this article, we generated a client for the Publication API, fixed the errors from the auto-generation and uploaded our validated notice to the service. 
 
 With this the series comes to an end, I hope the read was helpful for your journey with eForms and thanks for stopping by!
 

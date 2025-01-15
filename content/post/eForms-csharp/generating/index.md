@@ -74,4 +74,4 @@ And that's it, because of the namespace fuzz I encapsulated the serialization in
 ## Summary
 To get an XML we first transformed the schema files (.xsd) of the eForms SDK into a .cs file with all the classes necessary to build a notice, award or prior information. Then we mapped our application model to the models of eForms and finally serialized the model into an XML file. 
 
-Next up will be to validate that model for which we will use the Validation API of eForms. But that's the topic of [the next post](/post/eForms-scharp/validating)!
+Next up will be to validate that model for which we will use the Validation API of eForms. But that's the topic of [the next post](/post/eForms-cscharp/validating)!
