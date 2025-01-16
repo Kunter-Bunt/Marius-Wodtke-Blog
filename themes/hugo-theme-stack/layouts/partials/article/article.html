@@ -9,3 +9,11 @@
         {{ partialCached "article/components/math.html" . }}
     {{ end }}
 </article>
+
+
+{{ if .Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from '/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+{{ end }}
