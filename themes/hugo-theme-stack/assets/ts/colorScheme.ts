@@ -9,7 +9,8 @@ class StackColorScheme {
         this.bindMatchMedia();
         this.currentScheme = this.getSavedScheme();
 
-        this.dispatchEvent(document.documentElement.dataset.scheme as colorScheme);
+        // The next line breaks the refreshing of mermaid (article.html)
+        // this.dispatchEvent(document.documentElement.dataset.scheme as colorScheme);
 
         if (toggleEl)
             this.bindClick(toggleEl);

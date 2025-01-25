@@ -14,6 +14,7 @@
 {{ if .Store.Get "hasMermaid" }}
   <script type="module">
     import mermaid from '/npm/mermaid/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ startOnLoad: true, theme: document.documentElement.dataset.scheme });
+    window.addEventListener('onColorSchemeChange', (event) => location.reload());
   </script>
 {{ end }}
