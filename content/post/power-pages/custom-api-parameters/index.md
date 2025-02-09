@@ -17,6 +17,19 @@ This concept does not apply to the outputs. They are pretty much left untouched 
 
 > *: The adapter could evaluate the Metadata to be sure, but that would have a performance impact with additional queries to Dynamics.
 
+Should the automatic parsing fail to recognize a type due to the value matching multiple types (e.g. "5" can be an integer, but also a string), the correct type can be annotated with an @, see the respective section ("Parser overwrite") for the correct name and [this article](/post/power-pages/custom-api-parser/) for more details. Sample:
+
+``` JS
+// likely to be misinterpreted as Integer
+var inputs = {
+   String: "5"
+}
+// Will be passed to the Custom API as String
+var inputs2 = {
+   ["String@string"]: "5"
+}
+```
+
 ## Field Types
 For this article, I created a simple Custom API that returns all inputs to the outputs. For every type, there was an input and output defined named like the type. So both the `Custom API Request Parameter` and `Custom API Response Property` for the type `String` are called _String_. 
 
@@ -34,6 +47,8 @@ var outputs = {
     String: "Hello"
 }
 ```
+
+Parser overwrite: @string
 
 ### StringArray
 ``` JS
@@ -62,6 +77,8 @@ var outputs = {
 }
 ```
 
+Parser overwrite: @guid
+
 ### Integer
 ``` JS
 var inputs = {
@@ -75,6 +92,8 @@ var outputs = {
 }
 ```
 
+Parser overwrite: @int
+
 ### Float
 ``` JS
 var inputs = {
@@ -87,6 +106,8 @@ var outputs = {
     Float: 5.5
 }
 ```
+
+Parser overwrite: @float
 
 ### Decimal
 To mark something as a decimal, pass it as a string with an "m" at the end.
@@ -102,6 +123,8 @@ var outputs = {
 }
 ```
 
+Parser overwrite: @decimal
+
 ### Boolean
 ``` JS
 var inputs = {
@@ -114,6 +137,8 @@ var outputs = {
     Boolean: true
 }
 ```
+
+Parser overwrite: @bool
 
 ### DateTime
 ``` JS
@@ -128,6 +153,8 @@ var outputs = {
 }
 ```
 
+Parser overwrite: @datetime
+
 ### Picklist
 Notice here that the required property for the input is `OptionSetValue` while in the output it is called `Value`.
 ``` JS
@@ -135,6 +162,10 @@ var inputs = {
     Picklist: {
         OptionSetValue: 1
     }
+} 
+// or
+var inputs2 = {
+    ["Picklist@picklist"]: 1
 }
 ```
 
@@ -146,6 +177,8 @@ var outputs = {
 }
 ```
 
+Parser overwrite: @picklist
+
 ### Money
 Notice here that the required property for the input is `Money` while in the output it is called `Value`.
 ``` JS
@@ -153,6 +186,10 @@ var inputs = {
     Money: {
         Money: 7.8
     }
+}
+// or
+var inputs2 = {
+    ["Money@money"]: 7.8
 }
 ```
 
@@ -163,6 +200,8 @@ var outputs = {
     }
 }
 ```
+
+Parser overwrite: @money
 
 ### EntityReference
 To be recognized as an EntityReference, the properties `LogicalName` and `Id` should be present.
