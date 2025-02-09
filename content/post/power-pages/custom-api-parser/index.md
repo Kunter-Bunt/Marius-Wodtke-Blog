@@ -10,6 +10,8 @@ tags:
 
 In [a recent article](/post/power-pages/custom-api-parameters/) I detailed the possible parameters with Power Pages Actions and how the parser will recognize them. 
 
+Repository Link: https://github.com/Kunter-Bunt/PowerPagesActions
+
 ## The problem
 However, Harish Karyattu reached out and made me aware of a problem he was facing with this. He had a string input for his Custom API and the parser misinterpreted the inputs for a Guid. The input in question here stemmed from a payment gateway, so changing the input was definitely not an option.
 
@@ -82,3 +84,5 @@ This is only needed in case mismatches are happening or are expected, e.g. due t
 To finish this article, here is a sample how such a mismatch and its correction will look like in the network tab.
 
 ![](cover.jpg)
+
+Repository Link: https://github.com/Kunter-Bunt/PowerPagesActions

@@ -10,6 +10,8 @@ tags:
 
 Previous videos showed passing [a string](/post/power-pages/custom-api/) and [an entity reference](/post/power-pages/custom-api-bound/), but the other parameters are missing an explanation. And while for some types, like integer, this might not be needed, but with complex types, like EntityCollection, it's not that clear. So here is a reference for all possible inputs for Custom APIs and their respective outputs.
 
+Repository Link: https://github.com/Kunter-Bunt/PowerPagesActions
+
 ## General concepts
 The Actions Adapter needs to guess your input, so you will find, that for complex types, there is something chosen to identify them correctly. For example, both OptionSetValue (Picklist) and Money have a Value property in their definition in C#. But how would the Actions Adapter would decide what `{ Value: 3 }` is?* So instead `{ OptionSetValue: 3 }` and `{ Money: 3 }` make for a clear differentiation.
 
@@ -322,3 +324,5 @@ var outputs = {
 The Power Pages Actions solution can handle all possible input types. Some types like Decimal might need special handling and complex parameters like Entity need extra care to ensure that the properties are named correctly. 
 
 The solution can hand out all possible output parameters. Here the properties are what you would find in C#.
+
+Repository Link: https://github.com/Kunter-Bunt/PowerPagesActions
