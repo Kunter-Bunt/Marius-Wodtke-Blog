@@ -11,7 +11,7 @@ tags:
     - Ribbon
 ---
 
-Just like [the first pattern](/post/pattern/date-flow) we discovered, the core of this pattern includes a Flow that is triggered by a DateTime field being set. The requirement sounds like this "When the user clicks the button X, logic Y should run" and Y here is a logic that either requires the Server due to privileges etc. or is just complex enough that you wouldn't want to implement it in the frontend, e.g. as PowerFX directly to the button. Considering the debuggability of PowerFX in the ribbon (aka Command Bar), that point for me is reached quite quickly. I might then resort to JS, but in the low code era, it might be much easier to do it in a Flow.
+Just like [the first pattern](/post/pattern/date-flow/) we discovered, the core of this pattern includes a Flow that is triggered by a DateTime field being set. The requirement sounds like this "When the user clicks the button X, logic Y should run" and Y here is a logic that either requires the Server due to privileges etc. or is just complex enough that you wouldn't want to implement it in the frontend, e.g. as PowerFX directly to the button. Considering the debuggability of PowerFX in the ribbon (aka Command Bar), that point for me is reached quite quickly. I might then resort to JS, but in the low code era, it might be much easier to do it in a Flow.
 
 To have a concrete sample you would implement like that: "After adding the necessary information, the user needs to send the record for approval". The Power Automate Approvals are best used from Power Automate, so we would like to trigger our flow from a ribbon button "Send to Approval".
 
