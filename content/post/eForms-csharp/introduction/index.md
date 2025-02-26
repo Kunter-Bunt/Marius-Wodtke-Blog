@@ -35,7 +35,7 @@ When we use the `/notices/validation` endpoint with the default values and our A
 The [Publication API](https://enotices2.preview.ted.europa.eu/esenders/swagger-ui/) works a little differently in terms of authentication. There is no simple header in the swagger that you can fill, instead, you will need to use the _Authorize_ Button on the top right and enter your API key, _Authorize_ and _Close_. Then you can use an endpoint like `/notice/notices/{business-id}/validation-report` with the default values to try out the API. 
 
 ## Summary
-So this article was an introduction. It detailed that using C# for eForms should be a conscious decision, providing links to the documentation and a short overview of the associated APIs. Last we generated an API key for the preview environment of eForms and used it to explore the APIs. In [the next post](/post/eForms-cscharp/generating), we will take a deeper dive into the actual programming, generating an XML for a notice. 
+So this article was an introduction. It detailed that using C# for eForms should be a conscious decision, providing links to the documentation and a short overview of the associated APIs. Last we generated an API key for the preview environment of eForms and used it to explore the APIs. In [the next post](/post/eForms-csharp/generating/), we will take a deeper dive into the actual programming, generating an XML for a notice. 
 
 ## Special Thanks
 To [Şevket Çokay](https://www.linkedin.com/in/sevketcokay/) and [Florian Unterberger](https://www.linkedin.com/in/florian-unterberger-3bab39106/) for supporting me with subject matter expertise and contacts in implementing eForms integration!
