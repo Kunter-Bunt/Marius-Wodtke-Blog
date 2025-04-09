@@ -65,7 +65,7 @@ The resulting code is much simpler:
 function HasRole(roleNameToCheck) {
     var userRoles = Xrm.Utility.getGlobalContext().userSettings.roles;
     var roleNames = [];
-    userRoles.forEach(item=>roleNames.push(item.name));
+    userRoles.forEach(item=>roleNames.push(item.name));
 
     console.log("Roles of the user: ", roleNames, "; checking against: ", roleNameToCheck);
     return roleNames.includes(roleNameToCheck);
@@ -83,7 +83,7 @@ export class Roles {
     static HasRole(roleName: string): boolean {
         const userRoles = Xrm.Utility.getGlobalContext().userSettings.roles
         var roleNames: string[] = [];
-        userRoles.forEach(item=>roleNames.push(item.name));
+        userRoles.forEach(item=>roleNames.push(item.name));
 
         console.log("Roles of the user: ", roleNames, "; checking against: ", roleNameToCheck);
         return roleNames.includes(roleName);
