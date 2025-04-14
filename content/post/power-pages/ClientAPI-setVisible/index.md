@@ -1,5 +1,5 @@
 ---
-title: "[VIDEO] getValue & setValue in Power Pages with ClientAPI"
+title: "[VIDEO] setVisible & getVisible in Power Pages with ClientAPI"
 date: 2025-04-13
 draft: false
 image: cover.jpg
