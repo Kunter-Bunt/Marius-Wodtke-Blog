@@ -1,5 +1,6 @@
 ---
 title: Links
+readingTime: false
 links:
   - title: GitHub
     website: https://github.com/Kunter-Bunt

@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Docs Contributions"
-date: 2023-03-24
+readingTime: false
 ---
 
 Self-awareness page for collecting my requests/suggestions for the docs.

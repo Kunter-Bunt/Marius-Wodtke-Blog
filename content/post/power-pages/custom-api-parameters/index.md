@@ -6,6 +6,7 @@ image: cover.jpg
 tags: 
     - Power Pages
     - Custom Apis
+    - PowerPagesActions
 ---
 
 Previous videos showed passing [a string](/post/power-pages/custom-api/) and [an entity reference](/post/power-pages/custom-api-bound/), but the other parameters are missing an explanation. And while for some types, like integer, this might not be needed, but with complex types, like EntityCollection, it's not that clear. So here is a reference for all possible inputs for Custom APIs and their respective outputs.

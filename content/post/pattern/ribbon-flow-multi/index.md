@@ -9,6 +9,7 @@ tags:
     - JavaScript
     - PowerFX
     - Ribbon
+    - D365RibbonHelpers
 ---
 
 Of course, we can easily boost the productivity of users by letting them apply logic to multiple records at once! Think about the requirement "I need to confirm close to 100 orders per day, it is sufficient to check plausibility in the View, I don't want to navigate every single order confirming them on the form!"  

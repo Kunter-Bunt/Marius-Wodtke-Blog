@@ -7,6 +7,7 @@ tags:
     - Power Pages
     - Portals
     - Video
+    - PowerPagesActions
 ---
 
 Custom APIs offer a lot of flexibility, but cannot be called directly from PowerPages. With this video and the accompanying repository/solution, this is going to change! We are going to call custom functionality with an interface that is similar to what you know from the JavaScript of Model-Driven Apps.

@@ -6,6 +6,7 @@ image: cover.jpg
 tags: 
     - Power Pages
     - Custom Apis
+    - PowerPagesActions
 ---
 
 In [a recent article](/post/power-pages/custom-api-parameters/) I detailed the possible parameters with Power Pages Actions and how the parser will recognize them. 

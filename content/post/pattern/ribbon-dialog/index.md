@@ -8,6 +8,7 @@ tags:
     - JavaScript
     - PowerFX
     - Ribbon
+    - D365RibbonHelpers
 ---
 
 In the ["trigger flow from ribbon" pattern](/post/pattern/ribbon-flow/) we already took a look at triggering logic from the ribbon. But what if we require additional input from the user?

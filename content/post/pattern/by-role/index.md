@@ -7,6 +7,7 @@ tags:
     - Patterns
     - JavaScript
     - TypeScript
+    - D365RibbonHelpers
 ---
 
 Have you heard of the requirement "When X visits (a record of) Table Y, they should not see Z", whereX is a role and Z is a button, control, section or tab? Although Dynamics works with privileges, stakeholders usually think in roles and therefore produce concepts which may only work with roles and not with privileges. And the other issue may be, that the request needs frontend scripting with JavaScript anyways and nitpicking about privileges vs roles is no value.  
