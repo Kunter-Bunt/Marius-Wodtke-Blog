@@ -52,8 +52,8 @@ So, given a name, we can find the record in the list of options, then navigate o
 function setMyLookup(newVal) {
     var lookupField = document.querySelector('input[name=mwo_category]');
 
-    field.value = value;
-    field.dispatchEvent(new Event('keyup')); 
+    lookupField.value = value;
+    lookupField.dispatchEvent(new Event('keyup')); 
 
     // ...
 }
@@ -66,19 +66,19 @@ But now we still face the problem, that we don't know when the request is finish
 function setMyLookup(newVal) {
     var lookupField = document.querySelector('input[name=mwo_category]');
 
-    field.value = newVal;
-    field.dispatchEvent(new Event('keyup')); 
+    lookupField.value = newVal;
+    lookupField.dispatchEvent(new Event('keyup')); 
 
-    const lookupContainer = field.closest('div.lookupFormFieldBlock');
+    const lookupContainer = lookupField.closest('div.lookupFormFieldBlock');
 
     const observer = new MutationObserver(() => {
-        if (trySetMyLookupValue(lookupContainer, field, newVal))
+        if (trySetMyLookupValue(lookupContainer, lookupField, newVal))
             observer.disconnect();
     });
 
     observer.observe(lookupContainer, { childList: true, subtree: true });
 
-    if (trySetMyLookupValue(lookupContainer, field, newVal))
+    if (trySetMyLookupValue(lookupContainer, lookupField, newVal))
         observer.disconnect();
 }
 ```
@@ -118,7 +118,7 @@ But there is a much easier way for this: You can simply read the value of the in
 function checkMyLookupChanged(matchedVal) {
     var lookupField = document.querySelector('input[name=mwo_category]');
 
-    if (field.value === matchedVal) {
+    if (lookupField.value === matchedVal) {
         // ... the logic
     }
 }
