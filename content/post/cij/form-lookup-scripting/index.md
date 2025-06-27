@@ -86,7 +86,7 @@ function setMyLookup(newVal) {
 We are creating the MutationObserver and register it to observe the enclosing `div` here, with its `childList` and `subtree` to also capture changes to the options. Whenever one of those objects changes, we want to execute `trySetMyLookupValue` (which we will discuss soon) and if it is successful, we want to disconnect the observer to avoid hogging browser resources. Not disconnecting could also lead to some problems with the user setting a value manually etc. Finally we are checking manually once, just in case the options were already loaded, e.g. because the user already interacted or the new search value is the same as the old one.
 
 ``` JS
-trySetMyLookupValue(lookupContainer, lookupField, newVal) {
+function trySetMyLookupValue(lookupContainer, lookupField, newVal) {
     const ul = lookupContainer.querySelector('ul');
     if (!ul) 
         return false;
