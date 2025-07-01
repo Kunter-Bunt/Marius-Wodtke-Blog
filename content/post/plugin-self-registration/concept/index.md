@@ -2,6 +2,8 @@
 title: "Plugin Self Registration 1: The Concept"
 date: 2023-04-19
 draft: false
+tags: 
+    - D365LivePluginRegistration
 ---
 
 Tools like [spkl](https://github.com/scottdurow/SparkleXrm) do a great job at registering plugins. 

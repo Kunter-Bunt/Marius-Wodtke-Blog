@@ -2,6 +2,8 @@
 title: "Plugin Self Registration 2: The Managed Solution"
 date: 2023-04-24
 draft: false
+tags: 
+    - D365LivePluginRegistration
 ---
 
 In [the last post](/post/plugin-self-registration/concept), we dived into the idea that one plugin could register a second plugin to allow for more flexible registration of plugins. But we've ended with the caveat that a lot of entities are involved and no relationships are allowed.

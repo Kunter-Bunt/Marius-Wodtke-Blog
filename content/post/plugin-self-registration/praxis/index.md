@@ -2,6 +2,9 @@
 title: "Plugin Self Registration 3: Putting it into practice"
 date: 2023-04-30
 draft: false
+tags: 
+    - D365NameCombiner
+    - D365LivePluginRegistration
 ---
 
 If you are a developer you probably have done a naming plugin some time in your career.

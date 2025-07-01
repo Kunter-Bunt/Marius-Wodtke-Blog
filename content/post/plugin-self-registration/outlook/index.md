@@ -2,6 +2,8 @@
 title: "Plugin Self Registration 4: When to use it"
 date: 2023-05-07
 draft: false
+tags: 
+    - D365LivePluginRegistration
 ---
 
 After we've explored the use of self-registering logic in the context of the generic name combination in the [previous post](/post/plugin-self-registration/praxis), there is certainly the question "Should we use this everywhere now?" Certainly not!
