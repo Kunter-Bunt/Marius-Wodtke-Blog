@@ -60,6 +60,7 @@ We can also add a view, even to the same channel. This can even work with person
 ![](AddToTeam3.png)
 
 > **_Issues:_** I had some trouble here at first doing it via the plus. After using the dropdown "Add to a team" once, it started working for all the teams. Unless members are not allowed to add apps.
+
 ![](Fix.png)
 ![](Fix2.png)
 
@@ -74,12 +75,14 @@ Also, if you connected a ["regular" Sharepoint location](/post/sharepoint/standa
 
 ## Connect to a chat
 In my chat with Alan Steiner, I added the record as well. This at first looked very similar to adding a record to a team, but at second glance there are some differences. You don't have the option to link a view and also the connected record does not show the "_This record is successfully connected to Dynamics 365_" message, meaning that the files from this chat are not connected to Dynamics. Still useful when collaborating without a full team!
+
 ![](AddToChat1.png)
 ![](AddToChat2.png)
 ![](AddToChat3.png)
 
 ## Connect to a meeting
 In a meeting, you can also connect to a record. Similar to the chat, no views and no "full connection". Also as a side pane, this looks different and not as powerful as the full forms. But it allows you to create tasks and notes for the Opportunity without leaving the context of the Meeting and should someone need the full form everyone now has the "pop-out" button at the top right as well. A link in the chat would also do, but certainly, it is more professional if you prepare this ahead of time in the meeting options.
+
 ![](AddToMeeting1.png)
 
 ![](AddToMeeting2.png)

@@ -30,9 +30,11 @@ In the Azure Portal, navigate to EntraId and select Add -> App Registration at t
 ![](AppRegNew.jpg)
 
 From the Overwiew we will need the AppId and TenantId in the next section, you can copy them now or come back when you need them. We will jump to _Certificate & Secrets_ next.
+
 ![](AppRegOverview.jpg)
 
 Here we need a new credential in Federated Credentials. This means someone else (the PowerPlatform) will validate the credentials and can request a token for this AppRegistration.
+
 ![](AppRegNewCredential.jpg)
 
 Now we need a certificate, this can be any certificate. MS suggests against self-signed certificates for production use cases, however I don't know how this makes it more secure, since only the thumbprint is checked. If you have an explanation, I would be glad if you comment it (there is a switch to enable comments on the bottom left). 
@@ -114,6 +116,7 @@ PATCH https://mariuswodtke-mvp.crm4.dynamics.com/api/data/v9.2/pluginassemblies(
 And that's it, we created all necessary credentials and joined them in Dataverse, now we need to run the plugin and check the results.
 
 ## Resulting Token
+
 ![](Result.jpg)
 
 As you saw in the code sample above, I printed the token to the tracelogs for debug builds. For production this is of course not ideal, but for the initial tests it helps in identifying issues. Websites like [jwt.ms](https://jwt.ms/) can decode the token, to check values like the audience and appId to clarify 401 errors received from target resources. So here is a sample of a (now expired) token I was able to generate.

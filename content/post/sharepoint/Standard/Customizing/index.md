@@ -27,6 +27,7 @@ One note though: You can't edit these columns in Dynamics, you will have to swit
 You can add the Documents grid to other tabs as well, not requiring the user to visit the _Documents_ Tab. It even works with _Quick View Forms_ if you for example want to display the documents of the parent account at the child contacts. However please note, that displaying this grid won't create a location automatically like it happens in the _Documents_ Tab, the user will have to visit it once to create the folder. Or they use the _Add Location_ button to create it. 
 
 To add the grid to an existing tab, in the Form editor select "Add Subgrid". In the dialog, select "Show Related Records" and then the relationship to display is "Documents".
+
 ![](AddSubgrid.png)
 
 ![](Subgrid.png)

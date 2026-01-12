@@ -11,6 +11,7 @@ In [the last post](/post/powerbi/first-dashboard) of the PowerBI series, we adde
 
 ## Prerequisites
 I suggest following [the post _PowerBI: Publishing a first Dashboard to Dynamics_](/post/powerbi/first-dashboard) because that already creates a Report from which the Dashboard is created. If you bring your own Report, make sure the PowerBI Embedding Feature is enabled on your environment under Settings -> Features -> Embedded Content.
+
 ![](FeatureSwitch.png) 
 
 ## Add Report to Dynamics

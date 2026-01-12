@@ -69,7 +69,9 @@ serx.Serialize(stringWriter, eform, ns);
 With that everything of the CommonBasicComponents will just have the prefix cbc.
 And that's it, because of the namespace fuzz I encapsulated the serialization in [its own service](https://github.com/Kunter-Bunt/eForms-CSharp-Sample/blob/main/eForms-CSharp-Sample-App/services/SerializeNoticeService.cs) in the sample which returns a byte array that can be saved to a local file for viewing for now.
 
-> **_NOTE:_**  You might run into an issue with the AppealStatusType which is a two dimensional array. This is not generated correctly in my version of xsd, resulting in weird errors like "Serializing JavaScript is not supported", just adding `[]` to the XmlArrayAttributes type was enough to fix this. ![Here I tried to specify a PostImage in a PreOperation step. The error from Dynamics is passed through.](AppealStatusType.png)
+> **_NOTE:_**  You might run into an issue with the AppealStatusType which is a two dimensional array. This is not generated correctly in my version of xsd, resulting in weird errors like "Serializing JavaScript is not supported", just adding `[]` to the XmlArrayAttributes type was enough to fix this. 
+
+![Here I tried to specify a PostImage in a PreOperation step. The error from Dynamics is passed through.](AppealStatusType.png)
 
 ## Summary
 To get an XML we first transformed the schema files (.xsd) of the eForms SDK into a .cs file with all the classes necessary to build a notice, award or prior information. Then we mapped our application model to the models of eForms and finally serialized the model into an XML file. 

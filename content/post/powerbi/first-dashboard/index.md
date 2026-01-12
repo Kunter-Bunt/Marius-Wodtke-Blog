@@ -71,6 +71,7 @@ In the wizard, we select our Dashboard from step 5 and then it is done!
 ![](DynDashboardFiltered.png) 
 
 > **_NOTE:_** Missing the "PowerBI Dashboard" Option? Make sure the PowerBI Embedding Feature is enabled on your environment under Settings -> Features -> Embedded Content.
+
 ![](FeatureSwitch.png) 
 
 ## Step 7: Sharing

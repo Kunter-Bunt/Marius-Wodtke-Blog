@@ -91,6 +91,7 @@ GO
 And that showed up as seen on the screenshots above.
 
 But there was another error:
+
 ![](Error.png)
 
 Googling around I then found [this thread](https://powerusers.microsoft.com/t5/Building-Power-Apps/Server-doesn-t-exist-for-external-table/td-p/2095631) and simply setting the _Manually Manage Connection Reference_ from the _Advanced Options_ in the first step of the wizard was enough to fix the issue (that's step 2 of the solution from the thread).

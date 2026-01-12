@@ -34,7 +34,9 @@ var response = await client.V1NoticesValidationAsync(factory.ApiKey, request);
 ## Interpreting the response
 With a pre-generated client, this is quite straightforward to make the API call. However, the response is an XML file and as with the upload, this is untyped. As I did not find a matching schema right away in [the SDK](https://github.com/OP-TED/eForms-SDK) I used the _Paste XML As Classes_ feature of Visual Studio (Edit -> Paste Special) to generate something that is deserializable. 
 
-> **_NOTE:_**  Depending on how much you have mapped at this stage you might get 400 responses from the service which will pop up as ApiExceptions. It is important to note that the definition of the API states that this is caused by the parameters like Language and Version, which is also printed to the Exception Message. But make sure to check the Result as well, here the real response from the service is noted, in the picture below you can see that the actual error is regarding the XML itsel! It is missing required properties. ![The actual response from the service is in the Result, not the Message](400Error.png)
+> **_NOTE:_**  Depending on how much you have mapped at this stage you might get 400 responses from the service which will pop up as ApiExceptions. It is important to note that the definition of the API states that this is caused by the parameters like Language and Version, which is also printed to the Exception Message. But make sure to check the Result as well, here the real response from the service is noted, in the picture below you can see that the actual error is regarding the XML itsel! It is missing required properties. 
+
+![The actual response from the service is in the Result, not the Message](400Error.png)
 
 Sadly there is another problem: The definition of the API which returns an application/xml content is not interpreted by NSwag as an XML File being returned because there is no schema given for this. I had to edit the return value [here](https://github.com/Kunter-Bunt/eForms-CSharp-Sample/blob/main/eForms-CSharp-Sample-App/clients/ValidationClient.cs#LL193C34-L193C34):
 ``` c#
@@ -55,6 +57,7 @@ else
 
 ## Fixing up the mapping
 Now this part I have to leave up to you of course, but the response does provide guidance. The validation errors do have a description and where to find the element that failed validation. Often you will also find things like Regexes that need to be matched and so on. 
+
 ![The validation errors do provide a description as well as XPaths.](200Response.png)
 
 So while I can't tell you what your notices will need and exploring all subtypes would take quite some time the Validation results can be mapped easily to the elements being failed and allowing for mostly easy fixes. Unless of course you simply do not have the data being required like a NUTS3 code that might need to be passed but is not entered by your user nor can be hard coded. 

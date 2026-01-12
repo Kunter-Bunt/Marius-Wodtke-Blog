@@ -28,11 +28,13 @@ We can see the list of our Teams directly in the wizard and also have the option
 ![](SelectChannel.png)
 
 Then we may select members to be added to the team (and channel if it's private). Here you will not just see anyone but people you as Sales Team (via Connections), 
+
 ![](SelectMembers.png)
 
 ![](Connection.png)
 
 After the dialog completes, we are redirected to Teams (in a new Tab), directly to the channel's new Tab for the record. As expected the people I selected to be added to the Team are now members.
+
 ![](Result1.png)
 
 ![](Result2.png)

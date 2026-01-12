@@ -75,6 +75,7 @@ An easy way to get the `Collaboration Tenant Identifier` is to look it up in the
 The other values are related to the record in Dataverse. If you are not using Opportunity, of course, the values for `Related Dynamics 365 Record ...` will change and your naming scheme for the Team might be different. An interesting note: I try to avoid the _Entity Code_ whenever possible because it changes for custom entities with deployments. But here you need to set it, otherwise, you will get the error pictured below. This should not be a bigger problem as the integration only works for a limited set of standard entities.
 
 > Note: There are hints, that the limitation to the entities that can be integrated with teams might be lifted, check out this recent change to the Entity.xml of a custom entity: 
+
 ![](Teaser.jpg)
 
 ![](Error.jpg)
