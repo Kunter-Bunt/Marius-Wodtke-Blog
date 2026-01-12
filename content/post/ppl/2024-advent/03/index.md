@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Leverage GenAI for translations"
 date: 2024-12-03
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

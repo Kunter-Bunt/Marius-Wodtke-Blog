@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: How to integrate translation by using AI - Options for the dictionary?"
 date: 2024-12-07
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

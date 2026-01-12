@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: ALM (CI/CD) for Power Pages in Multi-instance Environments using Azure DevOps"
 date: 2024-12-14
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: How Fabric can help you to get more value from your data?"
 date: 2024-12-17
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

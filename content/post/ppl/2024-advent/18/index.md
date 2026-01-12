@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Collaborating without Admin Permissions - sharing Connection References made easy"
 date: 2024-12-18
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

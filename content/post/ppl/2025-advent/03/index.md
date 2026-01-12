@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Monitor Copilot Studio Agents Like a Pro: Connect Azure Application Insights for Real-Time Analytics"
 date: 2025-12-03
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

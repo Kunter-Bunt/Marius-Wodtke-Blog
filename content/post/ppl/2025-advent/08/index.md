@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: How to use new ERD Explorer in Power Platform | Master in Visualize & Export Entity Relationships"
 date: 2025-12-08
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

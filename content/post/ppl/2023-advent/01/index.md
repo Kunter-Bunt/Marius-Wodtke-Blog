@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 01.12.2023 Kick-Off"
 date: 2023-12-01
 draft: false
-image: /post/2023-advent/cover.jpg
+image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video
 ---

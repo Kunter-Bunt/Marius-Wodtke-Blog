@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Wrap up Advent Calendar series & a BIG thank you"
 date: 2024-12-24
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

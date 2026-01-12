@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Translation with Open AI and Integrate with Dataverse"
 date: 2024-12-22
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

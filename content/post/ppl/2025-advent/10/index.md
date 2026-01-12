@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Step-by-Step: Using Security Role Analyzer & Personal Tool in D365- Must Have Tools for Developers"
 date: 2025-12-10
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

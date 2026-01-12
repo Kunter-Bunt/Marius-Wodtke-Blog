@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Better together- How to make use of Power BI in your Canvas App?"
 date: 2024-12-09
 draft: false
-image: /post/2024-advent/cover.jpg
+image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
 ---

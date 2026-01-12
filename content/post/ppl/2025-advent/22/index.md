@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: How to Use Microsoft Copilot Studio Labs | AI Innovation, Quick Start & Advanced Learning Paths"
 date: 2025-12-22
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

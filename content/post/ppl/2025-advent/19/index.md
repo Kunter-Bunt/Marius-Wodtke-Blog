@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Streamline Approvals in Dataverse with Power Automate | Step-by-Step Tutorial"
 date: 2025-12-19
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

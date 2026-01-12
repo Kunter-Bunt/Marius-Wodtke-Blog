@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 22.12.2023 Community Tools"
 date: 2023-12-22
 draft: false
-image: /post/2023-advent/cover.jpg
+image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video
 ---

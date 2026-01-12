@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Boost Your Power Platform Productivity: Explained Level Up Extension & New Field Focus Tool Launched"
 date: 2025-12-01
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---

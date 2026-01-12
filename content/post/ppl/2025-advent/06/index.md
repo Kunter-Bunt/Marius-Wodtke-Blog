@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Anthropic Models: Next-Level Copilot AI- How to Enable Experimental AI Models Now?"
 date: 2025-12-06
 draft: false
-image: /post/2025-advent/cover.jpg
+image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video
 ---
