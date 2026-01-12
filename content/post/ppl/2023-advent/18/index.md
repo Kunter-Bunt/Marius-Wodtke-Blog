@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 18.12.2023 Power Pages Filtered Lists"
 date: 2023-12-18
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

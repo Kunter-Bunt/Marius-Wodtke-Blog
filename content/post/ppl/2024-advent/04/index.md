@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Microsoft Ignite Updates about Copilot Studio and upcoming features"
 date: 2024-12-04
 draft: false
-image: /post/adventscalendar2024/cover.jpg
+image: /post/2024-advent/cover.jpg
 tags:
     - Video
 ---

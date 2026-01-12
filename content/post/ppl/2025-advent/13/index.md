@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Create Apps in Minutes with Vibe.PowerApps.com | AI + Copilot Demo : Complete Deep Dive"
 date: 2025-12-13
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

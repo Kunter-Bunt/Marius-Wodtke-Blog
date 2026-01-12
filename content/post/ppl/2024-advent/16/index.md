@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: How to secure your Copilot Agents?"
 date: 2024-12-16
 draft: false
-image: /post/adventscalendar2024/cover.jpg
+image: /post/2024-advent/cover.jpg
 tags:
     - Video
 ---

@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Power Platform Inventory API Explained | Governance & Automation Made Easy"
 date: 2025-12-20
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

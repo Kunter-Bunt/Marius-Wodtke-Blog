@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Power CAT Business Approval Kit Tutorial | Complete Setup & Workflow Guide"
 date: 2025-12-21
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

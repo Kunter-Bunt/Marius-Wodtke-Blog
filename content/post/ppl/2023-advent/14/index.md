@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 14.12.2023 Power Pages Prefilling Forms"
 date: 2023-12-14
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

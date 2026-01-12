@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Power Pages Made Easy: Accelerator, Templates & Pricing Hacks!"
 date: 2025-12-16
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

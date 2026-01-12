@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Enable Audit Logs on Security Role Changes in Dataverse"
 date: 2024-12-08
 draft: false
-image: /post/adventscalendar2024/cover.jpg
+image: /post/2024-advent/cover.jpg
 tags:
     - Video
 ---

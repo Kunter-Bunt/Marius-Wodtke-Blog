@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 20.12.2023 Power Apps Modern Controls"
 date: 2023-12-20
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

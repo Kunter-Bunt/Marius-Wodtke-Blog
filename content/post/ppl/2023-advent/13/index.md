@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 13.12.2023 Dataverse Accelerator App"
 date: 2023-12-13
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

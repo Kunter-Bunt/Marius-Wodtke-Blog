@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Fully Automated AI Approvals in Power Platform | Streamline Business Processes with AI"
 date: 2025-12-23
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Dynamics 365 Quality Evaluation Agent Explained: Step-by-Step Demo & Best Practices"
 date: 2025-12-04
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

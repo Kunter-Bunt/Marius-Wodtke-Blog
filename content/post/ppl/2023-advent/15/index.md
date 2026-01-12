@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 15.12.2023 Disable Survey Feedbacks"
 date: 2023-12-15
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

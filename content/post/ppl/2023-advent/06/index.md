@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 06.12.2023 AI Builder Credits and Tenant Isolation"
 date: 2023-12-06
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

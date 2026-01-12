@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 16.12.2023 Power Pages Payment Integration"
 date: 2023-12-16
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

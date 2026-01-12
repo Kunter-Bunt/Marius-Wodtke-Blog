@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 23.12.2023 Security myths around Copilot"
 date: 2023-12-23
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

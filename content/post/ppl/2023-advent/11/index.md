@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: 11.12.2023 Configuration Migration Tool"
 date: 2023-12-11
 draft: false
-image: /post/adventscalendar2023/cover.jpg
+image: /post/2023-advent/cover.jpg
 tags:
     - Video
 ---

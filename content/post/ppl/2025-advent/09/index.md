@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Stop Overspending on Copilot Agents: Copilot Studio Hub Explained- Governance , Inventory & Security"
 date: 2025-12-09
 draft: false
-image: /post/adventscalendar2025/cover.jpg
+image: /post/2025-advent/cover.jpg
 tags:
     - Video
 ---

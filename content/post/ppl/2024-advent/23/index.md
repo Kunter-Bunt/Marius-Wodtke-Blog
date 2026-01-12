@@ -2,7 +2,7 @@
 title: "Power Platform Advent Calendar: Quick tips for accessible content in Power Pages"
 date: 2024-12-23
 draft: false
-image: /post/adventscalendar2024/cover.jpg
+image: /post/2024-advent/cover.jpg
 tags:
     - Video
 ---
