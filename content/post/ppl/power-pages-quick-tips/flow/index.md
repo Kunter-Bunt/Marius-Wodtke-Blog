@@ -9,7 +9,7 @@ tags:
     - Power Pages
 ---
 
-The [content snippets](/post/ppl/power-pages-snippets) do not only allow changing texts on standard pages, they also allow us to translate pages. In this video we are exploring how we can enable a new language in Power Pages.
+Need some server logic for your Power Page? Power Automate is here to help! With this tip you will easily integrate your Power Pages Website with a Power Automate Flow.
 
 Check it out [here](https://youtu.be/UBltc6haCwQ).
 

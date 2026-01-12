@@ -9,7 +9,7 @@ tags:
     - Power Pages
 ---
 
-[In another tip](/post/ppl/website-create-copilot/), the Power Pages quick tips series already covered the creation of a website with copilot. But you can also create and edit pages inside the website.
+[In another tip](/post/ppl/power-pages-quick-tips/website-create-copilot/), the Power Pages quick tips series already covered the creation of a website with copilot. But you can also create and edit pages inside the website.
 
 Check it out [here](https://youtu.be/AtyCuMeZS4Y).
 

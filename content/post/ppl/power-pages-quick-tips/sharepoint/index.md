@@ -10,7 +10,7 @@ tags:
     - Sharepoint
 ---
 
-Following up on the [video about hierarchical permissions](/post/ppl/hierarchical-permissions), this time we will integrate Sharepoint for storing files from a Power Page.
+Following up on the [video about hierarchical permissions](/post/ppl/power-pages-quick-tips/hierarchical-permissions), this time we will integrate Sharepoint for storing files from a Power Page.
 
 Check it out [here](https://youtu.be/6pAoUThL96Y).
 
