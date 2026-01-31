@@ -18,6 +18,10 @@ menu:
 - [PowerPagesActions](https://github.com/Kunter-Bunt/PowerPagesActions) is an Adapter to directly call CustomAPIs from Power Pages.  
 [Read more](/tags/powerpagesactions/)
 
+## XrmToolbox
+- [Teams Integration Enabler](https://www.xrmtoolbox.com/plugins/plugininfo/?id=7e01b65d-b6da-f011-92b8-7ced8d44e4bd) helps you to integrate custom entities with Teams Channels.  
+[Read more](/post/teams/custom-table/)
+
 ## Dataverse (Low-Code)
 - [D365RibbonHelpers](https://github.com/Kunter-Bunt/D365RibbonHelpers) is a set of command and rules to enhance the possibilities with the ribbon without coding. Or simply a reference for anyone who is into high-code.
 [Read more](/tags/d365ribbonhelpers/)
