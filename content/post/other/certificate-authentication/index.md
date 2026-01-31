@@ -13,7 +13,7 @@ Now this is something different and very specific. So I am writing this series o
 ## Authenticating with a Secret
 Let's first start with this rather easy method. There are lots of resources on the internet covering this, but it's still important to cover it as a base because a lot of concepts will be similar. Of course, we will be doing it without a NuGet.
 
-Essentially we just need to send a POST request to ht<span>tps://login.microsoftonline.com/{yourtenantid}/oauth2/v2.0/token with a form content. The form content has the following 4 parameters:  
+Essentially we just need to send a POST request to https\://login.microsoftonline.com/{yourtenantid}/oauth2/v2.0/token with a form content. The form content has the following 4 parameters:  
 ``` c#
 "grant_type": "client_credentials"  
 "client_id": {yourappid}  

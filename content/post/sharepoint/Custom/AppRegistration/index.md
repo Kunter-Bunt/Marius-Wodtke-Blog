@@ -57,7 +57,7 @@ This can be done with the Powershell command `Grant-PnPAzureADAppSitePermission`
 
 But since we are using Powershell here anyway, let's do the whole thing with Powershell.
 1. Install the module: `Install-Module -Name PnP.PowerShell -SkipPublisherCheck -Scope CurrentUser` (-SkipPublisherCheck is technically not needed but helps with unattended scripts since you don't need to confirm the download.)
-2. Connect to your Sharepoint Site, $sharepointUrl stores the full URL here, e.g. ht<span>tps://crm123456.sharepoint.com/sites/Contoso: `Connect-PnPOnline -Url "$sharepointUrl" -Interactive`
+2. Connect to your Sharepoint Site, $sharepointUrl stores the full URL here, e.g. https\://crm123456.sharepoint.com/sites/Contoso: `Connect-PnPOnline -Url "$sharepointUrl" -Interactive`
 3. Next, we are going to create the AppRegistration. $tenantDomain holds the domain name of the tenant, in this case crm123456.onmicrosoft.com and $appName is the name of the app, so we can use something like DataverseCE-SharepointIntegration-dev again: `$appRegistration = Register-PnPAzureADApp -ApplicationName "$appName" -Tenant "$tenantDomain" -Store CurrentUser -SharePointApplicationPermissions "Sites.Selected" -Interactive`
 Please note that this action also creates the Certificate. Both the PFX and CER are dropped to the folder where you execute the command. It also uploads the CER to the AppRegistration and sets the Permission - _Sites.Selected_. So a lot of the steps we executed by hand earlier, making the Powershell command far less error-prone.
 You might want to upload the PFX to a KeyVault anyway to store it safely.
