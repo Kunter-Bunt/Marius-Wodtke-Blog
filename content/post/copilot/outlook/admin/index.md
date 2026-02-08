@@ -2,7 +2,7 @@
 title: "Copilot for Sales: Admin Settings"
 date: 2026-02-15
 draft: false
-image: cover.jpg
+image: /post/copilot/outlook/cover.jpg
 tags: 
     - Copilot for Sales
     - Outlook
