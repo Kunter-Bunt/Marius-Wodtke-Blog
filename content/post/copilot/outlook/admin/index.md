@@ -1,5 +1,5 @@
 ---
-title: "Copilot for Sales: The first deployment"
+title: "Copilot for Sales: Admin Settings"
 date: 2026-02-15
 draft: false
 image: cover.jpg
