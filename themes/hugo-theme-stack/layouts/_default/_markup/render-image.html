@@ -26,9 +26,15 @@
 	{{- end -}}
 {{- else -}}
 	{{/* Image not found in page bundle, try Azure Blob Storage */}}
-	{{- $pagePath := replace .Page.File.Dir "\\" "/" -}}
-	{{- $blobBaseURL := "https://mariuswodtkeblog.blob.core.windows.net/images/" -}}
-	{{- $Permalink = printf "%s%s%s" $blobBaseURL $pagePath .Destination -}}
+	{{- $blobBaseURL := "https://mariuswodtkeblog.blob.core.windows.net/images" -}}
+	{{- if hasPrefix .Destination "/" -}}
+		{{/* Absolute path, use as-is */}}
+		{{- $Permalink = printf "%s%s" $blobBaseURL .Destination -}}
+	{{- else -}}
+		{{/* Relative path, append to page directory */}}
+		{{- $pagePath := replace .Page.File.Dir "\\" "/" -}}
+		{{- $Permalink = printf "%s/%s%s" $blobBaseURL $pagePath .Destination -}}
+	{{- end -}}
 	{{/* Use default aspect ratio for gallery flex calculations, but don't set img width/height */}}
 	{{- $Width = 800 -}}
 	{{- $Height = 600 -}}

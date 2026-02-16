@@ -21,9 +21,19 @@
             {{ if ne (path.Ext $imageValue) ".svg" }}
                 {{ $result = merge $result (dict "resource" $pageResourceImage) }}
             {{ end }}
-        {{ else }}
-            <!-- Can not find the image under page bundle. Could be a relative linked image -->
-            {{ $result = merge $result (dict "permalink" (relURL $imageValue)) }}
+        {{ else }}            
+        <!-- Can not find the image under page bundle. Try Azure Blob Storage -->
+            {{ $blobBaseURL := "https://mariuswodtkeblog.blob.core.windows.net/images" }}
+            {{ $blobURL := "" }}
+            {{ if hasPrefix $imageValue "/" }}
+                <!-- Absolute path, use as-is -->
+                {{ $blobURL = printf "%s%s" $blobBaseURL $imageValue }}
+            {{ else }}
+                <!-- Relative path, append to page directory -->
+                {{ $pagePath := replace .Context.File.Dir "\\" "/" }}
+                {{ $blobURL = printf "%s/%s%s" $blobBaseURL $pagePath $imageValue }}
+            {{ end }}
+            {{ $result = merge $result (dict "permalink" $blobURL) }}
         {{ end }}
 
     {{ end }}
