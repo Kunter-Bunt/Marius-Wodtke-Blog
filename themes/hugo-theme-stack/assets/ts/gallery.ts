@@ -53,6 +53,16 @@ class StackGallery {
             }
 
             this.items.push(aux);
+
+            // Update dimensions for blob images when they load
+            if (img.getAttribute('data-blob-image') === 'true') {
+                img.addEventListener('load', () => {
+                    if (img.naturalWidth && img.naturalHeight) {
+                        aux.w = img.naturalWidth;
+                        aux.h = img.naturalHeight;
+                    }
+                });
+            }
         }
     }
 

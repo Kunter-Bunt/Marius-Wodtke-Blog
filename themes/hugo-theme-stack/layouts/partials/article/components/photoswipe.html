@@ -65,4 +65,33 @@
 
 </div>
 
+<script>
+function updateBlobImageDimensions(img) {
+	if (img.naturalWidth && img.naturalHeight) {
+		img.setAttribute('width', img.naturalWidth);
+		img.setAttribute('height', img.naturalHeight);
+		const flexGrow = (img.naturalWidth * 100) / img.naturalHeight;
+		const flexBasis = (img.naturalWidth * 240) / img.naturalHeight;
+		img.setAttribute('data-flex-grow', flexGrow);
+		img.setAttribute('data-flex-basis', flexBasis + 'px');
+	}
+}
+
+// Initialize blob image dimension updates
+document.addEventListener('DOMContentLoaded', function() {
+	const blobImages = document.querySelectorAll('img[data-blob-image="true"]');
+	blobImages.forEach(function(img) {
+		if (img.complete) {
+			// Image already loaded
+			updateBlobImageDimensions(img);
+		} else {
+			// Wait for image to load
+			img.addEventListener('load', function() {
+				updateBlobImageDimensions(img);
+			});
+		}
+	});
+});
+</script>
+
 {{- partial "helper/external" (dict "Context" . "Namespace" "PhotoSwipe") -}}

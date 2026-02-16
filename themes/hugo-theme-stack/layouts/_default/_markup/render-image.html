@@ -4,6 +4,7 @@
 {{- $Width := 0 -}}
 {{- $Height := 0 -}}
 {{- $Srcset := "" -}}
+{{- $isBlob := false -}}
 
 {{/* SVG and external images won't work with gallery layout, because their width and height attributes are unknown */}}
 {{- $galleryImage := false -}}
@@ -23,6 +24,16 @@
 			{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
 		{{- end -}}
 	{{- end -}}
+{{- else -}}
+	{{/* Image not found in page bundle, try Azure Blob Storage */}}
+	{{- $pagePath := replace .Page.File.Dir "\\" "/" -}}
+	{{- $blobBaseURL := "https://mariuswodtkeblog.blob.core.windows.net/images/" -}}
+	{{- $Permalink = printf "%s%s%s" $blobBaseURL $pagePath .Destination -}}
+	{{/* Use default aspect ratio for gallery flex calculations, but don't set img width/height */}}
+	{{- $Width = 800 -}}
+	{{- $Height = 600 -}}
+	{{- $galleryImage = true -}}
+	{{- $isBlob = true -}}
 {{- end -}}
 
 <img src="{{ $Permalink }}"
@@ -35,7 +46,10 @@
 	{{ end }}
 	{{ if $galleryImage }}
 		class="gallery-image" 
-		data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
-		data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
+		data-flex-grow="{{ div (mul $Width 100) $Height }}"
+		data-flex-basis="{{ div (mul $Width 240) $Height }}px"
+	{{ end }}
+	{{ if $isBlob }}
+		data-blob-image="true"
 	{{ end }}
 >
