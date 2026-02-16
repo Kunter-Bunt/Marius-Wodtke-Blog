@@ -70,7 +70,11 @@ foreach ($ext in $imageExtensions) {
     $allFiles += $files
 }
 
-Write-Host "Found $($allFiles.Count) image files to migrate" -ForegroundColor Yellow
+# Exclude page/links folder
+$excludePath = Resolve-Path (Join-Path $contentPath "page\links")
+$allFiles = $allFiles | Where-Object { -not $_.FullName.StartsWith($excludePath.Path) }
+
+Write-Host "Found $($allFiles.Count) image files to migrate (excluding page/links)" -ForegroundColor Yellow
 Write-Host ""
 
 if ($allFiles.Count -eq 0) {
