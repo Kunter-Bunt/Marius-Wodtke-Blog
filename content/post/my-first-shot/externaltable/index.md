@@ -3,7 +3,7 @@ title: "My First Shot at External Tables with SQL"
 date: 2023-06-17
 draft: false
 tags: 
-    - Virtual Entities
+    - Virtual Tables
     - External Tables 
     - Azure SQL
     - Azure
