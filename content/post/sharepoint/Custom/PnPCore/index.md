@@ -6,11 +6,11 @@ tags:
     - Sharepoint
 ---
 
-So now that we have a login from [the last post](/post/sharepoint/custom/appregistration), let's use it! In this post, we will use PnP.Core to help us interact with Sharepoint. After all, I am a CRM Developer and not a Sharepoint specialist, so a library to help with my tasks is most welcome.
+So now that we have a login from [the last post](/post/sharepoint/custom/appregistration/), let's use it! In this post, we will use PnP.Core to help us interact with Sharepoint. After all, I am a CRM Developer and not a Sharepoint specialist, so a library to help with my tasks is most welcome.
 
 ## Prerequisites
-So I do assume you have the service principle set up. If not it's time to head back [here](/post/sharepoint/custom/appregistration).
-The next rather important consideration is PnP.Core as a library itself. It has a lot of dependencies, usually, that's not a problem, but this means we won't be able to upload it to Dynamics, no ILMerge or [Plugin Packages](/post/my-first-shot/plugin-packages) will help here due to unmanaged code in some dependencies. This means that this method is not for plugins but for standalone tools, APIs etc. 
+So I do assume you have the service principle set up. If not it's time to head back [here](/post/sharepoint/custom/appregistration/).
+The next rather important consideration is PnP.Core as a library itself. It has a lot of dependencies, usually, that's not a problem, but this means we won't be able to upload it to Dynamics, no ILMerge or [Plugin Packages](/post/my-first-shot/plugin-packages/) will help here due to unmanaged code in some dependencies. This means that this method is not for plugins but for standalone tools, APIs etc. 
 
 To give you some samples of what I have had to build that benefited from the help of PnP.Core:
 - A tool that migrates a file archive from a file share to Sharepoint. Connect them to the according record in CRM by alternate key.
@@ -123,9 +123,9 @@ using (var scope = host.Services.CreateScope())
 host.Dispose();
 ```
 
-So, we used `IPnPContextFactory.CreateAsync` to get a Context like the ServiceContext you know from Dynamics. Next `PnPContext.Web.Lists.GetByTitleAsync` queries the library we are working in. Since the [Sharepoint standard series](/post/sharepoint/standard) focuses on the account, I've used it here as well.
+So, we used `IPnPContextFactory.CreateAsync` to get a Context like the ServiceContext you know from Dynamics. Next `PnPContext.Web.Lists.GetByTitleAsync` queries the library we are working in. Since the [Sharepoint standard series](/post/sharepoint/standard/) focuses on the account, I've used it here as well.
 Then we create a Folder in the library with `RootFolder.EnsureFolderAsync` where EnsureFolder works like a GetOrCreate, so there are no problems if the folder is already present. And finally, we will call `Files.Add` to upload our file. Straight forward I guess. 
-While I've left out all CRM calls you can already see that I've leveraged the knowledge from [the inner workings post](/post/sharepoint/standard/innerworkings) to make sure the folder is exactly named like Dynamics would name it. This has an interesting side effect, when I now open up the Account in Dynamics and head to the _Documents_ section, Dynamics will show me the uploaded file, likely because it also uses something like EnsureFolder to create it.
+While I've left out all CRM calls you can already see that I've leveraged the knowledge from [the inner workings post](/post/sharepoint/standard/innerworkings/) to make sure the folder is exactly named like Dynamics would name it. This has an interesting side effect, when I now open up the Account in Dynamics and head to the _Documents_ section, Dynamics will show me the uploaded file, likely because it also uses something like EnsureFolder to create it.
 
 ![](DocumentsTab.png)
 

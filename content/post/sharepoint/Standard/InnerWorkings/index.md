@@ -10,14 +10,14 @@ Having some knowledge about the inner workings of this integration is often bene
 Of course, I have never seen the code of Microsoft and therefore this is merely a compilation of observations.
 
 ## The basics
-While we talked a lot about the _Sharepoint Document_ [in the post about customizing](/post/sharepoint/standard/customizing), here we will talk about the _Document Location_. This entity mainly consists of a _Relative URL_ which holds the current path element and s _Parent Site or Location_ which is a hierarchical lookup to another _Document Location_ until eventually, this lookup will point to a _Sharepoint Site_.
+While we talked a lot about the _Sharepoint Document_ [in the post about customizing](/post/sharepoint/standard/customizing/), here we will talk about the _Document Location_. This entity mainly consists of a _Relative URL_ which holds the current path element and s _Parent Site or Location_ which is a hierarchical lookup to another _Document Location_ until eventually, this lookup will point to a _Sharepoint Site_.
 
 Let's first talk about the other Document Locations: All those hold a relative URL as well, so if you go up from the leaf with URL "abc" to parent "def" and from there to another parent "ghi" these elements will result in a path "ghi/def/abc".
 
 And the _Sharepoint Site_ has an _Absolute URL_. So if we assume that the "ghi" location looks up to the site "https://mycompany.sharepoint.com/sites/CRMDev" the final full URL to the Sharepoint folder would be "https://mycompany.sharepoint.com/sites/CRMDev/ghi/def/abc".
 The sites can also be hierarchical. You could use this if you are going to integrate a lot of sites, making "https://mycompany.sharepoint.com/sites" the base and then adding on child sites with the concrete relative URL.
 
-Why am I telling you all this? Dynamics is creating the sites for me [when setting up](/post/sharepoint/standard/setup) the Sharepoint Integration and the locations are automatically created when I open [the documents tab](/post/sharepoint/standard/functionality).
+Why am I telling you all this? Dynamics is creating the sites for me [when setting up](/post/sharepoint/standard/setup/) the Sharepoint Integration and the locations are automatically created when I open [the documents tab](/post/sharepoint/standard/functionality/).
 Because we might want to create our own locations! Or find out the URL of an existing location. Important things when you want to do some information with something like a flow.
 
 ## Common path patterns

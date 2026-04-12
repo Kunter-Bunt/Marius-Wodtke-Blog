@@ -8,7 +8,7 @@ tags:
     - Power Automate
 ---
 
-We have covered the standard approach of connecting a Teams team with Dataverse for [the basic](/post/teams/collab-basic) and [enhanced experience](/post/teams/collab-enhanced). But this time we will discuss automation around that. The standard wizard has a lot of steps that you might not want your users to go through every time. They also have a lot of flexibility in where they want to attach the record but that might not be what the IT-department wants as well. 
+We have covered the standard approach of connecting a Teams team with Dataverse for [the basic](/post/teams/collab-basic/) and [enhanced experience](/post/teams/collab-enhanced/). But this time we will discuss automation around that. The standard wizard has a lot of steps that you might not want your users to go through every time. They also have a lot of flexibility in where they want to attach the record but that might not be what the IT-department wants as well. 
 
 Our premise for this post will therefore be "Users do need a Team for collaborating with others when an Opportunity reaches a certain stage and this should be a new Team named like the Opportunity". To automate the creation, I have chosen Power Automate as seems to be a perfect fit for its wide variety of connectors.
 

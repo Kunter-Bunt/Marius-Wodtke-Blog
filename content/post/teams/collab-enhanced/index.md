@@ -7,7 +7,7 @@ tags:
     - Teams
 ---
 
-In [the previous post](/post/teams/collab-basic), we explored most of the collaboration features already, but what is better in the _Enhanced Experience_? The answer is simple, the creation/connection of Teams Teams (no, this is no mistake, it was not me naming the groups in Teams "Teams") can happen from Dynamics.
+In [the previous post](/post/teams/collab-basic/), we explored most of the collaboration features already, but what is better in the _Enhanced Experience_? The answer is simple, the creation/connection of Teams Teams (no, this is no mistake, it was not me naming the groups in Teams "Teams") can happen from Dynamics.
 
 ## Enabling the Enhanced Experience
 Just like with the _Basic Experience_, the _Enhanced Experience_ is enabled under _Sales Hub_ -> _App Settings_ -> _Chat and Collaborate_. This time however it's not enough to be an Administrator of Dynamics CE, but be a "Tenant Administrator". My Global Admin role in my Tenant is of course enough, but for bigger corporations, this means that one of the few administrative Accounts needs to be enabled as an Administrator for the Dynamics Environments as well to accept the permissions pictured in the second screenshot. Don't forget to save your new settings!

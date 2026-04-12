@@ -36,10 +36,10 @@ What you get back is a success indicator and a URL with the validation result. S
 
 ![The resulting output of the sample app for a successful publish](SuccessfulPublish.png)
 
-> **_NOTE:_** For my testing I have created an account with the EU in the [introduction article](/post/eForms-csharp/introduction). This one does receive 403 errors when trying to publish a notice. Even on the preview instance! For publishing notices you need to pass an authorization process with the EU first, so for the screenshot I had to resort to an API Key from the project.
+> **_NOTE:_** For my testing I have created an account with the EU in the [introduction article](/post/eForms-csharp/introduction/). This one does receive 403 errors when trying to publish a notice. Even on the preview instance! For publishing notices you need to pass an authorization process with the EU first, so for the screenshot I had to resort to an API Key from the project.
 
 ## Summary
-It's done! A notice published and may it be only to the preview environment! So let's recap, in [the beginning](/post/eForms-csharp/introduction), we started by finding the API specifications and created an account with the EU. Then, with the help of [the eForms SDK](https://github.com/OP-TED/eForms-SDK), we [created our first notice XMLs](/post/eForms-csharp/generating). After that, we [refined our output](/post/eForms-csharp/validating) with the Validation API. Finally, in this article, we generated a client for the Publication API, fixed the errors from the auto-generation and uploaded our validated notice to the service. 
+It's done! A notice published and may it be only to the preview environment! So let's recap, in [the beginning](/post/eForms-csharp/introduction/), we started by finding the API specifications and created an account with the EU. Then, with the help of [the eForms SDK](https://github.com/OP-TED/eForms-SDK), we [created our first notice XMLs](/post/eForms-csharp/generating/). After that, we [refined our output](/post/eForms-csharp/validating/) with the Validation API. Finally, in this article, we generated a client for the Publication API, fixed the errors from the auto-generation and uploaded our validated notice to the service. 
 
 With this the series comes to an end, I hope the read was helpful for your journey with eForms and thanks for stopping by!
 

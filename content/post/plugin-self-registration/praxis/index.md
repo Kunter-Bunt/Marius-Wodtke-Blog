@@ -19,7 +19,7 @@ However the requirement, you have multiple solutions:
 
 Now it's easy to come up with the idea "Let's just create something generic that can create strings from a template and let the non-coders fill it". However, the problem lies in the plugin registration of Dynamics which does not allow for a global registration for that logic.
 
-And this is where the solution from the [previous post](/post/plugin-self-registration/solution) comes in. When someone fills out the template in the configuration entity, we can register on create and update of the targeted entity and then execute the generic logic. 
+And this is where the solution from the [previous post](/post/plugin-self-registration/solution/) comes in. When someone fills out the template in the configuration entity, we can register on create and update of the targeted entity and then execute the generic logic. 
 
 ## Configuration Samples
 So the template orientates on format strings of C# - I'm a techy after all. We write something like _{0} - {1}_ and then specify that 0 shall be _Field A_ and 1 _Field B_. Now specify the entity and which field the result should be written to and we are golden. 
@@ -42,7 +42,7 @@ Lookups will by default print like this: _transactioncurrency(b5f9a0f3-7db9-ed11
 That in itself is quite cool, but for me the real magic here is that this is possible on any entity, registering this to the most common entities like account, contact, opportunity, incident, ... would be no problem, but it works anywhere. 
 
 ## The Inner Workings
-If you have read [the last post](/post/plugin-self-registration/solution) you already know where this is going, of course we are going to generate records of the mwo_pluginstepregistration entity. To be precise, two records, one for Create and one for Update. 
+If you have read [the last post](/post/plugin-self-registration/solution/) you already know where this is going, of course we are going to generate records of the mwo_pluginstepregistration entity. To be precise, two records, one for Create and one for Update. 
 And for that, we won't need a whole lot of code, creation and update of the mwo_namecombination is handled with [a mere 160 lines of code](https://github.com/Kunter-Bunt/D365NameCombiner/blob/main/mwo.D365NameCombiner.Plugins/Executables/RegistrationExecutable.cs) (at the time of writing) and deletions were handled in a separate class with [35 lines of code](https://github.com/Kunter-Bunt/D365NameCombiner/blob/main/mwo.D365NameCombiner.Plugins/Executables/DeleteRegistrationExecutable.cs). It even covers checks for whether the fields exist and translates a deactivation of the name combination to a deactivation of the step and vice versa. 
 Why is it so short? We simply create or update another entity if our configuration entity is created or updated. By the way: The triggers on mwo_namecombination of course use SPKL for registering the plugin because we absolutely know which entity and fields we want to trigger for.
 
@@ -71,7 +71,7 @@ So with the design of the configuration entity, we made sure that we know the ta
 ## Conclusion
 What's left to do now? Of course to implement all those cool ideas for generic logic that came to your mind while reading through the series! There will be one more post out soon elaborating more on the topic of strategies in self-registration and how you can get around it sometimes.
 Needless to say: While the [D365NameCombiner](https://github.com/Kunter-Bunt/D365NameCombiner/) served as an example for your self-registration ideas here it is of course a working solution with actual use! Check out its Wiki for more samples.
-In the next and [last post](/post/plugin-self-registration/outlook) of this series, we will take a look at when to use this - and when not.
+In the next and [last post](/post/plugin-self-registration/outlook/) of this series, we will take a look at when to use this - and when not.
 
 ## Special Thanks
 To [Lukas Leitzinger](https://www.linkedin.com/in/lukas-leitzinger-6b5654160/) for contributing to this repository with ideas and code!

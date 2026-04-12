@@ -37,4 +37,4 @@ sdkmessageprocessingstepimage
 
 ## What's next
 That's quite something, right? On top of that you cannot create relationships from or to these entities, so you cannot simply link your configuration and will have to somehow keep the connection to your sdkmessageprocessingstep as well.
-But fear not and stay tuned for [the next post](/post/plugin-self-registration/solution) in this series where I will show you some help to simplify the process to only managing one regular entity so that you can focus on translating your configuration entity into a plugin step!
+But fear not and stay tuned for [the next post](/post/plugin-self-registration/solution/) in this series where I will show you some help to simplify the process to only managing one regular entity so that you can focus on translating your configuration entity into a plugin step!

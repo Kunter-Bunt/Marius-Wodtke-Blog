@@ -9,7 +9,7 @@ tags:
     - Azure
 ---
 
-In [the last post](/post/servicebus/webjob), we already set up a working processor for Dataverse events. But what if AppServices and WebJobs are not preferred or are simply not possible for you? An example would be because you are on OnPremise infrastructure or Azure VMs or the Azure Kubernetes Services are used. There has to be an option to create a processor without such helper technologies, right? Yes, of course there is and here we are going to explore how.
+In [the last post](/post/servicebus/webjob/), we already set up a working processor for Dataverse events. But what if AppServices and WebJobs are not preferred or are simply not possible for you? An example would be because you are on OnPremise infrastructure or Azure VMs or the Azure Kubernetes Services are used. There has to be an option to create a processor without such helper technologies, right? Yes, of course there is and here we are going to explore how.
 
 ## General preparations
 You can find the full project code [here](https://github.com/Kunter-Bunt/D365ServiceBusProcessors/tree/main/DataverseEventProcessorPlain). 
@@ -21,7 +21,7 @@ Something else often forgotten in this kind of article is the description of the
 - `Microsoft.PowerPlatform.Dataverse.Client` => RemoteExecutionContext class for Deserialization
 - `Azure.Identity` => Only if you will use a managed identity if you are OnPremise, you can skip this
 
-And of course, check out [the first post](/post/servicebus/exporting-events) of this series where we set up the service bus and our possibility of sending events to this service bus. So by now every time you create an account, a message should pop up in your subscription. Of course, it might also be helpful to have read [the last post](/post/servicebus/webjob) as well for some context (e.g. regarding managed identities) as this is probably the easiest method to set up a processor.
+And of course, check out [the first post](/post/servicebus/exporting-events/) of this series where we set up the service bus and our possibility of sending events to this service bus. So by now every time you create an account, a message should pop up in your subscription. Of course, it might also be helpful to have read [the last post](/post/servicebus/webjob/) as well for some context (e.g. regarding managed identities) as this is probably the easiest method to set up a processor.
 
 ## The project
 We will start by creating the project. I am choosing .NET Core here as by now the CRM SDK for .NET Core (Microsoft.PowerPlatform.Dataverse.Client) has reached General availability and I expect Microsoft to push us further in the .NET Core Direction in the future.
@@ -65,7 +65,7 @@ var client = new ServiceBusClient(sbConnectionString);
 ```
 This of course has the problem, that the SAS key is in the appsettings.json, so this plain file would need to be guarded. For example, the risk of the secret being committed to source control is always present.
 
-To gain such a connection string, you can copy the approach from the policy of [the first post](/post/servicebus/exporting-events), just this time with the _Listen_ claim. 
+To gain such a connection string, you can copy the approach from the policy of [the first post](/post/servicebus/exporting-events/), just this time with the _Listen_ claim. 
 
 ![](Policy.png)
 

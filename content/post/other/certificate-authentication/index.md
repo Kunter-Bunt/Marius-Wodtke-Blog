@@ -8,7 +8,7 @@ tags:
     - Azure Active Directory
 ---
 
-Now this is something different and very specific. So I am writing this series on [Sharepoint](/post/sharepoint) and how to [integrate it from the Dynamics Backend](/post/sharepoint/custom). And Sharepoint Online has a strange restriction for the current state-of-the-art [Azure AD App-Only](https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread) authentication. It only works if you use a certificate and not with a secret. 
+Now this is something different and very specific. So I am writing this series on [Sharepoint](/post/sharepoint/) and how to [integrate it from the Dynamics Backend](/post/sharepoint/custom/). And Sharepoint Online has a strange restriction for the current state-of-the-art [Azure AD App-Only](https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread) authentication. It only works if you use a certificate and not with a secret. 
 
 ## Authenticating with a Secret
 Let's first start with this rather easy method. There are lots of resources on the internet covering this, but it's still important to cover it as a base because a lot of concepts will be similar. Of course, we will be doing it without a NuGet.

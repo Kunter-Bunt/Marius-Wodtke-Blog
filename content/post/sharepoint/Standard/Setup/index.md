@@ -68,4 +68,4 @@ First, we created a site on Sharepoint. Then we enabled the server-based integra
 
 In my experience, this works very well for most of the direct user interaction scenarios, so your users are hopefully already quite happy with these features, giving them quick access to documents through their Dynamics interface, all well organized within the records created by them.
 
-Check out [the next post](/post/sharepoint/standard/functionality) for a deeper dive into the OOTB functionality of this integration.
+Check out [the next post](/post/sharepoint/standard/functionality/) for a deeper dive into the OOTB functionality of this integration.

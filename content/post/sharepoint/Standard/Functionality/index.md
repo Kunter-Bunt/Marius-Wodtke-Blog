@@ -6,7 +6,7 @@ tags:
     - Sharepoint
 ---
 
-In [the previous post](/post/sharepoint/standard/setup) we set up the Sharepoint integration for our instance, what can we do now?
+In [the previous post](/post/sharepoint/standard/setup/) we set up the Sharepoint integration for our instance, what can we do now?
 
 ## The Documents Tab
 On the entities where you enabled the Integration in the wizard, you should be able to access the _Documents_ Tab. This is the main hub for interacting with Sharepoint.

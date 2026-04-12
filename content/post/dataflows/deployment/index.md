@@ -10,7 +10,7 @@ tags:
     - Data Integration
 ---
 
-In the [first shot of Dataflows](/post/my-first-shot/dataflows), we've explored the feature and imported products from an Azure SQL database. But a feature without deployment is merely a PoC. 
+In the [first shot of Dataflows](/post/my-first-shot/dataflows/), we've explored the feature and imported products from an Azure SQL database. But a feature without deployment is merely a PoC. 
 
 ## Dataflows in Solutions
 Luckily, we can just add dataflows to solutions! We can not create them inside a solution, or edit them, this has to happen in the dataflows section of the Maker Portal. But after preparing the dataflow there, we can just select _Add Existing_->_Automation_->_Dataflow_ in our solution.

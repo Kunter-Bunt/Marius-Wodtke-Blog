@@ -7,11 +7,11 @@ tags:
     - PowerBI
 ---
 
-In [the post about Embedded Reports](/post/powerbi/embedded-report), we did talk about the customizations needed to show a PowerBI Report on a form in Dynamics, but not about general ALM praxis: Customize on a Development environment and then deploy a solution.
+In [the post about Embedded Reports](/post/powerbi/embedded-report/), we did talk about the customizations needed to show a PowerBI Report on a form in Dynamics, but not about general ALM praxis: Customize on a Development environment and then deploy a solution.
 We will catch up here and explore the _Solution Awareness_ of Reports.
 
 ## Preparations
-For the report to be selectable for embedding, it needs to be included in a solution anyway, so if you followed [the post about Embedded Reports](/post/powerbi/embedded-report), your solution includes a Dataset, a Report and probably an Entity with a form.
+For the report to be selectable for embedding, it needs to be included in a solution anyway, so if you followed [the post about Embedded Reports](/post/powerbi/embedded-report/), your solution includes a Dataset, a Report and probably an Entity with a form.
 
 ![](SolutionComponents.jpg)
 

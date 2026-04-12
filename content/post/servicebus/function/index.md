@@ -20,7 +20,7 @@ Something else often forgotten in this kind of article is the description of the
 - `Microsoft.Extensions.Logging` => Used for logging output
 - `Microsoft.PowerPlatform.Dataverse.Client` => RemoteExecutionContext class for Deserialization
 
-And of course, check out [the first post](/post/servicebus/exporting-events) of this series where we set up the service bus and our possibility of sending events to this service bus. So by now every time you create an account, a message should pop up in your subscription.
+And of course, check out [the first post](/post/servicebus/exporting-events/) of this series where we set up the service bus and our possibility of sending events to this service bus. So by now every time you create an account, a message should pop up in your subscription.
 
 ## The project
 This time, the setup of the project is a little more involved, we have a wizard. The first stages of the project type _Azure Functions_ are as usual, but then we define your first trigger and here we will select _Service Bus Topic Trigger_.

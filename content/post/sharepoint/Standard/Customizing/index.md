@@ -6,7 +6,7 @@ tags:
     - Sharepoint
 ---
 
-If you are not entirely happy with the default functionality shown in [the previous post](/post/sharepoint/standard/functionality), there are some options to tailor it. This article will discuss some customization options available to people and projects not willing to build extensive PCF controls or something similar.
+If you are not entirely happy with the default functionality shown in [the previous post](/post/sharepoint/standard/functionality/), there are some options to tailor it. This article will discuss some customization options available to people and projects not willing to build extensive PCF controls or something similar.
 
 ## Showing Metadata 
 The _Documents_ Tab shows a grid and you can customize it. The entity is called _Sharepoint Document_ (sharepointdocument) and has the "Document Associated Grid" which is shown by default and the "All Sharepoint Documents" is shown when you select to show all locations.
@@ -37,7 +37,7 @@ Another customizing option can be realized via the [RibbonWorkBench](https://www
 
 ![The special document buttons are marked green.](Buttons.png)
 
-For demonstration, I used the _Hide_ action on the _Flow_ Button which did not work for me in [the previous post](/post/sharepoint/standard/functionality) and published the solution to apply the changes.
+For demonstration, I used the _Hide_ action on the _Flow_ Button which did not work for me in [the previous post](/post/sharepoint/standard/functionality/) and published the solution to apply the changes.
 
 ![](ButtonMissing.png)
 

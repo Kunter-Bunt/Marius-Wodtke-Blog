@@ -12,7 +12,7 @@ tags:
 This time I will do my first experiments with Dataflows. Spoiler alert: There are quite some options left that would need a separate article, so at first glance, this seems to be a powerful feature.
 
 ## Prerequisites 
-As a data source the same Azure SQL Database will be used that we already used for [the External Table post](/post/my-first-shot/externaltable). If you do not have a table ready, that post describes how it was set up in Azure with minimal cost. For reference, this is what the structure of the table looks like:
+As a data source the same Azure SQL Database will be used that we already used for [the External Table post](/post/my-first-shot/externaltable/). If you do not have a table ready, that post describes how it was set up in Azure with minimal cost. For reference, this is what the structure of the table looks like:
 
 ![](SQLTable.png)
 
@@ -21,7 +21,7 @@ On make.powerapps.com, ensure you are on the correct environment and select Data
 
 ![To create a new Dataflow, select New Dataflow and give it a name.](New.png)
 
-After giving our Dataflow a name, the next screen will present the selection of sources. There is a great variety of connectors, but for this first shot, the trusty SQL table will do. When I entered my server and database the wizard recognized that I had a connection to this database already and preselected it, nice! Therefore I will refer you to [the External Table post](/post/my-first-shot/externaltable) here as well.
+After giving our Dataflow a name, the next screen will present the selection of sources. There is a great variety of connectors, but for this first shot, the trusty SQL table will do. When I entered my server and database the wizard recognized that I had a connection to this database already and preselected it, nice! Therefore I will refer you to [the External Table post](/post/my-first-shot/externaltable/) here as well.
 
 ![](Connection.png)
 

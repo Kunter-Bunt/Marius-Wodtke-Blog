@@ -11,7 +11,7 @@ tags:
 
 Did you know there is [a preview for using React in Code Components](https://learn.microsoft.com/en-us/power-apps/developer/component-framework/react-controls-platform-libraries) (aka Power Apps Component Framework, PCF)? Well, I recently received training on using React natively so I thought this is a great opportunity to consolidate my knowledge.
 
-I plan to broaden the topic around [VIES VAT](/tags/vies-vat), so this experiment will contain a new PCF that shall do the same thing as the original [VAT Number Validator](https://pcf.gallery/vat-number-validator/) just for Power Pages. 
+I plan to broaden the topic around [VIES VAT](/tags/vies-vat/), so this experiment will contain a new PCF that shall do the same thing as the original [VAT Number Validator](https://pcf.gallery/vat-number-validator/) just for Power Pages. 
 
 ## Full example
 Please note that this is a first shot, the actual validation part is mocked at this stage, we will worry about CORS and calling VIES VAT in another article. 

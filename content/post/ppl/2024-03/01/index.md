@@ -8,7 +8,7 @@ tags:
     - Video
 ---
 
-The Power Platform Learners group is growing! In this episode, we picked our favorites from the wave update. I chose a lot of security enhancements for Plugins, Views and Apps. Also, I completely missed that [Plugin Packages](/post/my-first-shot/plugin-packages) are now generally available!
+The Power Platform Learners group is growing! In this episode, we picked our favorites from the wave update. I chose a lot of security enhancements for Plugins, Views and Apps. Also, I completely missed that [Plugin Packages](/post/my-first-shot/plugin-packages/) are now generally available!
 
 Check it out [here](https://youtu.be/BvqvHNhZpWA).
 

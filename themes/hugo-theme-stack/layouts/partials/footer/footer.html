@@ -10,7 +10,7 @@
     
     <section class="powerby">
         {{ with .Site.Params.footer.customText }}
-            {{ . | safeHTML }} <a href="/page/legal"><u>Legal notice.</u></a><br/>
+            {{ . | safeHTML }} <a href="/page/legal/"><u>Legal notice.</u></a><br/>
         {{ end }}
 
         {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}

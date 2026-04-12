@@ -7,7 +7,7 @@ tags:
     - Azure Active Directory
 ---
 
-The [last time around](/post/sharepoint/custom/pnpcore) we discussed the usage of PnP.Core as an easy-to-use helper to interact with Sharepoint from client code. The library has far too many dependencies to be suited for plugins, but that's exactly what we will be looking into.
+The [last time around](/post/sharepoint/custom/pnpcore/) we discussed the usage of PnP.Core as an easy-to-use helper to interact with Sharepoint from client code. The library has far too many dependencies to be suited for plugins, but that's exactly what we will be looking into.
 
 ## Sharepoint REST API
 The fact that Microsoft likes REST services has already saved me more than once with Azure integrations. And usually, the APIs are quite self-explaining once you make the first successful request.
@@ -40,9 +40,9 @@ That sounds easy, right? And up until now I always found how to do things in tha
 But if we were to try any of these requests, none of them would work. They'd all return a 401 because we are missing the _Authorization_ Header. 
 
 ## Authorization
-For authorizing the app registration from [the first post](/post/sharepoint/custom/appregistration) it is important to note, that the API does not accept tokens created with a client secret. The token needs to be created with a certificate and that is why we set up the app registration that way.
+For authorizing the app registration from [the first post](/post/sharepoint/custom/appregistration/) it is important to note, that the API does not accept tokens created with a client secret. The token needs to be created with a certificate and that is why we set up the app registration that way.
 
-But getting a token with a certificate was not an easy task without the help of other NuGets, this topic has received [a separate article](/post/other/certificate-authentication). So here is a quick rundown of the possibilities with only a little explanation.
+But getting a token with a certificate was not an easy task without the help of other NuGets, this topic has received [a separate article](/post/other/certificate-authentication/). So here is a quick rundown of the possibilities with only a little explanation.
 
 ## Using Microsoft.IdentityModel.Clients.ActiveDirectory
 This NuGet is nice because it does need to be ILMerged or similar since it's loaded to the Dynamics Sandboxes. But it's also deprecated! That means it will probably stop working as soon as the Dynamics SDK is loaded to the sandboxes no longer rely on this NuGet. So probably not the best option, but certainly the easiest for a quick PoC.
@@ -59,7 +59,7 @@ var authorizationHeaderContent = $"Bearer {authenticationResult.AccessToken}";
 ```
 
 ## Using Microsoft.Identity.Client
-This is the NuGet that you should use instead of `Microsoft.IdentityModel.Clients.ActiveDirectory`. The problem here is the usual NuGet problem: You can only upload one assembly. The options are the unsupported ILMerge or the plugin packages which are in preview at the time of writing. I've tried this exact NuGet in a [dedicated article to plugin packages](/post/my-first-shot/plugin-packages), so it will work, but as said, it's in preview.
+This is the NuGet that you should use instead of `Microsoft.IdentityModel.Clients.ActiveDirectory`. The problem here is the usual NuGet problem: You can only upload one assembly. The options are the unsupported ILMerge or the plugin packages which are in preview at the time of writing. I've tried this exact NuGet in a [dedicated article to plugin packages](/post/my-first-shot/plugin-packages/), so it will work, but as said, it's in preview.
 
 ``` c#
 using Microsoft.Identity.Client;

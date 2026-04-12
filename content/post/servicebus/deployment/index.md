@@ -9,10 +9,10 @@ tags:
     - Azure
 ---
 
-After finishing a development it's time to deploy it. In [the last post](/post/servicebus/biceps) of [this series](/post/servicebus), we covered how to deploy the Azure Service Bus. But the Service Endpoint in Dynamics linking it needs to be deployed as well!
+After finishing a development it's time to deploy it. In [the last post](/post/servicebus/biceps/) of [this series](/post/servicebus/), we covered how to deploy the Azure Service Bus. But the Service Endpoint in Dynamics linking it needs to be deployed as well!
 
 ## What's the problem?
-At first glance, it seems easy since you can put the Service Endpoint into a solution, but inspecting the customization.xml reveals the problem. The Namespace and Path (Queue or Topic) are in the export while the SAS Key is not. The SAS Key not being there is of course positive, but the Namespace and Path being present means deploying the solution will overwrite these properties. That would mean we are using the same Topic for each Environment and then differentiate in the subscriptions. And that's something I suggest against due to security concerns as explained in [the first post](/post/servicebus/exporting-events).
+At first glance, it seems easy since you can put the Service Endpoint into a solution, but inspecting the customization.xml reveals the problem. The Namespace and Path (Queue or Topic) are in the export while the SAS Key is not. The SAS Key not being there is of course positive, but the Namespace and Path being present means deploying the solution will overwrite these properties. That would mean we are using the same Topic for each Environment and then differentiate in the subscriptions. And that's something I suggest against due to security concerns as explained in [the first post](/post/servicebus/exporting-events/).
 
 ![Service Endpoints are found under the section Developer.](addToSolution.png)
 

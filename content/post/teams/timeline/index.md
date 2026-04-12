@@ -7,7 +7,7 @@ tags:
     - Teams
 ---
 
-We've already [talked about chat](/post/teams/chat) as the lighter integration of Teams. And there is a preview to make it even better: [Timeline Integration](https://learn.microsoft.com/en-us/dynamics365/release-plan/2023wave1/service/dynamics365-customer-service/view-teams-chat-connected-records-timeline). Even though this is marked as a customer service feature, it will still work nicely in the sales app context I've set in this series.
+We've already [talked about chat](/post/teams/chat/) as the lighter integration of Teams. And there is a preview to make it even better: [Timeline Integration](https://learn.microsoft.com/en-us/dynamics365/release-plan/2023wave1/service/dynamics365-customer-service/view-teams-chat-connected-records-timeline). Even though this is marked as a customer service feature, it will still work nicely in the sales app context I've set in this series.
 
 ## How to enable Timeline Integration?
 Luckily, the Teams Integration settings are a one-stop job. So we are again at _Sales Hub_ -> _App Settings_ -> _Chat and Collaborate_. Here it's the _Show Teams chats on the connected record's timeline (Preview)_ Flag we are looking for. Also note the fact, that this needs a Global Administrator to enable it because changes in Teams will be captured by an Application and synched back to Dynamics.
@@ -36,7 +36,7 @@ The timeline shows activities, which means there are also activity records. When
 ![](Activities.jpg)
 
 ## When does it not apply?
-This only works when you connect the chat from Dynamics as detailed in the [post about chat](/post/teams/chat). That specifically means that it will not make a timeline entry if you pin the Dynamics 365 Tab in a Teams chat, and this is a good decision by MS! Because there are other features like _Self Join_ that would make this a serious issue in regards to privacy. 
+This only works when you connect the chat from Dynamics as detailed in the [post about chat](/post/teams/chat/). That specifically means that it will not make a timeline entry if you pin the Dynamics 365 Tab in a Teams chat, and this is a good decision by MS! Because there are other features like _Self Join_ that would make this a serious issue in regards to privacy. 
 
 ![](FromTeams.jpg)
 

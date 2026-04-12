@@ -7,7 +7,7 @@ tags:
     - Teams
 ---
 
-One problem with [the connected chats](/post/teams/chat) in Dynamics is: How do you get access if you are not already part of the group? Dataverse does such a good job of breaking silos in organizations willing to do so, but if Teams chats are widely used, they may become mini-silos where relevant information is only accessible to a very selected group of people. 
+One problem with [the connected chats](/post/teams/chat/) in Dynamics is: How do you get access if you are not already part of the group? Dataverse does such a good job of breaking silos in organizations willing to do so, but if Teams chats are widely used, they may become mini-silos where relevant information is only accessible to a very selected group of people. 
 
 But this shall not draw you away from using the Teams integration! Instead, consider the _Self-Join_ option. This enables anyone with the appropriate permissions in Dataverse to join existing connected chats.
 
@@ -17,7 +17,7 @@ The Teams options are found at _Sales Hub_ -> _App Settings_ -> _Chat and Collab
 ![](Enable.jpg)
 
 ## How does it feel?
-After enabling it, it's pretty straightforward to join an existing conversation. First, we will take a look at what happens if you have the [timeline integration](/post/teams/timeline) enabled as well.
+After enabling it, it's pretty straightforward to join an existing conversation. First, we will take a look at what happens if you have the [timeline integration](/post/teams/timeline/) enabled as well.
 
 ![](TimelineJoin.jpg)
 
@@ -42,4 +42,4 @@ Lastly, it will also not work if you have used the pinned tab in Teams as "conne
 
 ## Summary
 Enabling self-join is done in the collaboration options in a per-entity fashion.
-Once you enable self-join for an entity, users with either write or append privileges to a record may join the connected chat(s). They can do so either via the timeline entry ([if this feature is enabled](/post/teams/timeline)) or the chat pane. This does only work for chats that were connected from Dynamics, chats are not connected to Dynamics by adding the Dynamics 365 tab to Teams. 
+Once you enable self-join for an entity, users with either write or append privileges to a record may join the connected chat(s). They can do so either via the timeline entry ([if this feature is enabled](/post/teams/timeline/)) or the chat pane. This does only work for chats that were connected from Dynamics, chats are not connected to Dynamics by adding the Dynamics 365 tab to Teams. 
