@@ -1,6 +1,6 @@
 ---
 title: "Having the right view on data"
-date: 2026-05-10
+date: 2026-05-24
 draft: false
 image: cover.jpg
 tags: 
