@@ -1,0 +1,21 @@
+/* Site-level customizations */
+
+.article-content blockquote {
+    border-inline-start: 5px solid #f0a500;
+    background-color: #fff8e6;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    p {
+        color: #4a3800;
+    }
+}
+
+:root[data-scheme="dark"] .article-content blockquote {
+    background-color: #3a2e00;
+    border-inline-start-color: #f0a500;
+
+    p {
+        color: #f5e0a0;
+    }
+}
