@@ -9,13 +9,15 @@ menu:
 ---
 
 ## Power Pages
-- [PowerPagesClientAPI](https://github.com/Kunter-Bunt/PowerPagesClientAPI) tries to replicate the ClientAPI of Model Driven Apps in order to streamline development.  
+- **[Archived]** [PowerPagesClientAPI](https://github.com/Kunter-Bunt/PowerPagesClientAPI) tries to replicate the ClientAPI of Model Driven Apps in order to streamline development.  
+Archived due to Microsoft publishing an official [Power Pages Client API](https://learn.microsoft.com/en-us/power-pages/configure/client-api).  
 [Read more](/tags/powerpagesclientapi/)
 
 - [PowerPagesTemplate](https://github.com/Kunter-Bunt/PowerPagesTemplate) is a starting point for anyone who needs to do more than just a little bit of JS for their Site. Supports Typescript and Bundling for more complex projects.  
 [Read more](/post/power-pages/framework-1/)
 
-- [PowerPagesActions](https://github.com/Kunter-Bunt/PowerPagesActions) is an Adapter to directly call CustomAPIs from Power Pages.  
+- **[Archived]** [PowerPagesActions](https://github.com/Kunter-Bunt/PowerPagesActions) is an Adapter to directly call CustomAPIs from Power Pages.  
+Archived due to Microsoft enabling this in [Power Pages Server Logic](https://learn.microsoft.com/en-us/power-pages/configure/server-logic-overview). The capabilities of this addition are shown [here](https://youtu.be/5ow4btEGiFI) and [here](https://youtu.be/mSM0Tg7RXWI).  
 [Read more](/tags/powerpagesactions/)
 
 ## XrmToolbox
