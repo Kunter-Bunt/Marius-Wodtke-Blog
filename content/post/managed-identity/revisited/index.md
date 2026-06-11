@@ -2,7 +2,7 @@
 title: "Revisited: Managed Identities for Plugin Packages"
 date: 2026-06-21
 draft: false
-image: cover.jpg
+image: /post/managed-identity/cover.jpg
 tags: 
     - Azure
     - Managed Identity
