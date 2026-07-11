@@ -104,15 +104,21 @@ foreach ($file in $allFiles) {
         Write-Host "  [WhatIf] Would delete local file after successful upload" -ForegroundColor Magenta
         $successCount++
     } else {
-        # Upload to blob storage with cache-control header
-        az storage blob upload `
+        # Upload to blob storage with cache-control header.
+        # az writes progress/warnings to stderr; under $ErrorActionPreference = "Stop"
+        # that would abort the script, so relax it for the native call and rely on $LASTEXITCODE.
+        $previousErrorAction = $ErrorActionPreference
+        $ErrorActionPreference = "Continue"
+        $uploadOutput = az storage blob upload `
             --account-name $storageAccountName `
             --account-key $accountKey `
             --container-name $containerName `
             --name $blobPath `
             --file $file.FullName `
             --content-cache-control $cacheControl `
-            --output none 2>$null
+            --overwrite `
+            --output none 2>&1
+        $ErrorActionPreference = $previousErrorAction
 
         if ($LASTEXITCODE -eq 0) {
             Write-Host "  Uploaded successfully" -ForegroundColor Green
@@ -125,6 +131,9 @@ foreach ($file in $allFiles) {
             $uploadedFiles += $blobPath
         } else {
             Write-Host "  Failed (exit code $LASTEXITCODE)" -ForegroundColor Red
+            if ($uploadOutput) {
+                Write-Host "  $($uploadOutput -join "`n  ")" -ForegroundColor Red
+            }
             $failCount++
         }
     }
