@@ -31,35 +31,38 @@ if ($WhatIf) {
 }
 Write-Host ""
 
+# Check if Azure CLI is available
+if (-not (Get-Command az -ErrorAction SilentlyContinue)) {
+    Write-Host "Azure CLI (az) is not installed or not in PATH. Please install it from https://aka.ms/installazurecliwindows" -ForegroundColor Red
+    exit 1
+}
+
 # Check if already logged in
 Write-Host "Checking Azure connection..." -ForegroundColor Cyan
-$context = Get-AzContext -ErrorAction SilentlyContinue
-
-if (-not $context) {
+$accountJson = az account show 2>$null
+if ($LASTEXITCODE -ne 0) {
     Write-Host "Not logged in. Starting device code authentication..." -ForegroundColor Yellow
     Write-Host "Please follow the instructions to authenticate." -ForegroundColor Yellow
     Write-Host ""
-    try {
-        Connect-AzAccount -UseDeviceAuthentication -ErrorAction Stop | Out-Null
-        Write-Host "Successfully logged in to Azure" -ForegroundColor Green
-    } catch {
-        Write-Host "Failed to login to Azure: $_" -ForegroundColor Red
+    az login --use-device-code
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Failed to login to Azure." -ForegroundColor Red
         exit 1
     }
+    Write-Host "Successfully logged in to Azure" -ForegroundColor Green
 } else {
-    Write-Host "Already logged in as: $($context.Account.Id)" -ForegroundColor Green
+    $account = $accountJson | ConvertFrom-Json
+    Write-Host "Already logged in as: $($account.user.name)" -ForegroundColor Green
 }
 
-# Get storage account context
-Write-Host "Getting storage account context..." -ForegroundColor Cyan
-try {
-    $storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroup -Name $storageAccountName -ErrorAction Stop
-    $ctx = $storageAccount.Context
-    Write-Host "Successfully connected to storage account" -ForegroundColor Green
-} catch {
-    Write-Host "Failed to get storage account: $_" -ForegroundColor Red
+# Get storage account key
+Write-Host "Getting storage account key..." -ForegroundColor Cyan
+$accountKey = az storage account keys list --account-name $storageAccountName --resource-group $resourceGroup --query "[0].value" --output tsv 2>&1
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Failed to get storage account key: $accountKey" -ForegroundColor Red
     exit 1
 }
+Write-Host "Successfully retrieved storage account credentials" -ForegroundColor Green
 
 # Find all image files
 Write-Host ""
@@ -101,27 +104,27 @@ foreach ($file in $allFiles) {
         Write-Host "  [WhatIf] Would delete local file after successful upload" -ForegroundColor Magenta
         $successCount++
     } else {
-        try {
-            # Upload to blob storage with cache-control header
-            $result = Set-AzStorageBlobContent `
-                -File $file.FullName `
-                -Container $containerName `
-                -Blob $blobPath `
-                -Context $ctx `
-                -Properties @{CacheControl=$cacheControl} `
-                -Force `
-                -ErrorAction Stop
-            
+        # Upload to blob storage with cache-control header
+        az storage blob upload `
+            --account-name $storageAccountName `
+            --account-key $accountKey `
+            --container-name $containerName `
+            --name $blobPath `
+            --file $file.FullName `
+            --content-cache-control $cacheControl `
+            --output none 2>$null
+
+        if ($LASTEXITCODE -eq 0) {
             Write-Host "  Uploaded successfully" -ForegroundColor Green
-            
+
             # Delete local file after successful upload
             Remove-Item -Path $file.FullName -Force -ErrorAction Stop
             Write-Host "  Deleted local file" -ForegroundColor Green
-            
+
             $successCount++
             $uploadedFiles += $blobPath
-        } catch {
-            Write-Host "  Failed: $_" -ForegroundColor Red
+        } else {
+            Write-Host "  Failed (exit code $LASTEXITCODE)" -ForegroundColor Red
             $failCount++
         }
     }
