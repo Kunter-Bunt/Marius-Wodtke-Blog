@@ -23,4 +23,6 @@ That also means that my known issue still exists: The MS API just seem to trigge
 
 ![This view was refreshed about 30s after the success appeared allowing the modification to propagate to Metadata.](Step3.jpg)
 
+[Teams Integration Enabler is now available in the Power Platform Toolbox!](https://www.powerplatformtoolbox.com/tools/6715d04f-fed4-4e52-b1a2-72ae859459b8)
+
 Cheers and see you in the next one!
