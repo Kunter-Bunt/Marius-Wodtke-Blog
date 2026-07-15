@@ -20,9 +20,12 @@ Archived due to Microsoft publishing an official [Power Pages Client API](https:
 Archived due to Microsoft enabling this in [Power Pages Server Logic](https://learn.microsoft.com/en-us/power-pages/configure/server-logic-overview). The capabilities of this addition are shown [here](https://youtu.be/5ow4btEGiFI) and [here](https://youtu.be/mSM0Tg7RXWI).  
 [Read more](/tags/powerpagesactions/)
 
-## XrmToolbox
+## XrmToolbox & Power Platform Toolbox
 - [Teams Integration Enabler](https://www.xrmtoolbox.com/plugins/plugininfo/?id=7e01b65d-b6da-f011-92b8-7ced8d44e4bd) helps you to integrate custom entities with Teams Channels.  
 [Read more](/post/teams/custom-table/)
+It is also [available for the Power Platform Toolbox](https://www.powerplatformtoolbox.com/tools/6715d04f-fed4-4e52-b1a2-72ae859459b8). 
+[Read more](/post/teams/custom-table-pptb/)
+
 
 ## Dataverse (Low-Code)
 - [D365RibbonHelpers](https://github.com/Kunter-Bunt/D365RibbonHelpers) is a set of command and rules to enhance the possibilities with the ribbon without coding. Or simply a reference for anyone who is into high-code.
