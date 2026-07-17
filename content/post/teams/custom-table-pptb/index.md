@@ -1,6 +1,6 @@
 ---
 title: "Announcement: Teams Integration Enabler now available for Power Platform Toolbox"
-date: 2026-08-02
+date: 2026-07-19
 draft: false
 image: cover.jpg
 tags: 
