@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Delegation Limit Solved! Power Apps & Microsoft Graph API Integration Tips"
 date: 2025-11-30
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

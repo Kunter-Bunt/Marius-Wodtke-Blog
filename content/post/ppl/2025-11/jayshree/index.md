@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Are Your Copilot Agents Protected and Safe? Copilot Studio Agent Protection Explained"
 date: 2025-11-11
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

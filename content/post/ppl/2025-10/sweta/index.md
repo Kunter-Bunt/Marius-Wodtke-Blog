@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: How to Embed Copilot Agent in SharePoint | No-Code Guide for Admins, Easy Setup & Embedding Tutorial"
 date: 2025-10-21
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

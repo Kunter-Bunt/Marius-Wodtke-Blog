@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Mastering Power Platform & Copilot Studio Architecture Center | Your Blueprint for Scalable Solution"
 date: 2025-10-30
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

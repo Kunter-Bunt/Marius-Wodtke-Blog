@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Copilot Agent Flows vs Power Automate: Which Automation Wins? Real Use Cases, Licensing & Pro Tips!"
 date: 2025-11-05
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

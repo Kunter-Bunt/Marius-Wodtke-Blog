@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Stop Data Leaks : How to Govern AI Agents with Managed Environment & Generative AI Settings?"
 date: 2025-12-14
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

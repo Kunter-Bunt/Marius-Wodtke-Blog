@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Table Explorer Extension Tool: Must-Have Tool for Power Platform & Dynamics 365 Makers & Architects"
 date: 2025-12-05
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

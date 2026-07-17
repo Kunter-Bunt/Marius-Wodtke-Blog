@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Copilot Chat API Explained | How to Build Custom Copilot Solutions for Your Business"
 date: 2025-12-17
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

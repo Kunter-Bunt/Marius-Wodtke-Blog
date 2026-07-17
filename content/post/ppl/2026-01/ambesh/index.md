@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: How to Reschedule Microsoft Certification Exams Free of Cost? Step-by-Step Guide"
 date: 2026-01-05
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

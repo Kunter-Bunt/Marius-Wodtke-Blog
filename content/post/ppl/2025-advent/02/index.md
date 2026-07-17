@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Master Contact Center and Customer Service Quality with AI : Quality Evaluation Agent Explained"
 date: 2025-12-02
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 10.12.2023 Powershell - Self Service Purchase"
 date: 2023-12-10
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Dataverse Solution Import Failure: How to Fix Attempt to Provide an Unauthorized Operation Error?"
 date: 2025-11-06
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

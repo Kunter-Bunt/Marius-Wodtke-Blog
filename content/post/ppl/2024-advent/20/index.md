@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Securely use Azure OpenAI on your Data"
 date: 2024-12-20
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

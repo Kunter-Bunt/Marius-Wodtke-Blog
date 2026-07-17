@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Build Business Apps in Minutes with Plan Designer | Live Walkthrough from Scratch to Deliver"
 date: 2025-10-27
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

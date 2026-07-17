@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 21.12.2023 Power Platform Community Hub"
 date: 2023-12-21
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

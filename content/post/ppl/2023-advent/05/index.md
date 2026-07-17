@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 05.12.2023 ACS Direct Routing"
 date: 2023-12-05
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

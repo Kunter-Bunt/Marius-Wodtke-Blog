@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Copilot Studio Explained: Full Experience vs Lightweight Copilot - Which One Should You Use?"
 date: 2025-11-29
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 2024 Kick-Off"
 date: 2024-12-01
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

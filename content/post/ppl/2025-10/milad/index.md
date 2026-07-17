@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: MCP Server Explained: Unlock Enterprise AI with MCP Server in Power Platform & Copilot Studio"
 date: 2025-10-29
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Autonomous Agents in Copilot Studio"
 date: 2024-12-11
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

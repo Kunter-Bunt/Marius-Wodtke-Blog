@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: How to Use Environment Groups in Power Platform | Governance & DLP Explained"
 date: 2025-10-25
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

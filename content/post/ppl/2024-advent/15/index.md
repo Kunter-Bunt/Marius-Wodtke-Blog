@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: How to leverage accessibility in Power Pages?"
 date: 2024-12-15
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 07.12.2023 ACS Teams and External User"
 date: 2023-12-07
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

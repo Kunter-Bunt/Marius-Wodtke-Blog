@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Smarter Scheduling with Copilot: Optimize Resources Like a Pro!"
 date: 2025-10-21
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

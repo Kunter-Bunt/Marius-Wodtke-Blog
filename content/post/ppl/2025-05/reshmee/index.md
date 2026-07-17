@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Canvas Apps + Copilot = Game Changer! Learn How to Get Started?"
 date: 2025-05-06
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

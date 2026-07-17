@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Boost Agent Productivity with Customer Intent Agents in Dynamics 365 | The Future of CRM Support"
 date: 2025-11-08
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

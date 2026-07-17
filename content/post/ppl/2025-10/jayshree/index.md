@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Stop Oversharing! How to Block & Limit Copilot Agent Access in Managed Environments | Admin Guide"
 date: 2025-10-31
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

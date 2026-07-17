@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: What’s New in Power Apps 2025? Wi-Fi Sync, Smart Fill, Copilot & more– Future of Low-Code is Here!"
 date: 2025-11-10
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

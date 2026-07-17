@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Let Copilot Build Your Travel Bot in 5 Minutes | UK Travel Bot with Generative Orchestration"
 date: 2025-10-23
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

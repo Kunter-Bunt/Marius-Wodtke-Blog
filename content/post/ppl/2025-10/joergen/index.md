@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Mastering Git Integration with Dataverse: End-to-End ALM Demo for Power Platform Developers!"
 date: 2025-10-28
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

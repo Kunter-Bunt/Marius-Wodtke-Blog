@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Power Automate Just Got Smarter: Track Time & Cost Savings in Power Automate | New Feature Insights"
 date: 2025-11-01
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

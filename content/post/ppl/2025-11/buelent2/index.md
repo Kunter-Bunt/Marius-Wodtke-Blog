@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Power Apps Copilot Hack: Rename Controls Instantly with Copilot | Speed Up Power Apps Development"
 date: 2025-11-02
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Pro Code Approach for Power Pages"
 date: 2024-12-05
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

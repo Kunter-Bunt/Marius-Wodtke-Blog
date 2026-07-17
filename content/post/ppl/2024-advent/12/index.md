@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: From Natural Language to SQL- Streamline Dataverse Queries with OpenAI on TDS Endpoint"
 date: 2024-12-12
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

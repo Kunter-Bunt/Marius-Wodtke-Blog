@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 02.12.2023 Developer Environments"
 date: 2023-12-02
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

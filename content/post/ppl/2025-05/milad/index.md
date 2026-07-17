@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Easily Share Records in Dynamics 365 CRM Using Advanced Find | Step-by-Step Guide"
 date: 2025-05-05
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

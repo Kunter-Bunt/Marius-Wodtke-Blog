@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Go Offline, Stay Productive! Dynamics 365 Field Service Wave 1 Update"
 date: 2025-05-04
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

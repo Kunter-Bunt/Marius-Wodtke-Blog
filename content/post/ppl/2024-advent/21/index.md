@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Connecting Azure Cognitive Services to Power Automate"
 date: 2024-12-21
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

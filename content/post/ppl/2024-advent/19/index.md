@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Enhance Customer Support with Copilot in Dynamics Customer Service"
 date: 2024-12-19
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video

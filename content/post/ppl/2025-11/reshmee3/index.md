@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: How to Use Copilot Studio and SharePoint for Dynamic, Context-Aware Search"
 date: 2025-11-03
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Revolutionize Insurance Claims with AI: Copilot Studio Image Input Tutorial"
 date: 2025-10-26
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

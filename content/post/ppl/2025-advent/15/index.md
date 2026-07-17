@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Stop Exposing Secrets! Use Server Logic in Power Pages | Quick Tips"
 date: 2025-12-15
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

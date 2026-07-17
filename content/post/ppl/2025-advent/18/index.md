@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Copilot Studio Governance Made Easy: Agent Inventory in Power Platform Admin Center"
 date: 2025-12-18
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

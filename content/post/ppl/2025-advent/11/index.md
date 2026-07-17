@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: Agent 365 Explained + Live Demo | Microsoft Copilot’s New AI Governance Revolution"
 date: 2025-12-11
-draft: false
+draft: true
 image: /post/ppl/2025-advent/cover.jpg
 tags:
     - Video

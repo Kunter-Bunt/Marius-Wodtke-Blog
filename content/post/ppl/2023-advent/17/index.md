@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: 17.12.2023 Customize DLP Error Messages"
 date: 2023-12-17
-draft: false
+draft: true
 image: /post/ppl/2023-advent/cover.jpg
 tags:
     - Video

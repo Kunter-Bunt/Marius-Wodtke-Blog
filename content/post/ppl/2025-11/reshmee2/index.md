@@ -1,7 +1,7 @@
 ---
 title: "[VIDEO] Power Platform Learners: Supercharge Hiring with Copilot Agents: File Metadata Extraction Made Easy! Live Demo"
 date: 2025-11-09
-draft: false
+draft: true
 image: /post/ppl/power-collab-cover.jpg
 tags: 
     - Power Platform Learners

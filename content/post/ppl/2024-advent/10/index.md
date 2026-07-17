@@ -1,7 +1,7 @@
 ---
 title: "Power Platform Advent Calendar: How to Simplify Field Service Management with Copilot in Dynamics Field Service?"
 date: 2024-12-10
-draft: false
+draft: true
 image: /post/ppl/2024-advent/cover.jpg
 tags:
     - Video
